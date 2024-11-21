@@ -1,7 +1,7 @@
 ---
 title: That fresh new website feeling
 slug: fresh-new-website
-description: A brief description of my blog post
+description: I've built a lot of personal websites in the past, but this one is my favourite! (obvs)
 pubDate: Nov 21 2024
 tags:
   - web_design
