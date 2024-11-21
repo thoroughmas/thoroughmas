@@ -3,11 +3,9 @@ title: That fresh new website feeling
 slug: fresh-new-website
 description: A brief description of my blog post
 pubDate: Nov 21 2024
-taggey:
-  - web
-  - design
-  - open
-  - source
+tags:
+  - web_design
+  - open_source
 coverImage: ./thomasmidenanewsite.png
 ---
 Smells pretty good right?
