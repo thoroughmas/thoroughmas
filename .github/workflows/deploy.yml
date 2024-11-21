@@ -1,38 +1,36 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: [main]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout your repository
+      - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install, build, and upload your site
-        uses: withastro/action@v1
-        # with:
-        #   # path: . # The root location of your Astro project (optional)
-        #   # node-version: 18 # The specific version of Node that should be used to build your site (optional)
-        #   # package-manager: pnpm # The Node package manager that should be used to install dependencies (optional)
-  
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.0 # Or the latest version of pnpm you want to use
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build the site
+        run: pnpm run build
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
