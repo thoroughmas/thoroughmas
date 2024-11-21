@@ -1,7 +1,7 @@
 import { getRepositoryDetails } from "../../utils";
 import Community101 from '@src/assets/img/projects/community101.webp';
 import Thoroughmas from '@src/assets/img/projects/tmyoutubeicon_1.jpg';
-//import ThirtyNineSteps from '@src/assets/img/tm39Steps_1.jpg';
+import ThirtyNineSteps from '@src/assets/img/projects/tm39Steps_1.jpg';
 
 export interface Project {
   name: string;
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     demoLink: 'https://t39s.au/',
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'Tickets',
-    //image: ThirtyNineSteps,
+    image: ThirtyNineSteps,
     tags: ['Theatre']
   },
 ]
