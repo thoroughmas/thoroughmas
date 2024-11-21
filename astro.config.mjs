@@ -13,7 +13,7 @@ export default defineConfig({
   markdown: {
     extendDefaultPlugins: true,
     rehypePlugins: [[autoNewTabExternalLinks, {
-      domain: 'localhost:4321'
+      domain: 'https://thomid.me'
     }]]
   }
 });
