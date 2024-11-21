@@ -1,7 +1,7 @@
 import { getRepositoryDetails } from "../../utils";
 import Community101 from '@src/assets/img/projects/community101.webp';
 import Thoroughmas from '@src/assets/img/projects/tmyoutubeicon_1.jpg';
-import ThirtyNineSteps from '@src/assets/img/projects/tm39Steps_1.jpg';
+import ThirtyNineSteps from '/src/assets/img/projects/tm39Steps_1.jpg';
 
 export interface Project {
   name: string;
