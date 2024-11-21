@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import type { Project } from '../pages/projects/projects'
+const { projects } = Astro.props
+---
+<div class="grid grid-cols-12 gap-5">
+  {
+    projects.map((project: Project) =>
+      <div class="col-span-12 sm:col-span-6 lg:col-span-4 border dark:border-zinc-700 rounded-xl shadow-sm p-5">
+        {/* Title at the top */}
+        <h3 class="font-semibold mb-4 w-full">
+          <a class="underline" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>{project.name}</a>
+        </h3>
+
+        <div class="flex gap-4 mb-4">
+          {/* Left side - Image */}
+          {project.image && (
+            <div class="w-1/3">
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={200}
+                height={200}
+                class="rounded-lg object-cover w-full"
+              />
+            </div>
+          )}
+
+          {/* Right side - Description */}
+          <div class="flex-1">
+            <p class="text-zinc-600 dark:text-zinc-300">{project.description}</p>
+          </div>
+        </div>
+
+        {/* Bottom row */}
+        <div class="flex justify-between items-end mt-auto">
+          {/* Tags on bottom left */}
+          {(project.tags || [])?.length > 0 && (
+            <div class='flex gap-2 flex-wrap'>
+              {project.tags?.map((tag: string) => (
+                <span class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                  text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                  transition-all duration-700
+                  hover:border-zinc-700 dark:hover:border-zinc-300'>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Links on bottom right */}
+          <div class="flex gap-3">
+            {project.postLink && (
+              <a class="underline flex items-center gap-2" href={project.postLink}>
+                Article
+              </a>
+            )}
+            {project.demoLink && (
+  <a class="underline flex items-center gap-2" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>
+    {project.linkType ? project.linkType : 'Demo'}  {/* Update this line */}
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>
+)}
+          </div>
+        </div>
+      </div>
+    )
+  }
+</div>

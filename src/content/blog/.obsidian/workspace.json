@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "76c1328ff3fce992",
+    "type": "split",
+    "children": [
+      {
+        "id": "e07d38e3f379465d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d462ec9c3acbb4cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2024-11-21-that-fresh-new-website-feeling/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2abe2db83158f6df",
+    "type": "split",
+    "children": [
+      {
+        "id": "1badd020b2efb0db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c18d3c32ddf1032",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "576d95e3a56c433e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "549f4d11e35a757b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a4822340f99bb6fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "8114680b65aee6d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92b331b83dade741",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "0f77ff43a1865364",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2024-11-21-that-fresh-new-website-feeling/index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from index"
+            }
+          },
+          {
+            "id": "f0a902bafa970955",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c8a450262485f27e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2024-11-21-that-fresh-new-website-feeling/index.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of index"
+            }
+          },
+          {
+            "id": "0e797311d360c42e",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 350.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "d462ec9c3acbb4cd",
+  "lastOpenFiles": [
+    "2024-11-21-that-fresh-new-website-feeling/thomasmidenanewsite.png",
+    "Untitled 2.md",
+    "2024-11-21-that-fresh-new-website-feeling/index.md",
+    "2024-11-21-that-fresh-new-website-feeling/thomasmidenawordpresssite.png",
+    "Templates/Blog Post Template.md",
+    "Untitled 4.md",
+    "Untitled 3.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "Templates/Scripts/Create Blog Post.js",
+    "Templates/Scripts/New Text Document.txt",
+    "Templates/Scripts/New folder",
+    "Templates/Scripts",
+    "Templates/New folder",
+    "Templater Scripts/foldering",
+    "Templater Scripts/New Text Document.txt",
+    "Templater Scripts/Foldering",
+    "Templater Scripts/New folder",
+    "Templater Scripts",
+    "Templater Scripts/Foldering.md",
+    "2024-11-18.md",
+    "2024-11-21-that-fresh-new-website-feeling/thomasmidenarefinedsite.png",
+    "2024-11-21-that-fresh-new-website-feeling/thomasmidenaogsite.png",
+    "2024-11-21-that-fresh-new-website-feeling/Thomas_websitebanner_v3.png",
+    "2024-11-21-that-fresh-new-website-feeling/lcmfilmsite.png",
+    "Welcome.md"
+  ]
+}
