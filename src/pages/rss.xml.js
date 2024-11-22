@@ -31,7 +31,9 @@ export async function GET(context) {
                 }
 
                 // Combine cover image and inline images for content
-                const coverImage = post.data.coverImage?.src ? `<img src="${siteUrl}/_astro/${post.data.coverImage.src.replace(/^\.\//, '')}" alt="" />` : '';
+                const coverImage = typeof post.data.coverImage === 'string' 
+    ? `<img src="${siteUrl}/_astro/${post.data.coverImage.replace(/^\.\//, '')}" alt="" />` 
+    : '';
                 const allImages = [coverImage, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
 
                 const fullContent = `
