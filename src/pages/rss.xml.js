@@ -7,24 +7,16 @@ export async function GET(context) {
     const posts = await getCollection('blog');
     const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
 
-    const renderer = new marked.Renderer();
-    renderer.image = (hrefObj, title, text) => {
-        const href = hrefObj.href || ''; // Extract href from the object
-        console.log('Image href:', href); // Log the href value
+    // Debug info
+    console.log('Example post data:', {
+        id: posts[0].id,
+        slug: posts[0].slug,
+        coverImage: posts[0].data.coverImage,
+        firstImage: posts[0].body.match(/!\[.*?\]\((.*?)\)/)
+    });
 
-        if (!href || typeof href !== 'string') {
-            console.warn('Invalid image href:', hrefObj);
-            return '';
-        }
-
-        if (href.startsWith('http')) {
-            return `<img src="${href}" alt="${text || ''}" title="${title || ''}" />`;
-        }
-
-        const filename = href.replace(/^\.\//, '');
-        const imageUrl = `${siteUrl}/_astro/${filename}`;
-        return `<img src="${imageUrl}" alt="${text || ''}" title="${title || ''}" />`;
-    };
+    // Add this regex to capture images in the markdown content
+    const imageRegex = /!\[.*?\]\((.*?)\)/g;
 
     return rss({
         title: SITE_TITLE,
@@ -32,19 +24,51 @@ export async function GET(context) {
         site: context.site,
         items: await Promise.all(
             posts.map(async (post) => {
+                // Create renderer for each post
+                const renderer = new marked.Renderer();
+
+                // Handle images with proper null checking
+                renderer.image = (href, title, text) => {
+                    if (!href) return '';
+
+                    try {
+                        // If it's already a full URL, use it as is
+                        if (typeof href === 'string' && href.startsWith('http')) {
+                            return `<img src="${href}" alt="${text || ''}" title="${title || ''}" />`;
+                        }
+
+                        // For local images, use the full optimized path
+                        const filename = typeof href === 'string' ? href.replace(/^\.\//, '') : '';
+                        const imageUrl = `${siteUrl}/_astro/${filename}`;
+
+                        return `<img src="${imageUrl}" alt="${text || ''}" title="${title || ''}" />`;
+                    } catch (error) {
+                        console.warn('Error processing image:', error, { href, title, text });
+                        return '';
+                    }
+                };
+
+                // Parse the content
                 const content = marked(post.body, { 
                     renderer,
                     mangle: false,
                     headerIds: false
                 });
 
-                const coverImageUrl = typeof post.data.coverImage === 'string' 
-                    ? `${siteUrl}/_astro/${post.data.coverImage.replace(/^\.\//, '')}`
-                    : '';
+                // Handle inline images from markdown
+                let inlineImages = [];
+                let match;
+                while ((match = imageRegex.exec(post.body)) !== null) {
+                    const imgSrc = match[1].replace(/^\.\//, ''); // Clean the path
+                    inlineImages.push(`${siteUrl}/_astro/${imgSrc}`);
+                }
+
+                // Combine cover image and inline images for content
+                const allImages = [post.data.coverImage?.src, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
 
                 const fullContent = `
                     <div class="post-content">
-                        ${coverImageUrl ? `<img src="${coverImageUrl}" alt="" />` : ''}
+                        ${allImages}
                         ${content}
                     </div>
                 `;
