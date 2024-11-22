@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { marked } from 'marked';
-import path from 'path';
+import { getImage } from 'astro:assets';
 
 export async function GET(context) {
     const posts = await getCollection('blog');
@@ -17,7 +17,7 @@ export async function GET(context) {
                 // Create renderer for each post
                 const renderer = new marked.Renderer();
                 
-                // Handle images with better path resolution
+                // Handle images with direct URLs
                 renderer.image = (href, title, text) => {
                     // Ensure href is a string and not empty
                     const imgHref = String(href || '');
@@ -32,14 +32,12 @@ export async function GET(context) {
                             return `<img src="${imgHref}" alt="${imgText}" title="${imgTitle}" />`;
                         }
                         
-                        // For local images, construct the path based on the post's directory
-                        // Extract the post's directory from its slug
-                        const postDir = post.slug.split('/').pop();
-                        // Clean the image filename
-                        const cleanImgName = path.basename(imgHref);
+                        // For local images, use the direct URL path
+                        // Remove any leading ./ from the path
+                        const cleanHref = imgHref.replace(/^\.\//, '');
                         
-                        // Construct the URL pattern that Astro uses for the specific post's images
-                        const imageUrl = `${siteUrl}/_astro/${postDir}_${cleanImgName}`;
+                        // Use the optimized image URL pattern from the site
+                        const imageUrl = `${siteUrl}/_astro/${cleanHref}`;
                         
                         return `<img src="${imageUrl}" alt="${imgText}" title="${imgTitle}" />`;
                     } catch (error) {
@@ -59,9 +57,8 @@ export async function GET(context) {
                 let coverImageHtml = '';
                 if (post.data.coverImage && post.data.coverImage.src) {
                     try {
-                        const postDir = post.slug.split('/').pop();
-                        const coverFileName = path.basename(post.data.coverImage.src);
-                        const coverImageUrl = `${siteUrl}/_astro/${postDir}_${coverFileName}`;
+                        // For cover images, use the full optimized URL
+                        const coverImageUrl = `${siteUrl}/_astro/${post.data.coverImage.src}`;
                         coverImageHtml = `<img src="${coverImageUrl}" alt="${post.data.title}" class="cover-image" />`;
                     } catch (error) {
                         console.warn('Error processing cover image:', error);
