@@ -7,14 +7,6 @@ export async function GET(context) {
     const posts = await getCollection('blog');
     const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
 
-    // Debug info
-    console.log('Example post data:', {
-        id: posts[0].id,
-        slug: posts[0].slug,
-        coverImage: posts[0].data.coverImage,
-        firstImage: posts[0].body.match(/!\[.*?\]\((.*?)\)/)
-    });
-
     // Regex to capture images in the markdown content
     const imageRegex = /!\[.*?\]\((.*?)\)/g;
 
@@ -24,34 +16,8 @@ export async function GET(context) {
         site: context.site,
         items: await Promise.all(
             posts.map(async (post) => {
-                const renderer = new marked.Renderer();
-
-                // Handle images with proper null checking
-                renderer.image = (href, title, text) => {
-                    if (!href) return '';
-
-                    try {
-                        if (typeof href === 'string' && href.startsWith('http')) {
-                            return `<img src="${href}" alt="${text || ''}" title="${title || ''}" />`;
-                        }
-
-                        const filename = typeof href === 'string' ? href.replace(/^\.\//, '') : '';
-                        const imageUrl = `${siteUrl}/_astro/${filename}`;
-
-                        return `<img src="${imageUrl}" alt="${text || ''}" title="${title || ''}" />`;
-                    } catch (error) {
-                        console.warn('Error processing image:', error, { href, title, text });
-                        return '';
-                    }
-                };
-
-                // Parse the content
-                const content = marked(post.body, { 
-                    renderer,
-                    mangle: false,
-                    headerIds: false
-                });
-
+                const content = marked(post.body);
+                
                 // Handle inline images from markdown
                 let inlineImages = [];
                 let match;
@@ -64,7 +30,8 @@ export async function GET(context) {
                 }
 
                 // Combine cover image and inline images for content
-                const allImages = [post.data.coverImage?.src, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
+                const coverImage = post.data.coverImage?.src ? `<img src="${post.data.coverImage.src}" alt="" />` : '';
+                const allImages = [coverImage, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
 
                 const fullContent = `
                     <div class="post-content">
