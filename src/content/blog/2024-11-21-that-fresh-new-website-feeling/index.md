@@ -18,7 +18,7 @@ Some of the earliest ones I can remember I built with Freewebs. Which later chan
 
 My early websites featured my projects under the moniker "Lcm Film".
 
-./lcmfilmsite.png
+![](lcmfilmsite.png)
 
 Here's one of the final forms of that Freewebs site (which went through a ridiculous number of regenerations... every few months it was "Let's remake the website!").
 
