@@ -96,7 +96,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Blog',
-    description: "My personal blog. Yeah, the one that's right here on this website!",
+    description: "My personal blog. Yeah, that's right, the one here on this website!",
     demoLink: 'https://thomid.me/posts/',
     linkType: 'Read',
     image: Blog,
