@@ -16,21 +16,22 @@ export async function GET(context) {
         site: context.site,
         items: await Promise.all(
             posts.map(async (post) => {
+                // Parse the content
                 const content = marked(post.body);
-                
+
                 // Handle inline images from markdown
                 let inlineImages = [];
                 let match;
                 while ((match = imageRegex.exec(post.body)) !== null) {
-                    const imgSrc = match[1].replace(/^\.\//, ''); // Clean the path
+                    const imgSrc = match[1].trim(); // Clean the path
                     const fullImageUrl = imgSrc.startsWith('http') 
                         ? imgSrc 
-                        : `${siteUrl}/_astro/${imgSrc}`; // Construct full URL
+                        : `${siteUrl}/_astro/${imgSrc.replace(/^\.\//, '')}`; // Construct full URL
                     inlineImages.push(fullImageUrl);
                 }
 
                 // Combine cover image and inline images for content
-                const coverImage = post.data.coverImage?.src ? `<img src="${post.data.coverImage.src}" alt="" />` : '';
+                const coverImage = post.data.coverImage?.src ? `<img src="${siteUrl}/_astro/${post.data.coverImage.src.replace(/^\.\//, '')}" alt="" />` : '';
                 const allImages = [coverImage, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
 
                 const fullContent = `
