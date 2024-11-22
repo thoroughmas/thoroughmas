@@ -31,12 +31,11 @@ export async function GET(context) {
                             return `<img src="${imgHref}" alt="${imgText}" title="${imgTitle}" />`;
                         }
                         
-                        // Get the base filename without path or extension
-                        const baseFilename = imgHref.replace(/^\.\//, '').replace(/\.[^/.]+$/, '');
+                        // Get just the filename without extension
+                        const filename = imgHref.split('/').pop().split('.')[0];
                         
-                        // Construct the slug-based filename that Astro uses
-                        const slug = post.slug.split('/').pop();
-                        const imageUrl = `${siteUrl}/_astro/${slug}_${baseFilename}`;
+                        // Construct the URL based on the file location
+                        const imageUrl = `${siteUrl}/_astro/${filename}`;
                         
                         return `<img src="${imageUrl}" alt="${imgText}" title="${imgTitle}" />`;
                     } catch (error) {
@@ -56,10 +55,14 @@ export async function GET(context) {
                 let coverImageHtml = '';
                 if (post.data.coverImage) {
                     try {
-                        // Get the base filename of the cover image
-                        const coverFilename = post.data.coverImage.replace(/^\.\//, '').replace(/\.[^/.]+$/, '');
-                        const slug = post.slug.split('/').pop();
-                        const coverImageUrl = `${siteUrl}/_astro/${slug}_${coverFilename}`;
+                        // Handle coverImage whether it's a string or an object
+                        const coverImagePath = typeof post.data.coverImage === 'string' 
+                            ? post.data.coverImage 
+                            : post.data.coverImage?.src || '';
+                            
+                        // Get filename without ./ and extension
+                        const filename = coverImagePath.replace(/^\.\//, '').split('.')[0];
+                        const coverImageUrl = `${siteUrl}/_astro/${filename}`;
                         coverImageHtml = `<img src="${coverImageUrl}" alt="${post.data.title}" class="cover-image" />`;
                     } catch (error) {
                         console.warn('Error processing cover image:', error);
@@ -74,7 +77,8 @@ export async function GET(context) {
                 `;
 
                 return {
-                    link: `${siteUrl}/blog/${post.slug}/`,
+                    // Remove 'blog/' from the URL since that's not in your actual URL structure
+                    link: `${siteUrl}/${post.slug}/`,
                     title: post.data.title,
                     description: post.data.description,
                     pubDate: post.data.pubDate,
