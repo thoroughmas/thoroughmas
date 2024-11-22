@@ -15,7 +15,7 @@ export async function GET(context) {
         firstImage: posts[0].body.match(/!\[.*?\]\((.*?)\)/)
     });
 
-    // Add this regex to capture images in the markdown content
+    // Regex to capture images in the markdown content
     const imageRegex = /!\[.*?\]\((.*?)\)/g;
 
     return rss({
@@ -24,7 +24,6 @@ export async function GET(context) {
         site: context.site,
         items: await Promise.all(
             posts.map(async (post) => {
-                // Create renderer for each post
                 const renderer = new marked.Renderer();
 
                 // Handle images with proper null checking
@@ -32,12 +31,10 @@ export async function GET(context) {
                     if (!href) return '';
 
                     try {
-                        // If it's already a full URL, use it as is
                         if (typeof href === 'string' && href.startsWith('http')) {
                             return `<img src="${href}" alt="${text || ''}" title="${title || ''}" />`;
                         }
 
-                        // For local images, use the full optimized path
                         const filename = typeof href === 'string' ? href.replace(/^\.\//, '') : '';
                         const imageUrl = `${siteUrl}/_astro/${filename}`;
 
@@ -60,7 +57,10 @@ export async function GET(context) {
                 let match;
                 while ((match = imageRegex.exec(post.body)) !== null) {
                     const imgSrc = match[1].replace(/^\.\//, ''); // Clean the path
-                    inlineImages.push(`${siteUrl}/_astro/${imgSrc}`);
+                    const fullImageUrl = imgSrc.startsWith('http') 
+                        ? imgSrc 
+                        : `${siteUrl}/_astro/${imgSrc}`; // Construct full URL
+                    inlineImages.push(fullImageUrl);
                 }
 
                 // Combine cover image and inline images for content
