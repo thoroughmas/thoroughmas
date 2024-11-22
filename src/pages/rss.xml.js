@@ -2,6 +2,7 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { marked } from 'marked';
+import path from 'path';
 
 export async function GET(context) {
     const posts = await getCollection('blog');
@@ -16,7 +17,7 @@ export async function GET(context) {
                 // Create renderer for each post
                 const renderer = new marked.Renderer();
                 
-                // Handle images with better type checking
+                // Handle images with better path resolution
                 renderer.image = (href, title, text) => {
                     // Ensure href is a string and not empty
                     const imgHref = String(href || '');
@@ -31,19 +32,14 @@ export async function GET(context) {
                             return `<img src="${imgHref}" alt="${imgText}" title="${imgTitle}" />`;
                         }
                         
-                        // For local images, construct the URL to the processed image in _astro
-                        // Remove any ./ from the start of the path
-                        const cleanHref = imgHref.replace(/^\.\//, '');
-                        // Split the filename and extension
-                        const [filename, ext] = cleanHref.split('.');
+                        // For local images, construct the path based on the post's directory
+                        // Extract the post's directory from its slug
+                        const postDir = post.slug.split('/').pop();
+                        // Clean the image filename
+                        const cleanImgName = path.basename(imgHref);
                         
-                        if (!filename || !ext) {
-                            console.warn(`Invalid image path: ${imgHref}`);
-                            return '';
-                        }
-                        
-                        // Construct the URL pattern that Astro uses
-                        const imageUrl = `${siteUrl}/_astro/${filename}.${ext}`;
+                        // Construct the URL pattern that Astro uses for the specific post's images
+                        const imageUrl = `${siteUrl}/_astro/${postDir}_${cleanImgName}`;
                         
                         return `<img src="${imageUrl}" alt="${imgText}" title="${imgTitle}" />`;
                     } catch (error) {
@@ -63,11 +59,10 @@ export async function GET(context) {
                 let coverImageHtml = '';
                 if (post.data.coverImage && post.data.coverImage.src) {
                     try {
-                        // Extract just the filename from the cover image path
-                        const filename = post.data.coverImage.src.split('/').pop();
-                        if (filename) {
-                            coverImageHtml = `<img src="${siteUrl}/_astro/${filename}" alt="${post.data.title}" class="cover-image" />`;
-                        }
+                        const postDir = post.slug.split('/').pop();
+                        const coverFileName = path.basename(post.data.coverImage.src);
+                        const coverImageUrl = `${siteUrl}/_astro/${postDir}_${coverFileName}`;
+                        coverImageHtml = `<img src="${coverImageUrl}" alt="${post.data.title}" class="cover-image" />`;
                     } catch (error) {
                         console.warn('Error processing cover image:', error);
                     }
