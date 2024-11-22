@@ -7,8 +7,24 @@ export async function GET(context) {
     const posts = await getCollection('blog');
     const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
 
-    // Regex to capture images in the markdown content
-    const imageRegex = /!\[.*?\]\((.*?)\)/g;
+    const renderer = new marked.Renderer();
+    renderer.image = (hrefObj, title, text) => {
+        const href = hrefObj.href || ''; // Extract href from the object
+        console.log('Image href:', href); // Log the href value
+
+        if (!href || typeof href !== 'string') {
+            console.warn('Invalid image href:', hrefObj);
+            return '';
+        }
+
+        if (href.startsWith('http')) {
+            return `<img src="${href}" alt="${text || ''}" title="${title || ''}" />`;
+        }
+
+        const filename = href.replace(/^\.\//, '');
+        const imageUrl = `${siteUrl}/_astro/${filename}`;
+        return `<img src="${imageUrl}" alt="${text || ''}" title="${title || ''}" />`;
+    };
 
     return rss({
         title: SITE_TITLE,
@@ -16,29 +32,19 @@ export async function GET(context) {
         site: context.site,
         items: await Promise.all(
             posts.map(async (post) => {
-                // Parse the content
-                const content = marked(post.body);
+                const content = marked(post.body, { 
+                    renderer,
+                    mangle: false,
+                    headerIds: false
+                });
 
-                // Handle inline images from markdown
-                let inlineImages = [];
-                let match;
-                while ((match = imageRegex.exec(post.body)) !== null) {
-                    const imgSrc = match[1].trim(); // Clean the path
-                    const fullImageUrl = imgSrc.startsWith('http') 
-                        ? imgSrc 
-                        : `${siteUrl}/_astro/${imgSrc.replace(/^\.\//, '')}`; // Construct full URL
-                    inlineImages.push(fullImageUrl);
-                }
-
-                // Combine cover image and inline images for content
-                const coverImage = typeof post.data.coverImage === 'string' 
-    ? `<img src="${siteUrl}/_astro/${post.data.coverImage.replace(/^\.\//, '')}" alt="" />` 
-    : '';
-                const allImages = [coverImage, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
+                const coverImageUrl = typeof post.data.coverImage === 'string' 
+                    ? `${siteUrl}/_astro/${post.data.coverImage.replace(/^\.\//, '')}`
+                    : '';
 
                 const fullContent = `
                     <div class="post-content">
-                        ${allImages}
+                        ${coverImageUrl ? `<img src="${coverImageUrl}" alt="" />` : ''}
                         ${content}
                     </div>
                 `;
