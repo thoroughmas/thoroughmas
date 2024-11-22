@@ -48,7 +48,7 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
       </div>
       <div>
         <div class="flex justify-between gap-2 mb-1">
-          <h2 class="text-lg font-bold mb-3">Projects</h2>
+          <h2 class="text-lg font-bold mb-3">Active Projects</h2>
           <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">All projects &raquo;</a>
         </div>
         <ProjectList projects={top6Projects}/>
