@@ -5,7 +5,7 @@ import { marked } from 'marked';
 
 export async function GET(context) {
     const posts = await getCollection('blog');
-    const siteUrl = context.site?.toString() || '';
+    const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
     
     return rss({
         title: SITE_TITLE,
@@ -16,16 +16,40 @@ export async function GET(context) {
                 // Create renderer for each post
                 const renderer = new marked.Renderer();
                 
-                // Handle images - using post.slug to maintain relative paths
-                renderer.image = (href = '', title = '', text = '') => {
-                    const imagePath = String(href);
+                // Handle images with better type checking
+                renderer.image = (href, title, text) => {
+                    // Ensure href is a string and not empty
+                    const imgHref = String(href || '');
+                    if (!imgHref) return '';
                     
-                    // For images in the markdown content, they're relative to the post directory
-                    const absoluteUrl = imagePath.startsWith('http') 
-                        ? imagePath 
-                        : new URL(`blog/${post.slug}/${imagePath}`, siteUrl).toString();
+                    const imgTitle = String(title || '');
+                    const imgText = String(text || '');
                     
-                    return `<img src="${absoluteUrl}" alt="${text}" title="${title}" />`;
+                    try {
+                        // If it's already a full URL, use it as is
+                        if (imgHref.match(/^https?:\/\//)) {
+                            return `<img src="${imgHref}" alt="${imgText}" title="${imgTitle}" />`;
+                        }
+                        
+                        // For local images, construct the URL to the processed image in _astro
+                        // Remove any ./ from the start of the path
+                        const cleanHref = imgHref.replace(/^\.\//, '');
+                        // Split the filename and extension
+                        const [filename, ext] = cleanHref.split('.');
+                        
+                        if (!filename || !ext) {
+                            console.warn(`Invalid image path: ${imgHref}`);
+                            return '';
+                        }
+                        
+                        // Construct the URL pattern that Astro uses
+                        const imageUrl = `${siteUrl}/_astro/${filename}.${ext}`;
+                        
+                        return `<img src="${imageUrl}" alt="${imgText}" title="${imgTitle}" />`;
+                    } catch (error) {
+                        console.warn('Error processing image:', error);
+                        return '';
+                    }
                 };
 
                 // Parse the content
@@ -35,20 +59,29 @@ export async function GET(context) {
                     headerIds: false
                 });
                 
-                // Create the full content with cover image if present
+                // Handle cover image
+                let coverImageHtml = '';
+                if (post.data.coverImage && post.data.coverImage.src) {
+                    try {
+                        // Extract just the filename from the cover image path
+                        const filename = post.data.coverImage.src.split('/').pop();
+                        if (filename) {
+                            coverImageHtml = `<img src="${siteUrl}/_astro/${filename}" alt="${post.data.title}" class="cover-image" />`;
+                        }
+                    } catch (error) {
+                        console.warn('Error processing cover image:', error);
+                    }
+                }
+
                 const fullContent = `
                     <div class="post-content">
-                        ${post.data.coverImage ? 
-                            `<img src="${new URL(`blog/${post.slug}/${post.data.coverImage.src}`, siteUrl)}" 
-                                  alt="${post.data.title}" 
-                                  class="cover-image" />` 
-                            : ''}
+                        ${coverImageHtml}
                         ${content}
                     </div>
                 `;
 
                 return {
-                    link: `${siteUrl}blog/${post.slug}/`,
+                    link: `${siteUrl}/blog/${post.slug}/`,
                     title: post.data.title,
                     description: post.data.description,
                     pubDate: post.data.pubDate,
