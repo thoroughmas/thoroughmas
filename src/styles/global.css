@@ -7,3 +7,26 @@
 		font-size: 0.875rem;
 	}
 }
+
+/* Default styling for icons */
+.social-icons img {
+	filter: none; /* Default for light mode */
+	transition: filter 0.3s ease; /* Smooth transition when toggling themes */
+  }
+  
+  /* Adjust icons for dark mode */
+  html.dark .social-icons img {
+	filter: invert(1) brightness(2); /* Makes icons white in dark mode */
+  }
+  
+
+  @font-face {
+    font-family: 'WFK1_honeymushroom';
+    src: url('/fonts/webfontkit1/honey_mushroom-webfont.woff2') format('woff2'),
+         url('/fonts/webfontkit1/honey_mushroom-webfont.woff') format('woff'),
+         url('/fonts/webfontkit1/Honey_Mushroom.ttf') format('truetype');
+}
+
+.custom-name-title {
+    font-family: 'WFK1_honeymushroom', sans-serif;
+}
