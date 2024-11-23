@@ -29,6 +29,12 @@ const { Content, headings } = await post.render();
 <BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>
   <div class='container lg:flex gap-10'>
     <main class='overflow-hidden grow'>
+      <div class="main-content">  {/* Add this wrapper */}
+        <article 
+          class="h-entry" 
+          itemscope 
+          itemtype="http://schema.org/BlogPosting"
+        >
       <article 
         class="h-entry" 
         itemscope 
