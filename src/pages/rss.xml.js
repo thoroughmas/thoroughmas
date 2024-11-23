@@ -7,68 +7,52 @@ export async function GET(context) {
     const posts = await getCollection('blog');
     const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
 
-    // Debug info
-    console.log('Example post data:', {
-        id: posts[0].id,
-        slug: posts[0].slug,
-        coverImage: posts[0].data.coverImage,
-        firstImage: posts[0].body.match(/!\[.*?\]\((.*?)\)/)
-    });
-
-    // Add this regex to capture images in the markdown content
-    const imageRegex = /!\[.*?\]\((.*?)\)/g;
-
     return rss({
         title: SITE_TITLE,
         description: SITE_DESCRIPTION,
         site: context.site,
         items: await Promise.all(
             posts.map(async (post) => {
-                // Create renderer for each post
+                // Create renderer for post
                 const renderer = new marked.Renderer();
 
-                // Handle images with proper null checking
+                // Handle images
                 renderer.image = (href, title, text) => {
-                    if (!href) return '';
-
                     try {
+                        // Handle case where href is an object
+                        const imagePath = typeof href === 'object' ? href.href : href;
+                        
+                        if (!imagePath) return '';
+
                         // If it's already a full URL, use it as is
-                        if (typeof href === 'string' && href.startsWith('http')) {
-                            return `<img src="${href}" alt="${text || ''}" title="${title || ''}" />`;
+                        if (typeof imagePath === 'string' && imagePath.startsWith('http')) {
+                            return `<img src="${imagePath}" alt="${text || ''}" />`;
                         }
 
-                        // For local images, use the full optimized path
-                        const filename = typeof href === 'string' ? href.replace(/^\.\//, '') : '';
-                        const imageUrl = `${siteUrl}/_astro/${filename}`;
-
-                        return `<img src="${imageUrl}" alt="${text || ''}" title="${title || ''}" />`;
+                        // For relative paths, use the site URL and _astro path
+                        const cleanPath = typeof imagePath === 'string' ? imagePath.replace('./', '') : '';
+                        return `<img src="${siteUrl}/_astro/${cleanPath}" alt="${text || ''}" />`;
                     } catch (error) {
-                        console.warn('Error processing image:', error, { href, title, text });
+                        console.error('Error processing image:', error, { href, title, text });
                         return '';
                     }
                 };
 
                 // Parse the content
-                const content = marked(post.body, { 
+                const content = marked(post.body, {
                     renderer,
                     mangle: false,
                     headerIds: false
                 });
 
-                // Handle inline images from markdown
-                let inlineImages = [];
-                let match;
-                while ((match = imageRegex.exec(post.body)) !== null) {
-                    const imgSrc = match[1].replace(/^\.\//, ''); // Clean the path
-                    inlineImages.push(`${siteUrl}/_astro/${imgSrc}`);
-                }
-
-                // Combine cover image and inline images for content
-                const allImages = [post.data.coverImage?.src, ...inlineImages].filter(Boolean).map(src => `<img src="${src}" alt="" />`).join('');
+                // Handle the cover image
+                const coverImageHtml = post.data.coverImage?.src 
+                    ? `<img src="${post.data.coverImage.src}" alt="${post.data.title}" />`
+                    : '';
 
                 const fullContent = `
                     <div class="post-content">
-                        ${allImages}
+                        ${coverImageHtml}
                         ${content}
                     </div>
                 `;
@@ -81,7 +65,7 @@ export async function GET(context) {
                     content: fullContent,
                     categories: post.data.tags || [],
                     author: SITE_TITLE,
-                    customData: post.data.updatedDate 
+                    customData: post.data.updatedDate
                         ? `<updated>${post.data.updatedDate.toUTCString()}</updated>`
                         : ''
                 };
