@@ -17,7 +17,7 @@ const blog = defineCollection({
                 message: 'Cover image must be at least 960 pixels wide!'
             })
             .optional()
-    }),
-});
+        }),
+    });
 
 export const collections = { blog };
