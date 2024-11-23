@@ -12,31 +12,39 @@ import { loadEnv } from 'vite';
 const { GISCUS_REPO, GISCUS_REPO_ID, GISCUS_CATEGORY, GISCUS_CATEGORY_ID } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post: any) => ({
-		params: { slug: post.slug },
-		props: post
-	}));
+  const posts = await getCollection('blog');
+  return posts.map((post: any) => ({
+    params: { slug: post.slug },
+    props: post
+  }));
 }
 type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const {
-	data: { title, seoTitle, description, coverImage, pubDate, updatedDate, tags }
+  data: { title, seoTitle, description, coverImage, pubDate, updatedDate, tags }
 } = post;
 const { Content, headings } = await post.render();
 ---
 
 <BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>
   <div class='container lg:flex gap-10'>
-    <main
-      class='overflow-hidden grow'
-    >
-      <article class="h-entry">  {/* Added h-entry class for microformats */}
+    <main class='overflow-hidden grow'>
+      <article 
+        class="h-entry" 
+        itemscope 
+        itemtype="http://schema.org/BlogPosting"
+      >
         <Prose>
-          <div class="entry-content hentry" id="main-content">  {/* Added these classes */}
-            <h1 class='!my-1 leading-tight entry-title'>{title}</h1>  {/* Added entry-title class */}
-            <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
-              {
+          <div class="entry-content hentry" id="main-content">
+            <h1 
+              class='!my-1 leading-tight entry-title p-name' 
+              itemprop="headline"
+            >
+              {title}
+            </h1>
+            
+            <div class="post-meta">
+              <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
                 <div class='flex gap-2'>
                   {
                     (tags || [])?.map((tag: string) => (
@@ -45,30 +53,63 @@ const { Content, headings } = await post.render();
                           text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
                           transition-all duration-700
                         hover:border-zinc-700 dark:hover:border-zinc-300'
-                        href={`/tags/${slugify(tag)}`}>
+                        href={`/tags/${slugify(tag)}`}
+                        itemprop="keywords"
+                      >
                         {tag}
                       </a>
                     ))
                   }
                 </div>
-              }
-              <div>
-                {
-                  updatedDate ?
-                    <>Updated on <strong><FormattedDate date={updatedDate} /></strong></>
-                  :
-                    <>Published on <strong><FormattedDate date={pubDate} /></strong></>
-                }
+                <div>
+                  <time 
+                    class="dt-published" 
+                    datetime={pubDate.toISOString()} 
+                    itemprop="datePublished"
+                  >
+                    {
+                      updatedDate ?
+                        <>Updated on <strong><FormattedDate date={updatedDate} /></strong></>
+                      :
+                        <>Published on <strong><FormattedDate date={pubDate} /></strong></>
+                    }
+                  </time>
+                  
+                  {updatedDate && (
+                    <time 
+                      class="dt-updated" 
+                      datetime={updatedDate.toISOString()} 
+                      itemprop="dateModified"
+                      style="display:none;"
+                    >
+                      {updatedDate.toISOString()}
+                    </time>
+                  )}
+                </div>
               </div>
             </div>
           </div>
+          
           <div class='py-3 overflow-hidden'>
-            {coverImage && <Image class='rounded-3xl w-full m-0 lg:mb-2' src={coverImage} alt={title} loading='eager' />}
+            {coverImage && (
+              <Image 
+                class='rounded-3xl w-full m-0 lg:mb-2' 
+                src={coverImage} 
+                alt={title} 
+                loading='eager' 
+                itemprop="image"
+              />
+            )}
           </div>
-          <div class="e-content">  {/* Added e-content class */}
+          
+          <div 
+            class="e-content" 
+            itemprop="articleBody"
+          >
             <Content />
           </div>
         </Prose>
+        
         {
           GISCUS_REPO &&
             <script
@@ -91,7 +132,13 @@ const { Content, headings } = await post.render();
         }
       </article>
     </main>
-    {/* Rest of the file remains the same */}
+    
+    <div class='shrink-0 w-[280px] hidden md:block'>
+      <div class='mb-4'>
+        <AboutTheAuthor />
+      </div>
+      <TableOfContent headings={headings} />
+    </div>
   </div>
 </BaseLayout>
 
