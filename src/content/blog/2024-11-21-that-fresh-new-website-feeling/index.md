@@ -18,7 +18,7 @@ Some of the earliest ones I can remember I built with Freewebs. Which later chan
 
 My early websites featured my projects under the moniker "Lcm Film".
 
-![Lcm Film website](lcmfilmsite.png)
+![Lcm Film website](./lcmfilmsite.png)
 
 Here's one of the final forms of that Freewebs site (which went through a ridiculous number of regenerations... every few months it was "Let's remake the website!").
 
@@ -30,19 +30,19 @@ But if you look closely, my favourite bit is the little "What's going on!?" imag
 
 My websites were actually much more fancy back then. I mean, each of those menu links lights up when you hover over them. And the Library has links to separate pages for each short film I was hosting. Yes, actually hosting. Videos weren't all just hosted on YouTube back then, like they are now (for better and (lately) worse).
 
-![OG Thomas Midena website](thomasmidenaogsite.png)
+![OG Thomas Midena website](./thomasmidenaogsite.png)
 
 This is what it looked like when I was just starting to get into minimalism.
 
 Now I was using my own name, a picture of myself, and starting to base everything about my YouTube Channel. Exciting times.
 
-![Refined Thomas Midena website](thomasmidenarefinedsite.png)
+![Refined Thomas Midena website](./thomasmidenarefinedsite.png)
 
 Later on I had this site. Which again, in hindsight I'm pretty impressed by, and I wonder why I got rid of it. It's pretty elegant for 2016.
 
 I can't take all the credit for this one though. It was created with help from my mate [Drew Collins](http://drewcollins.me/). Who was and I have to assume absolutely still is an absolute legend.
 
-![Thomas Midena website banner](Thomas_websitebanner_v3.png)
+![Thomas Midena website banner](./Thomas_websitebanner_v3.png)
 
 For a little while I had a website that looked like this. Holey moley. We all go through design phases.
 
@@ -50,7 +50,7 @@ Since then and in-between I've had various other sites, hosted with Blogger, Squ
 
 Then the website I've had for the last few years has been a very basic Wordpress page.
 
-![Thomas Midena Wordpress site](thomasmidenawordpresssite.png)
+![Thomas Midena Wordpress site](./thomasmidenawordpresssite.png)
 
 I was determined to go proper minimal with this one. No icons, only a few lines of text, one image.
 
