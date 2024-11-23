@@ -5,85 +5,57 @@ import { marked } from 'marked';
 import { createImageMap } from '../utils/imageMap';
 
 export async function GET(context) {
+  try {
     const posts = await getCollection('blog');
     const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
     const imageMap = await createImageMap();
 
-    return rss({
-        title: SITE_TITLE,
-        description: SITE_DESCRIPTION,
-        site: context.site,
-        items: await Promise.all(
-            posts.map(async (post) => {
-                // Create renderer for post
-                const renderer = new marked.Renderer();
+    console.log('=== RSS GENERATION DIAGNOSTICS ===');
+    console.log('Total Posts:', posts.length);
+    console.log('Site URL:', siteUrl);
+    console.log('Site Title:', SITE_TITLE);
+    console.log('Site Description:', SITE_DESCRIPTION);
 
-                // Handle images
-                renderer.image = (href, title, text) => {
-                    try {
-                        // Handle case where href is an object
-                        const imagePath = typeof href === 'object' ? href.href : href;
-                        if (!imagePath) return '';
+    // Detailed logging for each post
+    const processedPosts = posts.map((post, index) => {
+      console.log(`\nPost ${index + 1} Details:`);
+      console.log('Title:', post.data.title);
+      console.log('Description:', post.data.description);
+      console.log('Pub Date (raw):', post.data.pubDate);
+      console.log('Pub Date Type:', typeof post.data.pubDate);
+      console.log('Pub Date Instance of Date:', post.data.pubDate instanceof Date);
 
-                        // If it's already a full URL, use it as is
-                        if (typeof imagePath === 'string' && imagePath.startsWith('http')) {
-                            return `<img src="${imagePath}" alt="${text || ''}" />`;
-                        }
+      // Explicit date conversion with error handling
+      let pubDate;
+      try {
+        pubDate = post.data.pubDate instanceof Date 
+          ? post.data.pubDate 
+          : new Date(post.data.pubDate);
+        console.log('Converted Pub Date:', pubDate.toISOString());
+      } catch (dateError) {
+        console.error(`Error converting date for post ${index + 1}:`, dateError);
+        pubDate = new Date(); // Fallback to current date
+      }
 
-                        // Get original filename without extension and ./
-                        const originalName = imagePath.replace('./', '').split('.')[0];
-                        
-                        // Look up the hashed version from our map
-                        const hashedPath = imageMap.get(originalName);
-                        if (hashedPath) {
-                            return `<img src="${hashedPath}" alt="${text || ''}" />`;
-                        }
-
-                        // Fallback to original behavior
-                        const cleanPath = typeof imagePath === 'string' ? imagePath.replace('./', '') : '';
-                        return `<img src="${siteUrl}/_astro/${cleanPath}" alt="${text || ''}" />`;
-                    } catch (error) {
-                        console.error('Error processing image:', error, { href, title, text });
-                        return '';
-                    }
-                };
-
-                // Rest of your existing code remains the same
-                const content = marked(post.body, {
-                    renderer,
-                    mangle: false,
-                    headerIds: false
-                });
-
-                // Handle the cover image
-                const coverImageHtml = post.data.coverImage?.src
-                    ? `<img src="${post.data.coverImage.src}" alt="${post.data.title}" />`
-                    : '';
-
-                const fullContent = `
-                    <div class="post-content">
-                        ${coverImageHtml}
-                        ${content}
-                    </div>
-                `;
-
-                return {
-                    link: `${siteUrl}/${post.slug}/`,
-                    title: post.data.title,
-                    description: post.data.description,
-                    pubDate: post.data.pubDate,
-                    content: fullContent,
-                    categories: post.data.tags || [],
-                    author: SITE_TITLE,
-                    customData: post.data.updatedDate
-                        ? `<updated>${post.data.updatedDate.toUTCString()}</updated>`
-                        : ''
-                };
-            })
-        ),
-        customData: `
-            <language>en-us</language>
-            <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-        `
+      return {
+        title: String(post.data.title || 'Untitled Post'),
+        description: String(post.data.description || 'No description'),
+        pubDate: pubDate,
+        link: `${siteUrl}/${post.slug}/`,
+      };
     });
+
+    console.log('\n=== Processed Posts ===');
+    console.log(JSON.stringify(processedPosts, null, 2));
+
+    return rss({
+      title: SITE_TITLE,
+      description: SITE_DESCRIPTION,
+      site: context.site,
+      items: processedPosts,
+    });
+  } catch (error) {
+    console.error('CRITICAL RSS GENERATION ERROR:', error);
+    throw error;
+  }
 }

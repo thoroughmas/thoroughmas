@@ -1,0 +1,1658 @@
+// File: P:\workshop\WEBSITE\thomid.me\src\components\widgets\AboutTheAuthor.astro
+
+---
+import Author from '../Author.astro';
+---
+
+<div
+	class='about-the-author py-4 border-b'
+>
+	<h3 class='font-extrabold uppercase mb-4 text-sm'>About the Author</h3>
+	<Author picSize='md' />
+	<div class='author-desc text-[.825rem] my-4'>
+		<p class='mb-3'>
+			Thomas Midena is a performer and filmmaker based in Adelaide, Australia.</p>
+			<p>Growing up in Darwin, Thomas cultivated a reverence for live theatre, guerilla filmmaking and destructive thunderstorms.</p>
+
+
+</p>
+	</div>
+</div>
+
+
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\widgets\TableOfContent.astro
+
+---
+const { headings, maxLevel = 3 } = Astro.props;
+const toc = buildToc(headings);
+
+function buildToc(headings: any) {
+    const _toc: any = [];
+    const parentHeadings = new Map();
+    (headings || []).forEach((h: any) => {
+        const heading = { ...h, subheadings: [] };
+        parentHeadings.set(heading.depth, heading);
+        if (heading.depth === 2) {
+            _toc.push(heading);
+        } else {
+            if (maxLevel > 2) {
+                parentHeadings.get(heading.depth - 1)?.subheadings?.push(heading);
+            }
+        }
+    });
+    return _toc;
+}
+---
+{toc.length > 0 && (
+    <nav class='toc sticky top-4 py-2 lg:-ml-3'>
+        <h3 class='font-extrabold uppercase mb-1 px-3 text-sm'>On This Page</h3>
+        <ul class='toc-list max-h-[calc(100vh-70px)] overflow-auto text-[.825rem] text-[var(--color-content-secondary)]'>
+		{
+			toc.map((heading: any) => (
+				<li>
+					<a
+						class='block font-bold py-1.5 px-3 border-l border-transparent text-inherit leading-tight text-zinc-700 dark:text-zinc-300'
+						href={'#' + heading.slug}>
+						{heading.text}
+					</a>
+					{heading.subheadings?.length > 0 && (
+						<ul>
+							{heading.subheadings.map((subheading: any) => (
+								<li>
+									<a
+										class='block py-1.5 pl-6 pr-3 border-l border-transparent text-inherit leading-tight text-zinc-700 dark:text-zinc-300'
+										href={'#' + subheading.slug}>
+										{subheading.text}
+									</a>
+								</li>
+							))}
+						</ul>
+					)}
+				</li>
+			))
+		}
+	</ul>
+</nav>
+)}
+<style>
+	.toc-list::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	/* Track */
+	.toc-list::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	/* Handle */
+	.toc-list::-webkit-scrollbar-thumb {
+		background: #eeeeee;
+		border-radius: 5px;
+	}
+  :global(.dark) .toc-list::-webkit-scrollbar-thumb {
+		background: #2e2e2e;
+		border-radius: 5px;
+	}
+</style>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\Author.astro
+
+---
+import { Image } from 'astro:assets';
+import Tommy from '@src/assets/img/tmcolour_1_small.jpg';
+
+type PicSize = 'sm' | 'md' | 'lg';
+interface Props {
+	picSize: PicSize;
+}
+const { picSize } = Astro.props;
+---
+
+<div class='flex gap-4 items-center leading-tight not-prose'>
+	<a
+		href='https://thomid.me/about'
+		target='_blank'
+		rel='noopener noreferrer'
+		class:list={[
+			'rounded-full overflow-hidden shrink-0',
+			{ 'w-12 h-12': picSize === 'sm' },
+			{ 'w-[70px] h-[70px]': picSize === 'md' },
+			{ 'w-[90px] h-[90px]': picSize === 'lg' }
+		]}
+	>
+		<Image src={Tommy} alt='Thomas Midena' />
+	</a>
+	<div>
+		<div>
+			<a
+				href='https://thomid.me/about'
+				class='block font-bold text-inherit hover:text-[var(--link-color)]'
+				target='_blank'
+				rel='noopener noreferrer'
+			>
+				Thomas Midena
+			</a>
+		</div>
+		<small class='avatar__subtitle'></small>
+	</div>
+</div>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\FormattedDate.astro
+
+---
+interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<time datetime={date.toISOString()}>
+	{
+		date.toLocaleDateString('en-us', {
+			year: 'numeric',
+			month: 'short',
+			day: '2-digit',
+			timeZone: 'Australia/Adelaide', // Set to Adelaide time zone
+		})
+	}
+</time>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\PostItem.astro
+
+---
+import { slugifyTag } from '../utils/formatTags';
+import FormattedDate from './FormattedDate.astro';
+import type { CollectionEntry } from 'astro:content';
+type BlogPost = CollectionEntry<'blog'>;
+const { post }: Record<string, any> | { post: BlogPost } = Astro.props
+---
+<div class='flex flex-col sm:flex-row gap-2 sm:items-center border-b py-2 mb-1 dark:border-b-zinc-700'>        
+    <div class='text-zinc-700 text-sm w-24 dark:text-zinc-300 shrink-0'>
+        <FormattedDate date={post.data.pubDate} />
+    </div>
+    <h3 class='font-medium grow'>
+        <a href={`/${post.slug}/`}>
+            {post.data.title}
+        </a>
+    </h3>
+    <div class='flex gap-2 shrink-0'>
+        {
+            (post.data.tags || [])?.map((tag: string) => (
+                <a
+                    class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                    text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                    transition-all duration-700
+                    hover:border-zinc-700 dark:hover:border-zinc-300'
+                    href={`/tags/${slugifyTag(tag)}`}>
+                    {tag} {/* Tag is already formatted by the schema transform */}
+                </a>
+            ))
+        }
+    </div>
+</div>
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\PostsByYear.astro
+
+---
+import type { CollectionEntry } from 'astro:content';
+import PostItem from './PostItem.astro';
+
+type BlogPost = CollectionEntry<'blog'>;
+const { posts } = Astro.props;
+
+function groupPostsByYear(posts: BlogPost[]) {
+  const grouped = posts.reduce((acc, post) => {
+    const year = post.data.pubDate.getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(post);
+    return acc;
+  }, {} as Record<number, BlogPost[]>);
+
+  return Object.entries(grouped)
+    .sort(([a], [b]) => Number(b) - Number(a))
+    .map(([year, posts]) => ({
+      year: Number(year),
+      posts: posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()),
+    }));
+}
+
+const groupedPosts = groupPostsByYear(posts);
+
+
+---
+
+{groupedPosts.map(({ year, posts }) => (
+  <div class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">{year}</h2>
+    <div>
+      {posts.map((post: BlogPost, i: number) => (
+        <PostItem post={post} />
+      ))}
+    </div>
+  </div>
+))}
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\ProjectList.astro
+
+---
+import { Image } from 'astro:assets';
+import type { Project } from '../pages/projects/projects'
+const { projects } = Astro.props
+---
+<div class="grid grid-cols-12 gap-5">
+  {
+    projects.map((project: Project) =>
+      <div class="col-span-12 sm:col-span-6 lg:col-span-4 border dark:border-zinc-700 rounded-xl shadow-sm p-5">
+        {/* Title at the top */}
+        <h3 class="font-semibold mb-4 w-full">
+          <a class="underline" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>{project.name}</a>
+        </h3>
+
+        <div class="flex gap-4 mb-4">
+          {/* Left side - Image */}
+          {project.image && (
+            <div class="w-1/3">
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={200}
+                height={200}
+                class="rounded-lg object-cover w-full"
+              />
+            </div>
+          )}
+
+          {/* Right side - Description */}
+          <div class="flex-1">
+            <p class="text-zinc-600 dark:text-zinc-300">{project.description}</p>
+          </div>
+        </div>
+
+        {/* Bottom row */}
+        <div class="flex justify-between items-end mt-auto">
+          {/* Tags on bottom left */}
+          {(project.tags || [])?.length > 0 && (
+            <div class='flex gap-2 flex-wrap'>
+              {project.tags?.map((tag: string) => (
+                <span class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                  text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                  transition-all duration-700
+                  hover:border-zinc-700 dark:hover:border-zinc-300'>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Links on bottom right */}
+          <div class="flex gap-3">
+            {project.postLink && (
+              <a class="underline flex items-center gap-2" href={project.postLink}>
+                Article
+              </a>
+            )}
+            {project.demoLink && (
+  <a class="underline flex items-center gap-2" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>
+    {project.linkType ? project.linkType : 'Demo'}  {/* Update this line */}
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>
+)}
+          </div>
+        </div>
+      </div>
+    )
+  }
+</div>
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\components\Prose.astro
+
+---
+
+---
+
+<div
+	class='prose dark:prose-invert
+  prose-h1:font-[900] prose-h1:my-4 prose-h1:text-2xl sm:prose-h1:text-[2rem]/[1.3]
+  prose-h2:mt-6 prose-h2:mb-3 prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:font-extrabold
+  prose-h3:mt-5 prose-h3:mb-2 prose-h3:text-xl sm:prose-h3:text-2xl
+  prose-h4:mt-3 prose-h4:mb-0 prose-img:rounded-xl prose-h3:target:pt-20'
+>
+	<slot />
+</div>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\content\config.ts
+
+import { defineCollection, z } from 'astro:content';
+import { formatTag } from '../utils/formatTags'; 
+
+const blog = defineCollection({
+    type: 'content',
+    schema: ({ image }) => z.object({
+        title: z.string(),
+        seoTitle: z.string().optional(),
+        description: z.string(),
+        pubDate: z.coerce.date(),
+        updatedDate: z.coerce.date().optional(),
+        tags: z.array(z.string())
+            .optional()
+            .transform(tags => tags?.map(formatTag)), // Transform tags here
+        coverImage: image()
+            .refine((img) => img.width >= 960, {
+                message: 'Cover image must be at least 960 pixels wide!'
+            })
+            .optional()
+    }),
+});
+
+export const collections = { blog };
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\BaseHead.astro
+
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import '../../styles/global.css';
+import Favicon from '@src/assets/img/favicon.ico';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string; // Optional image prop
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Set a default image URL if not provided
+const { title, description, image = '/tm_circleheader_1.png' } = Astro.props; // Ensure this is the correct path to your default image
+---
+
+<!-- Global Metadata -->
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width,initial-scale=1' />
+<link rel='icon' href={Favicon} />
+<meta name='generator' content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel='canonical' href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name='title' content={title} />
+<meta name='description' content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property='og:type' content='website' />
+<meta property='og:url' content={Astro.url} />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={new URL(image, Astro.url)} /> <!-- This will create the full URL -->
+
+<!-- Twitter -->
+<meta property='twitter:card' content='summary_large_image' />
+<meta property='twitter:url' content={Astro.url} />
+<meta property='twitter:title' content={title} />
+<meta property='twitter:description' content={description} />
+<meta property='twitter:image' content={new URL(image, Astro.url)} /> <!-- This will create the full URL -->
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\Footer.astro
+
+---
+const today = new Date();
+---
+
+<footer class='container mt-8'>
+  <div class="justify-center flex gap-4 py-8 prose dark:prose-invert text-sm">
+    <a href="mailto:thomas@thomid.me">Contact Me</a>
+    <a href="https://thomid.me/rss.xml">RSS</a>
+  </div>
+
+	<div class='py-4 border-t dark:border-t-zinc-700'>
+    <div class="md:flex text-sm text-zinc-500 dark:text-zinc-300 prose dark:prose-invert justify-between">
+      <div>Copyright © {today.getFullYear()} Thomas.</div>
+      <!-- Please leave the credit if you dont make a significant changes to the template. It's just a nofollow link :)  -->
+      <div>Template created by <a href="https://devaradise.com/" target="_blank" rel="nofollow noopener">Syakir @ Devaradise</a></div>      
+    </div>
+	</div>
+</footer>
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\Header.astro
+
+---
+import HeaderLink from './HeaderLink.astro';
+import { Image } from 'astro:assets';
+import TommyLogo from '@src/assets/img/tmcolour_1_small.jpg';
+import GithubWhite from '@src/assets/img/github-mark-white.svg';
+import GithubBlack from '@src/assets/img/github-mark.svg';
+
+
+const menu = [
+  {
+		link: '/about/',
+		label: 'About'
+	},
+	{
+		link: '/posts/',
+		label: 'Posts'
+	},
+	{
+		link: '/projects/',
+		label: 'Projects'
+	},
+	{
+		link: '/tags/',
+		label: 'Tags'
+	},
+];
+---
+
+<header
+  id='site-header'
+  class:list={[
+    'flex items-center w-full transition duration-300 z-[999] border-[var(--soft-border-color)]'
+  ]}
+>
+  <div class='container'>
+    <nav class='flex gap-4 items-center justify-between py-3'>
+      <h2 class='m-0'>
+        <a href='/' class='flex gap-4 items-center text-xl font-black uppercase'>
+          <Image src={TommyLogo} alt='Your site name' class="rounded-full w-11 border-white border-2 shadow-lg"/> 
+        </a>
+      </h2>
+      <div class='flex'>
+        <button class='p-3' id='themeToggle' aria-label='Theme mode'>
+          <svg
+            class='sun'
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            class='lucide lucide-sun'
+            ><circle cx='12' cy='12' r='4'></circle><path d='M12 2v2'></path><path d='M12 20v2'></path><path d='m4.93 4.93 1.41 1.41'
+            ></path><path d='m17.66 17.66 1.41 1.41'></path><path d='M2 12h2'></path><path d='M20 12h2'></path><path
+              d='m6.34 17.66-1.41 1.41'></path><path d='m19.07 4.93-1.41 1.41'></path></svg
+          >
+          <svg
+            class='moon'
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            class='lucide lucide-moon'
+          >
+            <path d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'></path></svg
+          >
+        </button>
+      </div>
+    </nav>
+    <div class='fixed top-3 w-auto max-w-full px-3 left-1/2 -translate-x-1/2 z-[999]'>
+      <div class="flex px-2.5 bg-white/90 dark:bg-zinc-900/75 backdrop-blur-md leading-tight rounded-full border dark:border-zinc-700">
+        <div class="px-2.5 text-sm">
+          <HeaderLink class="py-3 flex items-center" href="/" aria-label="Home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          </HeaderLink>
+        </div>
+        {
+          menu.map((item) => (
+            <div class='px-2.5 text-sm'>
+              <HeaderLink class="py-3 flex items-center" href={item.link}>
+                {item.label}
+              </HeaderLink>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <style is:global>
+    #themeToggle .moon {
+      display: none;
+    }
+    .dark #themeToggle .sun {
+      display: none;
+    }
+    .dark #themeToggle .moon {
+      display: block;
+    }
+  </style>
+
+  <script is:inline>
+    // Set the initial theme to 'dark'
+    let theme = 'dark';
+
+    // Check if the user has a previously saved theme preference
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      theme = localStorage.getItem('theme');
+    }
+
+    // Apply the initial theme
+    if (theme === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+
+    window.localStorage.setItem('theme', theme || '');
+
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    const handleToggleClick = () => {
+      const element = document.documentElement;
+      element.classList.toggle('dark');
+
+      const isDark = element.classList.contains('dark');
+      if (isDark) {
+        sendMessage({
+          setConfig: {
+            theme: 'dark_dimmed'
+          }
+        });
+      } else {
+        sendMessage({
+          setConfig: {
+            theme: 'light'
+          }
+        });
+      }
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    };
+    document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
+  </script>
+</header>
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\HeaderLink.astro
+
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, class: className, ...props } = Astro.props;
+
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^\/]+/g);
+const isActive = href === pathname || href === '/' + subpath?.[0];
+---
+
+<a
+	href={href}
+	class:list={[className, { 'border-b border-zinc-500 dark:border-zinc-300': isActive }, { 'text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50': !isActive }, { 'text-zinc-950 dark:text-zinc-50': isActive }]}
+	{...props}
+>
+	<slot />
+</a>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\layouts\BaseLayout.astro
+
+---
+import BaseHead from './components/BaseHead.astro';
+import Header from './components/Header.astro';
+import Footer from './components/Footer.astro';
+import { loadEnv } from 'vite';
+
+const { GTAG_MEASUREMENT_ID } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
+const { title, description, image } = Astro.props;
+---
+
+<!doctype html>
+<html 
+  lang='en' 
+  prefix="og: https://ogp.me/ns#"
+>
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+    
+    {/* Open Graph metadata */}
+    <meta property="og:type" content="website" />
+    {image && <meta property="og:image" content={image} />}
+  </head>
+  
+  <body 
+    class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0"
+    itemscope 
+    itemtype="https://schema.org/WebPage"
+  >
+    <Header />
+    <div 
+      class='py-8 min-h-[calc(100vh-160px)]' 
+      itemprop="mainContentOfPage"
+    >
+      <slot />
+    </div>
+    <Footer />
+    
+    <!-- Google tag (gtag.js) -->
+    {
+      GTAG_MEASUREMENT_ID && (
+        <>
+          <script type='text/partytown' async src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_MEASUREMENT_ID}`}></script>
+          <script type='text/partytown' define:vars={{ GTAG_MEASUREMENT_ID }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', GTAG_MEASUREMENT_ID);
+          </script>
+        </>
+      )
+    }
+  </body>
+</html>
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\posts\index.astro
+
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostsByYear from '../../components/PostsByYear.astro';
+
+type BlogPost = CollectionEntry<'blog'>;
+const title = 'All posts'
+const description = "Everything I've been thinking about."
+
+const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+>
+  <div class='container'>
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+      <p class="text-zinc-700 dark:text-zinc-300 text-lg">{description}</p>
+    </div>
+    <PostsByYear posts={posts}/>
+  </div>
+</BaseLayout>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\projects\index.astro
+
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { projects } from './projects';
+
+---
+
+<BaseLayout
+	title="Projects"
+	description="A collection of my recent projects."
+>
+  <div class='container'>
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">All My Projects</h1>
+      <p class="text-zinc-700 dark:text-zinc-300 text-lg">A collection of my key projects.</p>
+    </div>
+    <ProjectList projects={projects}/>
+  </div>
+</BaseLayout>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\projects\projects.ts
+
+import { getRepositoryDetails } from "../../utils";
+import Community101 from '@src/assets/img/projects/community101.webp';
+import Thoroughmas from '@src/assets/img/projects/tmyoutubeicon_1.jpg';
+import ThirtyNineSteps from '@src/assets/img/projects/tm39steps_1.jpg';
+import AbsurdityUnit from '@src/assets/img/projects/absurdityunit_1.webp';
+import FairPunishment from '@src/assets/img/projects/fairpunishment_1.jpg';
+import Fiasco from '@src/assets/img/projects/fiascohero_1.png';
+import BTN from '@src/assets/img/projects/tmbtnnews_1.jpg';
+import Blog from '@src/assets/img/projects/tmmirrorselfie_1.jpg';
+import MutantReviewers from '@src/assets/img/projects/heartbeeps.jpg';
+
+export interface Project {
+  name: string;
+  demoLink: string;
+  tags?: string[],
+  description?: string;
+  postLink?: string;
+  demoLinkRel?: string;
+  image?: ImageMetadata;
+  linkType: string;
+  [key: string]: any;
+}
+
+export const projects: Project[] = [
+  {
+    name: 'Thoroughmas',
+    description: 'My personal YouTube Channel, covering all manner of technology and entertainment.',
+    demoLink: 'https://www.youtube.com/@Thoroughmas',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'YouTube',
+    image: Thoroughmas,
+    tags: ['Videos']
+  },
+  {
+    name: 'Community Rewatching 101',
+    description: "I'm a co-host of this lighthearted rewatch podcast for the 2009 sitcom, Community.",
+    demoLink: 'https://open.spotify.com/show/7JTEGXQ1R2NzhASvKikxtT',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'Spotify',
+    image: Community101,
+    tags: ['Podcast']
+  },
+  {
+    name: 'Fair Punishment',
+    description: "I'll be performing in this gothic mask show in Darwin, May 2025.",
+    demoLink: 'https://brownsmart.com.au/fair-punishment/',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: "Brown's Mart",
+    image: FairPunishment,
+    tags: ['Theatre']
+  },
+  {
+    name: 'Behind The News',
+    description: "Check out my latest children's news story for the ABC's eternally fantastic BTN.",
+    demoLink: 'https://www.abc.net.au/btn/high/the-rise-of-misinformation/104504042',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'ABC',
+    image: BTN,
+    tags: ['Video', 'News']
+  },
+  {
+    name: 'Mutant Reviewers',
+    description: "I'm an irregular (in every sense) writer on this long-standing cult movie site.",
+    demoLink: 'https://mutantreviewersmovies.com/category/reviewer/thomas/',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'Website',
+    image: MutantReviewers,
+    tags: ['Articles']
+  },
+  {
+    name: 'The 39 Steps',
+    description: "I performed in this romping hoot at Adelaide's Little Theatre, Oct-Nov 2024.",
+    demoLink: 'https://t39s.au/',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'Theatre Guild',
+    image: ThirtyNineSteps,
+    tags: ['Theatre']
+  },
+  {
+    name: 'Fiasco',
+    description: "The world is literally ending at a high school concert in this short film I directed in 2023.",
+    demoLink: 'https://youtu.be/9F275JVjU4E',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'YouTube',
+    image: Fiasco,
+    tags: ['Video', 'Short Film']
+  },
+  {
+    name: 'Absurdity Unit',
+    description: "A short fictional podcast about patients in a hospital with kinda annoying superpowers.",
+    demoLink: 'https://pca.st/3pwltsia',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: 'Pocket Casts',
+    image: AbsurdityUnit,
+    tags: ['Podcast', 'Storytelling']
+  },
+  {
+    name: 'Blog',
+    description: "My personal blog. Yeah, that's right, the one here on this website!",
+    demoLink: 'https://thomid.me/posts/',
+    linkType: 'Read',
+    image: Blog,
+    tags: ['Writing', 'Learning']
+  },
+]
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\tags\[tag]\index.astro
+
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@src/layouts/BaseLayout.astro';
+import { slugify, unslugify } from '@src/utils';
+import PostsByYear from '@src/components/PostsByYear.astro';
+
+type BlogPost = CollectionEntry<'blog'>;
+export const getStaticPaths = async () => {
+	const allPosts: BlogPost[] = await getCollection('blog');
+	return [
+		...new Set(
+			allPosts
+				.map((post) => post.data.tags)
+				.flat()
+				.filter((tag) => !!tag)
+		)
+	].map((tag) => ({ params: { tag: slugify(tag || '') } }));
+};
+
+const { tag } = Astro.params;
+const allPosts: BlogPost[] = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const taggedPosts = allPosts.filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
+const title = `All Posts Tagged with ${unslugify(tag || '')}`;
+const description = `All Posts Tagged with ${unslugify(tag || '')}`;
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+>
+  <div class='container'>
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+    </div>
+    <PostsByYear posts={taggedPosts}/>
+  </div>
+</BaseLayout>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\tags\index.astro
+
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@src/layouts/BaseLayout.astro';
+import { slugify } from '@src/utils';
+
+type BlogPost = CollectionEntry<'blog'>;
+interface Tag {
+	value: string;
+	label: string;
+	postCount: number;
+}
+
+function groupTagsByFirstLetter(tags: Tag[]) {
+  const grouped = tags.reduce((acc, tag) => {
+    const firstLetter = tag.label[0].toUpperCase();
+    if (!acc[firstLetter]) {
+      acc[firstLetter] = [];
+    }
+    acc[firstLetter].push(tag);
+    return acc;
+  }, {} as Record<string, Tag[]>);
+
+  return Object.entries(grouped)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([letter, tags]) => ({
+      letter,
+      tags: tags.sort((a, b) => a.label.localeCompare(b.label)),
+    }));
+}
+
+const allPosts: BlogPost[] = await getCollection('blog');
+const mappedTags: { [key: string]: Tag } = {};
+for (const post of allPosts) {
+	for (const tag of post.data?.tags || []) {
+		const tagValue = slugify(tag);
+		if (mappedTags[tagValue]) {
+			mappedTags[tagValue].postCount += 1;
+		} else {
+			const _tag: Tag = {
+				value: tagValue,
+				label: tag,
+				postCount: 1
+			};
+			mappedTags[tagValue] = _tag;
+		}
+	}
+}
+const groupedTags  = groupTagsByFirstLetter(Object.values(mappedTags))
+const title = `All Tags`;
+const description = 'Find a blog post by its topic or category'
+---
+
+<BaseLayout title={title} description={description}>
+	<div class='container'>
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+      <p class="text-zinc-700 dark:text-zinc-300 text-lg">{description}</p>
+    </div>
+    <div>
+      {groupedTags.map(({ letter, tags }) => (
+        <div class="flex gap-2 border-b dark:border-b-zinc-700 py-3 mb-5 capitalize">
+          <h2 class="text-2xl font-bold text-zinc-800 dark:text-zinc-200 w-7 shrink-0">{letter}</h2>
+          <div class='flex gap-2 flex-wrap'>
+            {
+              (tags || [] )?.map((tag: Tag) => (
+                <a
+                  class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                    text-sm text-zinc-700 dark:text-zinc-300 no-underline px-3 py-1
+                    transition-all duration-700
+                  hover:border-zinc-700 dark:hover:border-zinc-300'
+                  href={`/tags/${slugify(tag.value)}/`}>
+                  {tag.label} ({tag.postCount})
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      ))}
+    </div>
+	</div>
+</BaseLayout>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\[...slug].astro
+
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Prose from '../components/Prose.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import FormattedDate from '../components/FormattedDate.astro';
+import AboutTheAuthor from '../components/widgets/AboutTheAuthor.astro';
+import TableOfContent from '../components/widgets/TableOfContent.astro';
+import { slugify } from '../utils';
+import { loadEnv } from 'vite';
+
+const { GISCUS_REPO, GISCUS_REPO_ID, GISCUS_CATEGORY, GISCUS_CATEGORY_ID } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post: any) => ({
+    params: { slug: post.slug },
+    props: post
+  }));
+}
+type Props = CollectionEntry<'blog'>;
+const post = Astro.props;
+const {
+  data: { title, seoTitle, description, coverImage, pubDate, updatedDate, tags }
+} = post;
+const { Content, headings } = await post.render();
+---
+
+<BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>
+  <div class='container lg:flex gap-10'>
+    <main class='overflow-hidden grow'>
+      <article 
+        class="h-entry" 
+        itemscope 
+        itemtype="http://schema.org/BlogPosting"
+      >
+        <Prose>
+          <div>
+            <h1 
+              class='!my-1 leading-tight p-name' 
+              itemprop="headline"
+            >
+              {title}
+            </h1>
+            <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
+              <div class='flex gap-2'>
+                {
+                  (tags || [])?.map((tag: string) => (
+                    <a
+                      class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                        text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                        transition-all duration-700
+                      hover:border-zinc-700 dark:hover:border-zinc-300'
+                      href={`/tags/${slugify(tag)}`}
+                      itemprop="keywords"
+                    >
+                      {tag}
+                    </a>
+                  ))
+                }
+              </div>
+              <div>
+                <time 
+                  class="dt-published" 
+                  datetime={pubDate.toISOString()} 
+                  itemprop="datePublished"
+                >
+                  {
+                    updatedDate ?
+                      <>Updated on <strong><FormattedDate date={updatedDate} /></strong></>
+                    :
+                      <>Published on <strong><FormattedDate date={pubDate} /></strong></>
+                  }
+                </time>
+                
+                {updatedDate && (
+                  <time 
+                    class="dt-updated" 
+                    datetime={updatedDate.toISOString()} 
+                    itemprop="dateModified"
+                    style="display:none;"
+                  >
+                    {updatedDate.toISOString()}
+                  </time>
+                )}
+              </div>
+            </div>
+          </div>
+          <div class='py-3 overflow-hidden'>
+            {coverImage && (
+              <Image 
+                class='rounded-3xl w-full m-0 lg:mb-2' 
+                src={coverImage} 
+                alt={title} 
+                loading='eager' 
+                itemprop="image"
+              />
+            )}
+          </div>
+          <div 
+            class="e-content" 
+            itemprop="articleBody"
+          >
+            <Content />
+          </div>
+        </Prose>
+        
+        {
+          GISCUS_REPO &&
+            <script
+              id='giscus-script'
+              is:inline
+              src='https://giscus.app/client.js'
+              data-repo={GISCUS_REPO}
+              data-repo-id={GISCUS_REPO_ID}
+              data-category={GISCUS_CATEGORY}
+              data-category-id={GISCUS_CATEGORY_ID}
+              data-mapping='pathname'
+              data-strict='0'
+              data-reactions-enabled='1'
+              data-emit-metadata='0'
+              data-input-position='bottom'
+              data-theme='preferred_color_scheme'
+              data-lang='en'
+              crossorigin='anonymous'
+              async></script>
+        }
+      </article>
+    </main>
+    
+    <div class='shrink-0 w-[280px] hidden md:block'>
+      <div class='mb-4'>
+        <AboutTheAuthor />
+      </div>
+      <TableOfContent headings={headings} />
+    </div>
+  </div>
+</BaseLayout>
+
+<script async is:inline>
+	const anchors = document.querySelectorAll('.prose h2[id], .prose h3[id]');
+	const links = document.querySelectorAll('nav.toc ul li a');
+
+	function observeToc() {
+		if (typeof anchors != 'undefined' && anchors != null && typeof links != 'undefined' && links != null) {
+			let scrollTop = window.scrollY;
+
+			// highlight the last scrolled-to: set everything inactive first
+			for (const link of links) {
+				link.classList.add('border-transparent', 'text-inherit');
+				link.classList.remove('bg-[var(--background-surface-color)]', 'border-[var(--soft-border-color)]', 'text-[var(--link-color)]');
+			}
+			// then iterate backwards, on the first match highlight it and break
+			for (var i = anchors.length - 1; i >= 0; i--) {
+				if (scrollTop > anchors[i].offsetTop - 80) {
+					links[i].classList.remove('border-transparent', 'text-inherit');
+					links[i].classList.add('bg-[var(--background-surface-color)]', 'border-[var(--soft-border-color)]', 'text-[var(--link-color)]');
+					break;
+				}
+			}
+		}
+	}
+
+	window.addEventListener('scroll', (event) => {
+		observeToc(event);
+	});
+	window.addEventListener('hashchange', (event) => {
+		observeToc(event);
+	});
+</script>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\404.astro
+
+---
+import { Image } from 'astro:assets';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NotFoundImage from '@src/assets/img/404-not-found.png';
+---
+
+<BaseLayout title={'404 Page Not Found - ' + SITE_TITLE} description={SITE_DESCRIPTION + ' 404 Page Not Found'}>
+	<div class='container text-center'>
+		<Image width={300} class='my-8 mx-auto' src={NotFoundImage} alt='404 Page Not Found' />
+		<div class='p-4'>
+			<h1 class='text-5xl font-bold my-4'>Page Not Found</h1>
+			<p class='text-xl'>
+				The page you're looking for is either moved or no longer exists. <br />
+				Please contact the site owner that linked you to the original URL and let them know their link is broken.
+			</p>
+		</div>
+	</div>
+</BaseLayout>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\about.astro
+
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TommyWheel from '@src/assets/img/tmwheel_1.jpg';
+import Prose from '../components/Prose.astro';
+
+---
+
+<BaseLayout
+	title="About Me"
+	description="Lorem ipsum dolor sit amet"
+>
+  <div class='container'>
+		<main class='prose text-lg dark:prose-invert'>
+      <article>
+        <div class='w-full md:flex md:items-center gap-16 mb-10'>
+          <div class="text-pretty leading-9">
+            <h1 class="text-4xl font-bold mb-4">What manner of man is this? </h1>
+            <Prose>
+              <div class="text-lg">
+                <p>Thomas Midena is a performer and filmmaker based in Adelaide, Australia.</p>
+                <p>Growing up in Darwin, Thomas cultivated a reverence for live theatre, guerilla filmmaking and destructive thunderstorms.</p>    
+              </div>
+            </Prose>
+          </div>
+          <Image src={TommyWheel} alt="Thomas Midena" width={300}  class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
+        </div>     
+        <div>
+          <p>
+            Full bio temporarily awol.
+          </p>
+        </div>
+        </article>
+      </article>
+    </main>
+  </div>
+</BaseLayout>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\index.astro
+
+---
+import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Tommy from '@src/assets/img/tmcolour_1.jpg';
+import Prose from '../components/Prose.astro';
+import { projects } from './projects/projects';
+import ProjectList from '../components/ProjectList.astro'
+import PostItem from '../components/PostItem.astro';
+
+type BlogPost = CollectionEntry<'blog'>;
+
+const top6Projects = projects.slice(0, 6);
+const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
+---
+
+<BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
+  <div class='container'>
+    <div class='w-full md:flex md:items-center gap-16 mb-10'>
+      <div class="flex flex-col md:flex-1">
+        <div class="text-pretty leading-9">
+          <h1 class="text-5xl font-bold mb-4 custom-name-title">Thomas Midena</h1>
+          <Prose>
+            <div class="text-lg">
+              <p>I'm big into storytelling, technology, and technology-driven storytelling.</p>
+              <p>This website is a portal to all my online activities.</p>
+            </div>
+          </Prose>
+        </div>
+        <div class="social-icons mt-4 mb-8 md:mb-0">
+          <a href="https://youtube.com/@thoroughmas" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/youtube_1.svg" alt="YouTube" title="YouTube"/>
+          </a>
+          <a href="https://instagram.com/thoroughmas" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/instagram_1.svg" alt="Instagram" title="Instagram"/>
+          </a>
+          <a href="https://bsky.app/profile/thomid.me" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/bluesky_1.svg" alt="Bluesky" title="Bluesky"/>
+          </a>
+          <a href="https://twitter.com/thoroughmas" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/twitter_1.svg" alt="Twitter" title="Twitter"/>
+          </a>
+          <a href="https://thomid.me/rss.xml" target="_blank" rel="noopener noreferrer" style="transform: scale(1.3);">
+            <img src="/icons/rss_1.svg" alt="RSS" title="RSS"/>
+          </a>
+        </div>
+      </div>
+      <div class="md:flex-shrink-0">
+        <Image 
+          src={Tommy} 
+          alt="Thomas Midena" 
+          width={300} 
+          quality={100} 
+          format="jpg" 
+          loading="eager" 
+          class="rounded-3xl rotate-3 mx-auto md:mx-0"
+        />
+      </div>
+    </div>
+		<main>
+      <div class='mt-6 mb-12'>
+        <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700">
+          <h2 class="text-lg font-bold mb-3">Recent Blog Posts</h2>
+          <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">All posts &raquo;</a>
+        </div>
+        <div>
+          {
+            posts.map((post: BlogPost) => (
+              <PostItem post={post} />
+            ))
+          }      
+        </div>
+        <div class="text-right">
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between gap-2 mb-1">
+          <h2 class="text-lg font-bold mb-3">Active Projects</h2>
+          <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">All projects &raquo;</a>
+        </div>
+        <ProjectList projects={top6Projects}/>
+      </div>
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .social-icons {
+      justify-content: flex-start;
+    }
+  }
+  
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover img {
+    transform: scale(1.1);
+  }
+  </style>
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\pages\rss.xml.js
+
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { marked } from 'marked';
+import { createImageMap } from '../utils/imageMap';
+
+export async function GET(context) {
+    const posts = await getCollection('blog');
+    const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
+    const imageMap = await createImageMap();
+
+    return rss({
+        title: SITE_TITLE,
+        description: SITE_DESCRIPTION,
+        site: context.site,
+        items: await Promise.all(
+            posts.map(async (post) => {
+                // Create renderer for post
+                const renderer = new marked.Renderer();
+
+                // Handle images
+                renderer.image = (href, title, text) => {
+                    try {
+                        // Handle case where href is an object
+                        const imagePath = typeof href === 'object' ? href.href : href;
+                        if (!imagePath) return '';
+
+                        // If it's already a full URL, use it as is
+                        if (typeof imagePath === 'string' && imagePath.startsWith('http')) {
+                            return `<img src="${imagePath}" alt="${text || ''}" />`;
+                        }
+
+                        // Get original filename without extension and ./
+                        const originalName = imagePath.replace('./', '').split('.')[0];
+                        
+                        // Look up the hashed version from our map
+                        const hashedPath = imageMap.get(originalName);
+                        if (hashedPath) {
+                            return `<img src="${hashedPath}" alt="${text || ''}" />`;
+                        }
+
+                        // Fallback to original behavior
+                        const cleanPath = typeof imagePath === 'string' ? imagePath.replace('./', '') : '';
+                        return `<img src="${siteUrl}/_astro/${cleanPath}" alt="${text || ''}" />`;
+                    } catch (error) {
+                        console.error('Error processing image:', error, { href, title, text });
+                        return '';
+                    }
+                };
+
+                // Rest of your existing code remains the same
+                const content = marked(post.body, {
+                    renderer,
+                    mangle: false,
+                    headerIds: false
+                });
+
+                // Handle the cover image
+                const coverImageHtml = post.data.coverImage?.src
+                    ? `<img src="${post.data.coverImage.src}" alt="${post.data.title}" />`
+                    : '';
+
+                const fullContent = `
+                    <div class="post-content">
+                        ${coverImageHtml}
+                        ${content}
+                    </div>
+                `;
+
+                return {
+                    link: `${siteUrl}/${post.slug}/`,
+                    title: post.data.title,
+                    description: post.data.description,
+                    pubDate: post.data.pubDate,
+                    content: fullContent,
+                    categories: post.data.tags || [],
+                    author: SITE_TITLE,
+                    customData: post.data.updatedDate
+                        ? `<updated>${post.data.updatedDate.toUTCString()}</updated>`
+                        : ''
+                };
+            })
+        ),
+        customData: `
+            <language>en-us</language>
+            <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+        `
+    });
+}
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\styles\global.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+	pre,
+	code {
+		font-size: 0.875rem;
+	}
+}
+
+/* Default styling for icons */
+.social-icons img {
+	filter: none; /* Default for light mode */
+	transition: filter 0.3s ease; /* Smooth transition when toggling themes */
+  }
+  
+  /* Adjust icons for dark mode */
+  html.dark .social-icons img {
+	filter: invert(1) brightness(2); /* Makes icons white in dark mode */
+  }
+  
+
+  @font-face {
+    font-family: 'WFK1_honeymushroom';
+    src: url('/fonts/webfontkit1/honey_mushroom-webfont.woff2') format('woff2'),
+         url('/fonts/webfontkit1/honey_mushroom-webfont.woff') format('woff'),
+         url('/fonts/webfontkit1/Honey_Mushroom.ttf') format('truetype');
+}
+
+.custom-name-title {
+    font-family: 'WFK1_honeymushroom', sans-serif;
+}
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\utils\formatTags.ts
+
+export function formatTag(tag: string): string {
+    return tag.replace(/_/g, ' ');
+  }
+  
+  export function slugifyTag(tag: string): string {
+    return tag.toLowerCase().replace(/\s+/g, '-');
+  }
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\utils\imageMap.ts
+
+import { getCollection } from 'astro:content';
+
+export async function createImageMap() {
+  const imageMap = new Map();
+  
+  try {
+    const posts = await getCollection('blog');
+    
+    for (const post of posts) {
+      // Get all images from the post's folder
+      const images = import.meta.glob('/src/content/blog/**/*.{png,jpg,jpeg,gif,webp}', {
+        eager: true,
+        import: 'default'
+      });
+
+      // Create mappings for each image
+      Object.entries(images).forEach(([path, imageModule]: [string, any]) => {
+        if (path.includes(post.slug)) {
+          const originalName = path.split('/').pop()?.split('.')[0];
+          const hashedSrc = imageModule.src;
+          if (originalName) {
+            imageMap.set(originalName, hashedSrc);
+          }
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error creating image map:', error);
+  }
+
+  return imageMap;
+}
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\autoNewTabExternalLinks.ts
+
+import type { RehypePlugin } from '@astrojs/markdown-remark';
+import { visit } from 'unist-util-visit';
+
+interface Options {
+	domain: string;
+}
+
+export const autoNewTabExternalLinks: RehypePlugin = (options?: Options) => {
+	const siteDomain = options?.domain ?? '';
+
+	return (tree: unknown) => {
+		visit(tree, (node: any) => {
+			if (node.type != 'element') {
+				return;
+			}
+
+			const element = node;
+
+			if (!isAnchor(element)) {
+				return;
+			}
+
+			const url = getUrl(element);
+
+			if (isExternal(url, siteDomain)) {
+				element.properties!['target'] = '_blank';
+				element.properties!['rel'] = 'noopener';
+			}
+		});
+	};
+};
+
+const isAnchor = (element: any) => element.tagName == 'a' && element.properties && 'href' in element.properties;
+
+const getUrl = (element: any) => {
+	if (!element.properties) {
+		return '';
+	}
+
+	const url = element.properties['href'];
+
+	if (!url) {
+		return '';
+	}
+
+	return url.toString();
+};
+
+const isExternal = (url: string, domain: string) => {
+	return url.startsWith('http') && !url.includes(domain);
+};
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\consts.ts
+
+// Place any global data in this file.
+// You can import this data from anywhere in your site by using the `import` keyword.
+
+export const SITE_TITLE = 'Thomas Midena';
+export const SITE_TAGLINE = 'Generally genuinely enthusiastic'; // site tagline
+export const SITE_DESCRIPTION = 'Generally genuinely enthusiastic'; // site meta description for SEO
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\env.d.ts
+
+/// <reference path="../.astro/types.d.ts" />
+
+
+
+
+// File: P:\workshop\WEBSITE\thomid.me\src\utils.ts
+
+import { loadEnv } from 'vite';
+
+const { GITHUB_PERSONAL_ACCESS_TOKEN } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
+
+export const slugify = (input: string) => {
+	if (!input) return '';
+
+	// make lower case and trim
+	var slug = input.toLowerCase().trim();
+
+	// remove accents from charaters
+	slug = slug.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+	// replace invalid chars with spaces
+	slug = slug.replace(/[^a-z0-9\s-]/g, ' ').trim();
+
+	// replace multiple spaces or hyphens with a single hyphen
+	slug = slug.replace(/[\s-]+/g, '-');
+
+	return slug;
+};
+
+export const unslugify = (slug: string) =>
+	slug.replace(/\-/g, ' ').replace(/\w\S*/g, (text) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase());
+
+export const kFormatter = (num: number) => {
+	return Math.abs(num) > 999 ? (Math.sign(num) * (Math.abs(num) / 1000)).toFixed(1) + 'k' : Math.sign(num) * Math.abs(num);
+};
+
+export const getRepositoryDetails = async (repositoryFullname: string) => {
+	const repoDetails = await fetch('https://api.github.com/repos/' + repositoryFullname, {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}`,
+			'X-GitHub-Api-Version': '2022-11-28'
+		}
+	});
+	const response = await repoDetails.json();
+	return response;
+};
+
+
+
+
