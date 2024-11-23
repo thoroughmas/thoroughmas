@@ -2,10 +2,12 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { marked } from 'marked';
+import { createImageMap } from '../utils/imageMap';
 
 export async function GET(context) {
     const posts = await getCollection('blog');
     const siteUrl = context.site?.toString().replace(/\/$/, '') || '';
+    const imageMap = await createImageMap();
 
     return rss({
         title: SITE_TITLE,
@@ -21,7 +23,6 @@ export async function GET(context) {
                     try {
                         // Handle case where href is an object
                         const imagePath = typeof href === 'object' ? href.href : href;
-                        
                         if (!imagePath) return '';
 
                         // If it's already a full URL, use it as is
@@ -29,7 +30,16 @@ export async function GET(context) {
                             return `<img src="${imagePath}" alt="${text || ''}" />`;
                         }
 
-                        // For relative paths, use the site URL and _astro path
+                        // Get original filename without extension and ./
+                        const originalName = imagePath.replace('./', '').split('.')[0];
+                        
+                        // Look up the hashed version from our map
+                        const hashedPath = imageMap.get(originalName);
+                        if (hashedPath) {
+                            return `<img src="${hashedPath}" alt="${text || ''}" />`;
+                        }
+
+                        // Fallback to original behavior
                         const cleanPath = typeof imagePath === 'string' ? imagePath.replace('./', '') : '';
                         return `<img src="${siteUrl}/_astro/${cleanPath}" alt="${text || ''}" />`;
                     } catch (error) {
@@ -38,7 +48,7 @@ export async function GET(context) {
                     }
                 };
 
-                // Parse the content
+                // Rest of your existing code remains the same
                 const content = marked(post.body, {
                     renderer,
                     mangle: false,
@@ -46,7 +56,7 @@ export async function GET(context) {
                 });
 
                 // Handle the cover image
-                const coverImageHtml = post.data.coverImage?.src 
+                const coverImageHtml = post.data.coverImage?.src
                     ? `<img src="${post.data.coverImage.src}" alt="${post.data.title}" />`
                     : '';
 
