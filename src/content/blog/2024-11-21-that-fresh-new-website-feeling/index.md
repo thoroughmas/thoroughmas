@@ -18,7 +18,7 @@ Some of the earliest ones I can remember I built with Freewebs. Which later chan
 
 My early websites featured my projects under the moniker "Lcm Film".
 
-![](lcmfilmsite.png)
+![](./lcmfilmsite.png)
 
 Here's one of the final forms of that Freewebs site (which went through a ridiculous number of regenerations... every few months it was "Let's remake the website!").
 
@@ -30,7 +30,7 @@ But if you look closely, my favourite bit is the little "What's going on!?" imag
 
 My websites were actually much more fancy back then. I mean, each of those menu links lights up when you hover over them. And the Library has links to separate pages for each short film I was hosting. Yes, actually hosting. Videos weren't all just hosted on YouTube back then, like they are now (for better and (lately) worse).
 
-![](thomasmidenaogsite.png)
+![](./thomasmidenaogsite.png)
 
 This is what it looked like when I was just starting to get into minimalism.
 
