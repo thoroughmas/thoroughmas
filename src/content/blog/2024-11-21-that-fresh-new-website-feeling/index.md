@@ -79,7 +79,7 @@ But ultimately, it came down to the availability of templates. Even though I int
 
 And so this new website is built on Astro. Which ticks all the right boxes and appears to be very popular.
 
-Plus, I really love this template by Muhammad Syakirurohman. It's clean and elegant, putting projects and blog posts at the forefront. And since it's built on Astro, the potential for customisation is unending.
+Plus, I really love [this template by Muhammad Syakirurohman](https://github.com/devaradise/devolio). It's clean and elegant, putting projects and blog posts at the forefront. And since it's built on Astro, the potential for customisation is unending.
 
 It's also a great boon that platforms like Astro integrate beautifully with markdown files. I've been using Obsidian a lot over the past year for extensive note-taking, and being able to write blog posts the same way is very intuitive.
 
