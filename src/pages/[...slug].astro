@@ -29,73 +29,63 @@ const { Content, headings } = await post.render();
 <BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>
   <div class='container lg:flex gap-10'>
     <main class='overflow-hidden grow'>
-      <div class="main-content">  {/* Add this wrapper */}
-        <article 
-          class="h-entry" 
-          itemscope 
-          itemtype="http://schema.org/BlogPosting"
-        >
       <article 
         class="h-entry" 
         itemscope 
         itemtype="http://schema.org/BlogPosting"
       >
         <Prose>
-          <div class="entry-content hentry" id="main-content">
+          <div>
             <h1 
-              class='!my-1 leading-tight entry-title p-name' 
+              class='!my-1 leading-tight p-name' 
               itemprop="headline"
             >
               {title}
             </h1>
-            
-            <div class="post-meta">
-              <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
-                <div class='flex gap-2'>
-                  {
-                    (tags || [])?.map((tag: string) => (
-                      <a
-                        class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
-                          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
-                          transition-all duration-700
-                        hover:border-zinc-700 dark:hover:border-zinc-300'
-                        href={`/tags/${slugify(tag)}`}
-                        itemprop="keywords"
-                      >
-                        {tag}
-                      </a>
-                    ))
-                  }
-                </div>
-                <div>
-                  <time 
-                    class="dt-published" 
-                    datetime={pubDate.toISOString()} 
-                    itemprop="datePublished"
-                  >
-                    {
-                      updatedDate ?
-                        <>Updated on <strong><FormattedDate date={updatedDate} /></strong></>
-                      :
-                        <>Published on <strong><FormattedDate date={pubDate} /></strong></>
-                    }
-                  </time>
-                  
-                  {updatedDate && (
-                    <time 
-                      class="dt-updated" 
-                      datetime={updatedDate.toISOString()} 
-                      itemprop="dateModified"
-                      style="display:none;"
+            <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
+              <div class='flex gap-2'>
+                {
+                  (tags || [])?.map((tag: string) => (
+                    <a
+                      class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                        text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                        transition-all duration-700
+                      hover:border-zinc-700 dark:hover:border-zinc-300'
+                      href={`/tags/${slugify(tag)}`}
+                      itemprop="keywords"
                     >
-                      {updatedDate.toISOString()}
-                    </time>
-                  )}
-                </div>
+                      {tag}
+                    </a>
+                  ))
+                }
+              </div>
+              <div>
+                <time 
+                  class="dt-published" 
+                  datetime={pubDate.toISOString()} 
+                  itemprop="datePublished"
+                >
+                  {
+                    updatedDate ?
+                      <>Updated on <strong><FormattedDate date={updatedDate} /></strong></>
+                    :
+                      <>Published on <strong><FormattedDate date={pubDate} /></strong></>
+                  }
+                </time>
+                
+                {updatedDate && (
+                  <time 
+                    class="dt-updated" 
+                    datetime={updatedDate.toISOString()} 
+                    itemprop="dateModified"
+                    style="display:none;"
+                  >
+                    {updatedDate.toISOString()}
+                  </time>
+                )}
               </div>
             </div>
           </div>
-          
           <div class='py-3 overflow-hidden'>
             {coverImage && (
               <Image 
@@ -107,7 +97,6 @@ const { Content, headings } = await post.render();
               />
             )}
           </div>
-          
           <div 
             class="e-content" 
             itemprop="articleBody"
