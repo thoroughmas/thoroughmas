@@ -1,4 +1,4 @@
-## Hi there 👋
+## Salut 👋
 
 I'm Thomas. This repository hosts my personal website: [thomid.me](https://thomid.me)
 
