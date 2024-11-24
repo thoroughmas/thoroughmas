@@ -11,13 +11,13 @@ const blog = defineCollection({
         updatedDate: z.coerce.date().optional(),
         tags: z.array(z.string())
             .optional()
-            .transform(tags => tags?.map(formatTag)), // Transform tags here
-        coverImage: image()
-            .refine((img) => img.width >= 960, {
+            .transform(tags => tags?.map(formatTag)),
+        coverImage: z.union([image(), z.null()])
+            .optional()
+            .refine((img) => img ? img.width >= 960 : true, {
                 message: 'Cover image must be at least 960 pixels wide!'
             })
-            .optional()
-        }),
-    });
+    }),
+});
 
 export const collections = { blog };
