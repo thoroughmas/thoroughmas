@@ -29,7 +29,7 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'YouTube',
     image: Thoroughmas,
-    tags: ['Videos']
+    tags: ['Video Channel']
   },
   {
     name: 'Community Rewatching 101',
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'ABC',
     image: BTN,
-    tags: ['Video', 'News']
+    tags: ['Reporting']
   },
   {
     name: 'Mutant Reviewers',
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'Website',
     image: MutantReviewers,
-    tags: ['Articles']
+    tags: ['Movie Reviews']
   },
   {
     name: 'The 39 Steps',
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'YouTube',
     image: Fiasco,
-    tags: ['Video', 'Short Film']
+    tags: ['Short Film']
   },
   {
     name: 'Absurdity Unit',
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'Pocket Casts',
     image: AbsurdityUnit,
-    tags: ['Podcast', 'Storytelling']
+    tags: ['Podcast']
   },
   {
     name: 'Blog',
@@ -100,6 +100,6 @@ export const projects: Project[] = [
     demoLink: 'https://thomid.me/posts/',
     linkType: 'Read',
     image: Blog,
-    tags: ['Writing', 'Learning']
+    tags: ['Writing']
   },
 ]
