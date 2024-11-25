@@ -1,0 +1,7 @@
+node_modules
+dist
+.output
+.astro/types
+.cache
+cache
+.DS_Store
