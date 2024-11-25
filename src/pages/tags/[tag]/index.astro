@@ -7,20 +7,23 @@ import PostsByYear from '@src/components/PostsByYear.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 export const getStaticPaths = async () => {
-	const allPosts: BlogPost[] = await getCollection('blog');
-	return [
-		...new Set(
-			allPosts
-				.map((post) => post.data.tags)
-				.flat()
-				.filter((tag) => !!tag)
-		)
-	].map((tag) => ({ params: { tag: slugify(tag || '') } }));
+    const allPosts: BlogPost[] = await getCollection('blog');
+    return [
+        ...new Set(
+            allPosts
+                .filter(post => post.data.listed !== false)
+                .map((post) => post.data.tags)
+                .flat()
+                .filter((tag) => !!tag)
+        )
+    ].map((tag) => ({ params: { tag: slugify(tag || '') } }));
 };
 
 const { tag } = Astro.params;
 const allPosts: BlogPost[] = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const taggedPosts = allPosts.filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
+const taggedPosts = allPosts
+    .filter(post => post.data.listed !== false)
+    .filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
 const title = `All Posts Tagged with ${unslugify(tag || '')}`;
 const description = `All Posts Tagged with ${unslugify(tag || '')}`;
 ---

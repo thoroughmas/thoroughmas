@@ -8,12 +8,24 @@ import Tommy from '@src/assets/img/tmcolour_1.jpg';
 import Prose from '../components/Prose.astro';
 import { projects } from './projects/projects';
 import ProjectList from '../components/ProjectList.astro'
-import PostItem from '../components/PostItem.astro';
+import PostItem from '../components/PostItem.astro'; 
 
-type BlogPost = CollectionEntry<'blog'>;
-
+type BlogPost = CollectionEntry<'blog'>; 
 const top6Projects = projects.slice(0, 6);
-const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
+const posts = (await getCollection('blog'))
+  .filter((post): post is BlogPost => {
+    const isListed = post.data.listed !== false;
+    console.log(`Post ${post.slug} - listed: ${isListed}`);
+    return isListed;
+  })
+  .filter(post => {
+    const isFeatured = post.data.featured === true;
+    console.log(`Post ${post.slug} - featured: ${isFeatured}`);
+    return isFeatured;
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+console.log('Featured posts:', posts.map(p => p.slug));
 ---
 
 <BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>

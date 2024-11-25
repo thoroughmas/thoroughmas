@@ -30,22 +30,23 @@ function groupTagsByFirstLetter(tags: Tag[]) {
 }
 
 const allPosts: BlogPost[] = await getCollection('blog');
-const mappedTags: { [key: string]: Tag } = {};
-for (const post of allPosts) {
-	for (const tag of post.data?.tags || []) {
-		const tagValue = slugify(tag);
-		if (mappedTags[tagValue]) {
-			mappedTags[tagValue].postCount += 1;
-		} else {
-			const _tag: Tag = {
-				value: tagValue,
-				label: tag,
-				postCount: 1
-			};
-			mappedTags[tagValue] = _tag;
-		}
-	}
-}
+
+// Use flatMap to extract all tags from listed posts
+const tags = allPosts
+  .filter((post) => post.data.listed !== false)
+  .flatMap((post) => post.data.tags || []);
+
+// Reduce the list of tags into the mappedTags object
+const mappedTags = tags.reduce((acc, tag) => {
+  const tagValue = slugify(tag);
+  if (acc[tagValue]) {
+    acc[tagValue].postCount += 1;
+  } else {
+    acc[tagValue] = { value: tagValue, label: tag, postCount: 1 };
+  }
+  return acc;
+}, {} as { [key: string]: Tag });
+
 const groupedTags  = groupTagsByFirstLetter(Object.values(mappedTags))
 const title = `All Tags`;
 const description = 'Find a blog post by its topic or category'

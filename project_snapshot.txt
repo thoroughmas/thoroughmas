@@ -1,4 +1,4 @@
-// File: P:\workshop\WEBSITE\thomid.me\src\components\widgets\AboutTheAuthor.astro
+// File: D:\thomid.me\src\components\widgets\AboutTheAuthor.astro
 
 ---
 import Author from '../Author.astro';
@@ -24,7 +24,7 @@ import Author from '../Author.astro';
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\widgets\TableOfContent.astro
+// File: D:\thomid.me\src\components\widgets\TableOfContent.astro
 
 ---
 const { headings, maxLevel = 3 } = Astro.props;
@@ -102,11 +102,11 @@ function buildToc(headings: any) {
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\Author.astro
+// File: D:\thomid.me\src\components\Author.astro
 
 ---
 import { Image } from 'astro:assets';
-import Tommy from '@src/assets/img/tmcolour_1_small.jpg';
+import Tommy from '@src/assets/img/tmspanishwriter_2.jpg';
 
 type PicSize = 'sm' | 'md' | 'lg';
 interface Props {
@@ -127,7 +127,7 @@ const { picSize } = Astro.props;
 			{ 'w-[90px] h-[90px]': picSize === 'lg' }
 		]}
 	>
-		<Image src={Tommy} alt='Thomas Midena' />
+		<Image src={Tommy} alt='Thomas discovers blogging' />
 	</a>
 	<div>
 		<div>
@@ -147,7 +147,7 @@ const { picSize } = Astro.props;
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\FormattedDate.astro
+// File: D:\thomid.me\src\components\FormattedDate.astro
 
 ---
 interface Props {
@@ -171,7 +171,7 @@ const { date } = Astro.props;
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\PostItem.astro
+// File: D:\thomid.me\src\components\PostItem.astro
 
 ---
 import { slugifyTag } from '../utils/formatTags';
@@ -207,7 +207,7 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\PostsByYear.astro
+// File: D:\thomid.me\src\components\PostsByYear.astro
 
 ---
 import type { CollectionEntry } from 'astro:content';
@@ -243,7 +243,7 @@ const groupedPosts = groupPostsByYear(posts);
   <div class="mb-8">
     <h2 class="text-2xl font-bold mb-4">{year}</h2>
     <div>
-      {posts.map((post: BlogPost, i: number) => (
+      {posts.map((post: BlogPost) => (
         <PostItem post={post} />
       ))}
     </div>
@@ -253,7 +253,7 @@ const groupedPosts = groupPostsByYear(posts);
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\ProjectList.astro
+// File: D:\thomid.me\src\components\ProjectList.astro
 
 ---
 import { Image } from 'astro:assets';
@@ -327,7 +327,7 @@ const { projects } = Astro.props
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\components\Prose.astro
+// File: D:\thomid.me\src\components\Prose.astro
 
 ---
 
@@ -346,27 +346,24 @@ const { projects } = Astro.props
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\content\config.ts
+// File: D:\thomid.me\src\content\config.ts
 
 import { defineCollection, z } from 'astro:content';
-import { formatTag } from '../utils/formatTags'; 
+import { formatTag } from '../utils/formatTags';
 
 const blog = defineCollection({
     type: 'content',
     schema: ({ image }) => z.object({
         title: z.string(),
         seoTitle: z.string().optional(),
-        description: z.string(),
+        description: z.union([z.string(), z.null()]).default("No description provided."), // Fix here
         pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
         tags: z.array(z.string())
             .optional()
-            .transform(tags => tags?.map(formatTag)), // Transform tags here
-        coverImage: image()
-            .refine((img) => img.width >= 960, {
-                message: 'Cover image must be at least 960 pixels wide!'
-            })
-            .optional()
+            .transform(tags => tags?.map(formatTag)),
+        coverImage: z.union([image(), z.null()]).optional(),
+        listed: z.boolean().optional().default(true),
     }),
 });
 
@@ -374,7 +371,8 @@ export const collections = { blog };
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\BaseHead.astro
+
+// File: D:\thomid.me\src\layouts\components\BaseHead.astro
 
 ---
 // Import the global.css file here so that it is included on
@@ -424,7 +422,7 @@ const { title, description, image = '/tm_circleheader_1.png' } = Astro.props; //
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\Footer.astro
+// File: D:\thomid.me\src\layouts\components\Footer.astro
 
 ---
 const today = new Date();
@@ -447,7 +445,7 @@ const today = new Date();
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\Header.astro
+// File: D:\thomid.me\src\layouts\components\Header.astro
 
 ---
 import HeaderLink from './HeaderLink.astro';
@@ -608,7 +606,7 @@ const menu = [
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\layouts\components\HeaderLink.astro
+// File: D:\thomid.me\src\layouts\components\HeaderLink.astro
 
 ---
 import type { HTMLAttributes } from 'astro/types';
@@ -633,7 +631,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\layouts\BaseLayout.astro
+// File: D:\thomid.me\src\layouts\BaseLayout.astro
 
 ---
 import BaseHead from './components/BaseHead.astro';
@@ -676,8 +674,8 @@ const { title, description, image } = Astro.props;
     {
       GTAG_MEASUREMENT_ID && (
         <>
-          <script type='text/partytown' async src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_MEASUREMENT_ID}`}></script>
-          <script type='text/partytown' define:vars={{ GTAG_MEASUREMENT_ID }}>
+          <script type='text/partytown' async is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_MEASUREMENT_ID}`}></script>
+          <script type='text/partytown' is:inline define:vars={{ GTAG_MEASUREMENT_ID }}>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
               dataLayer.push(arguments);
@@ -693,7 +691,7 @@ const { title, description, image } = Astro.props;
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\posts\index.astro
+// File: D:\thomid.me\src\pages\posts\index.astro
 
 ---
 import { getCollection } from 'astro:content';
@@ -705,7 +703,10 @@ type BlogPost = CollectionEntry<'blog'>;
 const title = 'All posts'
 const description = "Everything I've been thinking about."
 
-const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = await getCollection('blog')
+  .then((posts) => posts.filter((post): post is BlogPost => post.data.listed !== false))
+  .then((filteredPosts) => filteredPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()));
+
 ---
 
 <BaseLayout
@@ -724,7 +725,7 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\projects\index.astro
+// File: D:\thomid.me\src\pages\projects\index.astro
 
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -749,7 +750,7 @@ import { projects } from './projects';
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\projects\projects.ts
+// File: D:\thomid.me\src\pages\projects\projects.ts
 
 import { getRepositoryDetails } from "../../utils";
 import Community101 from '@src/assets/img/projects/community101.webp';
@@ -860,7 +861,7 @@ export const projects: Project[] = [
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\tags\[tag]\index.astro
+// File: D:\thomid.me\src\pages\tags\[tag]\index.astro
 
 ---
 import type { CollectionEntry } from 'astro:content';
@@ -871,20 +872,23 @@ import PostsByYear from '@src/components/PostsByYear.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 export const getStaticPaths = async () => {
-	const allPosts: BlogPost[] = await getCollection('blog');
-	return [
-		...new Set(
-			allPosts
-				.map((post) => post.data.tags)
-				.flat()
-				.filter((tag) => !!tag)
-		)
-	].map((tag) => ({ params: { tag: slugify(tag || '') } }));
+    const allPosts: BlogPost[] = await getCollection('blog');
+    return [
+        ...new Set(
+            allPosts
+                .filter(post => post.data.listed !== false)
+                .map((post) => post.data.tags)
+                .flat()
+                .filter((tag) => !!tag)
+        )
+    ].map((tag) => ({ params: { tag: slugify(tag || '') } }));
 };
 
 const { tag } = Astro.params;
 const allPosts: BlogPost[] = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const taggedPosts = allPosts.filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
+const taggedPosts = allPosts
+    .filter(post => post.data.listed !== false)
+    .filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
 const title = `All Posts Tagged with ${unslugify(tag || '')}`;
 const description = `All Posts Tagged with ${unslugify(tag || '')}`;
 ---
@@ -904,7 +908,7 @@ const description = `All Posts Tagged with ${unslugify(tag || '')}`;
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\tags\index.astro
+// File: D:\thomid.me\src\pages\tags\index.astro
 
 ---
 import type { CollectionEntry } from 'astro:content';
@@ -938,22 +942,23 @@ function groupTagsByFirstLetter(tags: Tag[]) {
 }
 
 const allPosts: BlogPost[] = await getCollection('blog');
-const mappedTags: { [key: string]: Tag } = {};
-for (const post of allPosts) {
-	for (const tag of post.data?.tags || []) {
-		const tagValue = slugify(tag);
-		if (mappedTags[tagValue]) {
-			mappedTags[tagValue].postCount += 1;
-		} else {
-			const _tag: Tag = {
-				value: tagValue,
-				label: tag,
-				postCount: 1
-			};
-			mappedTags[tagValue] = _tag;
-		}
-	}
-}
+
+// Use flatMap to extract all tags from listed posts
+const tags = allPosts
+  .filter((post) => post.data.listed !== false)
+  .flatMap((post) => post.data.tags || []);
+
+// Reduce the list of tags into the mappedTags object
+const mappedTags = tags.reduce((acc, tag) => {
+  const tagValue = slugify(tag);
+  if (acc[tagValue]) {
+    acc[tagValue].postCount += 1;
+  } else {
+    acc[tagValue] = { value: tagValue, label: tag, postCount: 1 };
+  }
+  return acc;
+}, {} as { [key: string]: Tag });
+
 const groupedTags  = groupTagsByFirstLetter(Object.values(mappedTags))
 const title = `All Tags`;
 const description = 'Find a blog post by its topic or category'
@@ -992,7 +997,7 @@ const description = 'Find a blog post by its topic or category'
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\[...slug].astro
+// File: D:\thomid.me\src\pages\[...slug].astro
 
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
@@ -1168,7 +1173,7 @@ const { Content, headings } = await post.render();
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\404.astro
+// File: D:\thomid.me\src\pages\404.astro
 
 ---
 import { Image } from 'astro:assets';
@@ -1193,7 +1198,7 @@ import NotFoundImage from '@src/assets/img/404-not-found.png';
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\about.astro
+// File: D:\thomid.me\src\pages\about.astro
 
 ---
 import { Image } from 'astro:assets';
@@ -1236,7 +1241,7 @@ import Prose from '../components/Prose.astro';
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\index.astro
+// File: D:\thomid.me\src\pages\index.astro
 
 ---
 import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
@@ -1248,12 +1253,14 @@ import Tommy from '@src/assets/img/tmcolour_1.jpg';
 import Prose from '../components/Prose.astro';
 import { projects } from './projects/projects';
 import ProjectList from '../components/ProjectList.astro'
-import PostItem from '../components/PostItem.astro';
+import PostItem from '../components/PostItem.astro'; 
 
-type BlogPost = CollectionEntry<'blog'>;
-
+type BlogPost = CollectionEntry<'blog'>; 
 const top6Projects = projects.slice(0, 6);
-const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
+const posts = await getCollection('blog')
+  .then((posts) => posts.filter((post): post is BlogPost => post.data.listed !== false))
+  .then((filteredPosts) => filteredPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()));
+
 ---
 
 <BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
@@ -1354,7 +1361,7 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\pages\rss.xml.js
+// File: D:\thomid.me\src\pages\rss.xml.js
 
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
@@ -1448,44 +1455,54 @@ export async function GET(context) {
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\styles\global.css
+// File: D:\thomid.me\src\styles\global.css
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
-	pre,
-	code {
-		font-size: 0.875rem;
-	}
+  pre,
+  code {
+    font-size: 0.875rem;
+  }
+
+  /* Increase specificity to target only captions inside figures */
+  figure {
+    margin: 0; /* Removes the default margin */
+  }
+
+  figure > figcaption {
+    margin-top: 4px; /* Adjusts space between image and caption */
+    font-style: italic; /* Keeps italic for captions */
+  }
 }
 
 /* Default styling for icons */
 .social-icons img {
-	filter: none; /* Default for light mode */
-	transition: filter 0.3s ease; /* Smooth transition when toggling themes */
-  }
-  
-  /* Adjust icons for dark mode */
-  html.dark .social-icons img {
-	filter: invert(1) brightness(2); /* Makes icons white in dark mode */
-  }
-  
+  filter: none; /* Default for light mode */
+  transition: filter 0.3s ease; /* Smooth transition when toggling themes */
+}
 
-  @font-face {
-    font-family: 'WFK1_honeymushroom';
-    src: url('/fonts/webfontkit1/honey_mushroom-webfont.woff2') format('woff2'),
-         url('/fonts/webfontkit1/honey_mushroom-webfont.woff') format('woff'),
-         url('/fonts/webfontkit1/Honey_Mushroom.ttf') format('truetype');
+/* Adjust icons for dark mode */
+html.dark .social-icons img {
+  filter: invert(1) brightness(2); /* Makes icons white in dark mode */
+}
+
+@font-face {
+  font-family: 'WFK1_honeymushroom';
+  src: url('/fonts/webfontkit1/honey_mushroom-webfont.woff2') format('woff2'),
+       url('/fonts/webfontkit1/honey_mushroom-webfont.woff') format('woff'),
+       url('/fonts/webfontkit1/Honey_Mushroom.ttf') format('truetype');
 }
 
 .custom-name-title {
-    font-family: 'WFK1_honeymushroom', sans-serif;
+  font-family: 'WFK1_honeymushroom', sans-serif;
 }
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\utils\formatTags.ts
+// File: D:\thomid.me\src\utils\formatTags.ts
 
 export function formatTag(tag: string): string {
     return tag.replace(/_/g, ' ');
@@ -1497,7 +1514,7 @@ export function formatTag(tag: string): string {
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\utils\imageMap.ts
+// File: D:\thomid.me\src\utils\imageMap.ts
 
 import { getCollection } from 'astro:content';
 
@@ -1534,7 +1551,7 @@ export async function createImageMap() {
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\autoNewTabExternalLinks.ts
+// File: D:\thomid.me\src\autoNewTabExternalLinks.ts
 
 import type { RehypePlugin } from '@astrojs/markdown-remark';
 import { visit } from 'unist-util-visit';
@@ -1591,7 +1608,7 @@ const isExternal = (url: string, domain: string) => {
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\consts.ts
+// File: D:\thomid.me\src\consts.ts
 
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
@@ -1603,14 +1620,14 @@ export const SITE_DESCRIPTION = 'Generally genuinely enthusiastic'; // site meta
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\env.d.ts
+// File: D:\thomid.me\src\env.d.ts
 
 /// <reference path="../.astro/types.d.ts" />
 
 
 
 
-// File: P:\workshop\WEBSITE\thomid.me\src\utils.ts
+// File: D:\thomid.me\src\utils.ts
 
 import { loadEnv } from 'vite';
 

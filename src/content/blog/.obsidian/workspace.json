@@ -13,21 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-11-21-that-fresh-new-website-feeling/index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "1e863174fb8c97f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-11-21-that-fresh-new-website-feeling/index.md",
+                "file": "2016-11-30-new-website-again/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -35,8 +21,7 @@
               "title": "index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -67,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "untitl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,34 +172,52 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1e863174fb8c97f6",
+  "active": "d462ec9c3acbb4cd",
   "lastOpenFiles": [
-    "Untitled.md",
+    "2016-11-30-new-website-again/FireShot_Capture.png",
+    "2016-11-30-new-website-again/index.md",
+    "2016-11-30-a-prequel-to-conductor-of-earth/index.md",
+    "2016-11-30-a-prequel-to-conductor-of-earth/SquareCover_MiracleMan2_smaller.jpg",
+    "2015-08-12-far-from-the-madding-crowd-review/index.md",
+    "2015-08-12-far-from-the-madding-crowd-review/far-from-madding-crowd10.jpg",
+    "2015-08-12-far-from-the-madding-crowd-review/far-from-the-madding-crowd-03.jpg",
+    "2015-08-12-new-podcast-stories-from-the-future/index.md",
+    "2015-02-04-how-to-be-an-intolerable-teammate-in-heroes-of-the-storm/index.md",
+    "2015-02-04-how-to-be-an-intolerable-teammate-in-heroes-of-the-storm/hots-muradin2.jpg",
+    "2014-06-26-brief-review-of-no-country-for-old-men-2007/index.md",
+    "2014-06-26-brief-review-of-no-country-for-old-men-2007/no-country-for-old-men-cattle.png",
+    "2012-06-19-google-music-why-arent-you-amazing/index.md",
+    "2012-06-19-google-music-why-arent-you-amazing/google-music.png",
+    "2012-06-19-google-music-why-arent-you-amazing/Google_vs_Apple.jpg",
     "2024-11-21-that-fresh-new-website-feeling/index.md",
-    "syntax/Image Captions.md",
-    "syntax",
-    "2024-11-29-holey-moley",
-    "2024-11-21-that-fresh-new-website-feeling/thomasmidenanewsite.png",
-    "Untitled 2.md",
-    "2024-11-21-that-fresh-new-website-feeling/thomasmidenawordpresssite.png",
-    "Templates/Blog Post Template.md",
-    "Untitled 4.md",
-    "Untitled 3.md",
-    "Untitled 1.md",
-    "Templates/Scripts/Create Blog Post.js",
-    "Templates/Scripts/New Text Document.txt",
-    "Templates/Scripts/New folder",
-    "Templates/Scripts",
-    "Templates/New folder",
-    "Templater Scripts/foldering",
-    "Templater Scripts/New Text Document.txt",
-    "Templater Scripts/Foldering",
-    "Templater Scripts/Foldering.md",
-    "2024-11-18.md",
-    "2024-11-21-that-fresh-new-website-feeling/thomasmidenarefinedsite.png",
-    "2024-11-21-that-fresh-new-website-feeling/thomasmidenaogsite.png",
-    "2024-11-21-that-fresh-new-website-feeling/Thomas_websitebanner_v3.png",
-    "2024-11-21-that-fresh-new-website-feeling/lcmfilmsite.png",
-    "Welcome.md"
+    "2019-12-29-the-sketch-files-5/index.md",
+    "2012-09-11-review-of-game-of-thrones-season-2-soundtrack-by-ramin-djawadi/index.md",
+    "2012-09-11-review-of-hugo-soundtrack-by-howard-shore/index.md",
+    "2012-06-05-the-dream-i-had-last-night/index.md",
+    "2012-07-06-problematic-peace-in-the-amazing-spider-man/index.md",
+    "2012-09-12-malignant-morality-in-doctor-who/index.md",
+    "2012-09-17-google-music-desktop-player-review/index.md",
+    "2012-09-22-why-you-should-check-out-the-doctor-who-fan-orchestra/index.md",
+    "2019-04-10-clive-released-reactions/index.md",
+    "2019-03-13-activate-nathaniel-kelly-production-powerhouse/index.md",
+    "2019-03-05-i-use-a-chromebook/index.md",
+    "2019-03-05-a-wacky-short-story-podcast/index.md",
+    "2019-01-05-the-sketch-files-4/index.md",
+    "2019-01-05-performing-in-black-comedy-loves-labours-lost/index.md",
+    "2018-09-10-you-do-you-darwin-international-film-festival-spark-film-2018/index.md",
+    "2018-09-10-darwin-fringe-show-vaudeville-knockout/index.md",
+    "2018-04-28-were-family-now-showing-at-deckchair-cinema/index.md",
+    "2016-05-19-on-battlestar-galactica/bsgiknowfarming.gif",
+    "archive",
+    "2012-09-11-review-of-game-of-thrones-season-2-soundtrack-by-ramin-djawadi/game-of-thrones-season-2-liam-cunningham.jpg",
+    "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya",
+    "2017-08-09-darwin-fringe-show-vaudeville-variety-starring-chaplin",
+    "2017-05-10-sideshow-sound-does-rogue-one-score-guide",
+    "2017-05-10-seabreeze-festival-antics",
+    "2017-05-10-dance-academy-film-review",
+    "2017-04-17-podcasting-doctor-whos-10th-season",
+    "2017-04-14-the-message-of-doctor-who-video",
+    "2017-03-04-two-new-podcasts-movies-and-memes",
+    "2017-02-18-the-making-of-a-feature-film"
   ]
 }

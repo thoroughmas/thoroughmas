@@ -1,4 +1,5 @@
 ---
+featured: true
 title: That fresh new website feeling
 slug: fresh-new-website
 description: I've built a lot of personal websites in the past, but this one is my favourite! (obvs)
@@ -7,6 +8,7 @@ tags:
   - web_design
   - open_source
 coverImage: ./thomasmidenanewsite.png
+listed: true
 ---
 Smells pretty good right?
 
