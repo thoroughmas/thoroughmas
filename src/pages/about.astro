@@ -1,36 +1,84 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import TommyWheel from '@src/assets/img/tmwheel_1.jpg';
 import Prose from '../components/Prose.astro';
 
+import ThomasStorm from '@src/assets/img/ThomasStorm.jpg';
+import ThomasCD3d from '@src/assets/img/ThomasCD3d.png';
+import TwelfthNight from '@src/assets/img/twelfthnight.jpg';
+import PrescriptionDrugsFringe from '@src/assets/img/prescriptiondrugsfringe.jpg';
+import DirectingBattlefieldYear7 from '@src/assets/img/directingbattlefieldyear7.jpg';
 ---
 
 <BaseLayout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
+  title="About Me"
+  description="Thomas Midena's Bio"
 >
   <div class='container'>
-		<main class='prose text-lg dark:prose-invert'>
+    <main class='prose text-lg dark:prose-invert'>
       <article>
-        <div class='w-full md:flex md:items-center gap-16 mb-10'>
-          <div class="text-pretty leading-9">
-            <h1 class="text-4xl font-bold mb-4">What manner of man is this? </h1>
-            <Prose>
-              <div class="text-lg">
-                <p>Thomas Midena is a performer and filmmaker based in Adelaide, Australia.</p>
-                <p>Growing up in Darwin, Thomas cultivated a reverence for live theatre, guerilla filmmaking and destructive thunderstorms.</p>    
-              </div>
-            </Prose>
-          </div>
-          <Image src={TommyWheel} alt="Thomas Midena" width={300}  class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
-        </div>     
-        <div>
-          <p>
-            Full bio temporarily awol.
-          </p>
+        <div class="text-pretty leading-8">
+          <h1 class="text-4xl font-bold mb-4">What manner of man is this?</h1>
+
+          <figure class="image-right max-w-[300px]">
+            <Image src={ThomasStorm} alt="Thomas Midena and a storm" />
+            <figcaption class="text-sm text-center mt-2 text-gray-600 dark:text-gray-400">
+              Storm chasing in Darwin
+            </figcaption>
+          </figure>
+          
+          <p>Thomas Midena is a performer and filmmaker based in Adelaide, Australia.</p>
+          
+          <p>Growing up in Darwin, he cultivated a reverence for live theatre, guerilla filmmaking and destructive thunderstorms.</p>
+
+          <p>Thomas started making short films at a young age, casting his family, himself, and teddy bears in quirky and unusual videos—the kookier, the better.</p>
+
+          <figure class="image-left max-w-[300px]">
+            <Image src={ThomasCD3d} alt="Thomas with CD art" />
+            <figcaption class="text-sm text-center mt-2 text-gray-600 dark:text-gray-400">
+              Preparing to do something dastardly with a CD
+            </figcaption>
+          </figure>
+
+          <p>Music was a huge inspiration from the start, and many of Thomas' early videos were soundtracked with pieces by John Williams. Many of Thomas' later projects and hobbies, such as playing piano and creating podcasts, have stemmed from his love of orchestral soundtrack music.</p>
+
+          <p>Thomas has always loved spoken audio media. As a teenager, he volunteered at a local radio station; later, he hosted a radio show on his own at university. Of the dozens of podcasts he's created over the years, some can still be found online (though others are hidden out of embarrassment).</p>
+
+          <p>Thomas loves to perform on stage, too. Though he wrestled with shyness from a young age, drama workshops soon came to feel like home. Thomas got his first role in an adult amateur production in 2013, playing Bartley in <em>The Cripple of Inishmaan</em> at Browns Mart Theatre.</p>
+
+          <figure class="image-right max-w-[400px]"> 
+            <Image src={TwelfthNight} alt="Performance from Twelfth Night" />
+            <figcaption class="text-sm text-center mt-2 text-gray-600 dark:text-gray-400">
+              Performing in Twelfth Night at Brown's Mart Theatre
+            </figcaption>
+          </figure>
+
+          <p>Thomas proceeded to perform in dozens of shows at Browns Mart, from classics like <em>The Crucible</em> (2018) to contemporary Australian plays like <em>The Messenger</em> (2022), with plenty of Shakespeare in between.</p>
+
+          <p>While completing a Bachelor of Film & TV at Swinburne University, Thomas crewed on countless short film productions and directed several of his own, including <em>Conductor of Earth</em> (2016), one of many examples of his love of magical realism. During his time in Melbourne, Thomas continued acting in plays such as <em>Trotsky & Friends</em> (2016) at the Melbourne International Comedy Festival.</p>
+
+          <figure class="image-left max-w-[300px]">
+            <Image src={PrescriptionDrugsFringe} alt="Thomas Midena performing in Prescription Drugs" />
+            <figcaption class="text-sm text-center mt-2 text-gray-600 dark:text-gray-400">
+              A cold photo shoot for "I'm on prescription drugs", credit: Nat Kelly
+            </figcaption>
+          </figure>
+
+          <p>In collaboration with mentor Kyle Walmsley, Thomas has developed and performed in two one-man shows: <em>Bartleby: The Horrible Magician</em> (2021) and <em>I'm on prescription drugs</em> (2023), for which he received Darwin Fringe Festival's Emerging Artist Award.</p>
+
+          <p>Thomas has received several awards for his filmmaking, such as Dark Utopia (2019), which was rewarded Best Editing, Best Director and Best Film at the Darwin International Film Festival's SPARK Short Film Awards.</p>
+
+          <figure class="image-right max-w-[300px]">
+            <Image src={DirectingBattlefieldYear7} alt="Thomas directing Battlefield Year 7" />
+            <figcaption class="text-sm text-center mt-2 text-gray-600 dark:text-gray-400">
+              Directing "Battlefield Year 7"
+            </figcaption>
+          </figure>
+
+          <p>Thomas' recent years have been filled with running drama workshops for kids of all ages (mostly with Corrugated Iron Youth Arts) and creating short films with and about young people, such as Battlefield Year 7 (2020) and Fiasco (2023). His passion for working with young people led him to pursue a Master of Teaching, which he is currently completing.</p>
+
+          <p>In 2023, Thomas began reporting for ABC's <em>Behind The News</em>, writing and presenting video stories on topics ranging from cryptozoology to misinformation.</p>
         </div>
-        </article>
       </article>
     </main>
   </div>

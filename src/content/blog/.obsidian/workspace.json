@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTimeReverse"
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -172,8 +172,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d462ec9c3acbb4cd",
+  "active": "0c18d3c32ddf1032",
   "lastOpenFiles": [
+    "Untitled",
     "2016-11-30-new-website-again/FireShot_Capture.png",
     "2016-11-30-new-website-again/index.md",
     "2016-11-30-a-prequel-to-conductor-of-earth/index.md",
