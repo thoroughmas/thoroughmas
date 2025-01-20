@@ -3,16 +3,16 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-
+  
 permissions:
   contents: read
   pages: write
   id-token: write
-
+  
 concurrency:
   group: "pages"
   cancel-in-progress: true
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,13 +28,19 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install dependencies
         run: pnpm install
+      - name: Debug Build
+        run: |
+          pwd
+          ls -R src/assets/img
+          echo "Checking import paths"
+          find . -name "*.astro" | xargs grep -l "@src"
       - name: Build site
         run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-
+  
   deploy:
     environment:
       name: github-pages

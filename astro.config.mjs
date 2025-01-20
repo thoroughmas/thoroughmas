@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import { autoNewTabExternalLinks } from './src/autoNewTabExternalLinks';
 import partytown from "@astrojs/partytown";
-// https://astro.build/config
+
 export default defineConfig({
   site: 'https://thomid.me',
   integrations: [mdx(), sitemap(), tailwind(), partytown()],
@@ -13,5 +13,12 @@ export default defineConfig({
     rehypePlugins: [[autoNewTabExternalLinks, {
       domain: 'https://thomid.me'
     }]]
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@src': new URL('./src', import.meta.url).pathname
+      }
+    }
   }
 });
