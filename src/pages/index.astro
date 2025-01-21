@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import Tommy from '@src/assets/img/tmcamera_1.jpg';
+import Tommy from '@src/assets/img/tmcamera_2.jpg';
 import Prose from '../components/Prose.astro';
 import { projects } from './projects/projects';
 import ProjectList from '../components/ProjectList.astro'
@@ -60,14 +60,14 @@ console.log('Featured posts:', posts.map(p => p.slug));
         </div>
       </div>
       <div class="md:flex-shrink-0">
-        <Image 
-          src={Tommy} 
-          alt="Thomas Midena" 
-          width={300} 
-          quality={100} 
-          format="jpg" 
-          loading="eager" 
-          class="rounded-3xl rotate-3 mx-auto md:mx-0"
+        <Image
+          src={Tommy}
+          alt="Thomas Midena"
+          width={800}
+          quality={100}
+          format="webp"
+          loading="eager"
+          class="rounded-3xl rotate-3 mx-auto md:mx-0 w-[300px]"
         />
       </div>
     </div>

@@ -3,11 +3,14 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Prose from '../components/Prose.astro';
 
-import TomStorm from '@src/assets/img/tomstorm.jpg';
-import ThomasCD3d from '@src/assets/img/ThomasCD3d.png';
-import TwelfthNight from '@src/assets/img/twelfthnight.jpg';
-import PrescriptionDrugsFringe from '@src/assets/img/prescriptiondrugsfringe.jpg';
-import DirectingBattlefieldYear7 from '@src/assets/img/directingbattlefieldyearseven.jpg';
+import TomStorm from '@src/assets/img/about/tomstorm.jpg';
+import ThomasCD3d from '@src/assets/img/about/ThomasCD3d.jpg';
+import TwelfthNight from '@src/assets/img/about/twelfthnight.jpg';
+import PrescriptionDrugsFringe from '@src/assets/img/about/prescriptiondrugsfringe.jpg';
+import DirectingBattlefieldYear7 from '@src/assets/img/about/directingbattlefieldyearseven.jpg';
+import TomandNat from '@src/assets/img/about/tomandnat.jpg';
+import TomandMax from '@src/assets/img/about/tomandmax.jpg';
+import TomandLexie from '@src/assets/img/about/tomandlexie.jpg';
 ---
 
 <BaseLayout
@@ -80,6 +83,29 @@ import DirectingBattlefieldYear7 from '@src/assets/img/directingbattlefieldyears
           <p>In 2023, Thomas began reporting for ABC's <em>Behind The News</em>, writing and presenting video stories on topics ranging from cryptozoology to misinformation.</p>
         </div>
       </article>
+      <div class="flex justify-between gap-4 mt-8">
+        <div class="w-1/3 aspect-square">
+          <Image 
+            src={TomandNat} 
+            alt="Nat Kelly & Thomas Midena are lost" 
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div class="w-1/3 aspect-square">
+          <Image 
+            src={TomandMax} 
+            alt="Max Conaghan & Thomas Midena getting sunburn" 
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div class="w-1/3 aspect-square">
+          <Image 
+            src={TomandLexie} 
+            alt="Thomas Miden & Lexie Gregory having a giggle" 
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+      </div>
     </main>
   </div>
 </BaseLayout>

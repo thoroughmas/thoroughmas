@@ -6,7 +6,7 @@ const { projects } = Astro.props
 <div class="grid grid-cols-12 gap-5">
   {
     projects.map((project: Project) =>
-      <div class="col-span-12 sm:col-span-6 lg:col-span-4 border dark:border-zinc-700 rounded-xl shadow-sm p-5">
+      <div class="col-span-12 sm:col-span-6 lg:col-span-4 border dark:border-zinc-500 rounded-xl shadow-sm p-5">
         {/* Title at the top */}
         <h3 class="font-semibold mb-4 w-full">
           <a class="underline" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>{project.name}</a>
@@ -38,7 +38,7 @@ const { projects } = Astro.props
           {(project.tags || [])?.length > 0 && (
             <div class='flex gap-2 flex-wrap'>
               {project.tags?.map((tag: string) => (
-                <span class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                <span class='border border-zinc-300 dark:border-zinc-600 rounded-2xl
                   text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
                   transition-all duration-700
                   hover:border-zinc-700 dark:hover:border-zinc-300'>
