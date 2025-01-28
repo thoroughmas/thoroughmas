@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2016-11-30-new-website-again/index.md",
+                "file": "2025-01-28-my-favourite-media-2024/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "a4822340f99bb6fc",
@@ -168,15 +168,22 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "templater-obsidian:Templater": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "0c18d3c32ddf1032",
   "lastOpenFiles": [
-    "Untitled",
-    "2016-11-30-new-website-again/FireShot_Capture.png",
+    "2025-01-28-my-favourite-media-2024/trakt2024.png",
+    "2025-01-28-my-favourite-media-2024/Screenshot 2025-01-28 120323.png",
+    "2025-01-28-my-favourite-media-2024/Screenshot 2025-01-27 213529.png",
+    "2025-01-28-my-favourite-media-2024/thomasbooksstorygraph2024.png",
+    "2025-01-28-my-favourite-media-2024/thomasmoviestrakt2024.png",
+    "2025-01-28-my-favourite-media-2024/index.md",
+    "2025-01-28-my-favourite-media-2024/thomastvshowstrakt2024.png",
+    "2024-11-21-that-fresh-new-website-feeling/index.md",
     "2016-11-30-new-website-again/index.md",
+    "2025-01-28-my-favourite-media-2024",
+    "2016-11-30-new-website-again/FireShot_Capture.png",
     "2016-11-30-a-prequel-to-conductor-of-earth/index.md",
     "2016-11-30-a-prequel-to-conductor-of-earth/SquareCover_MiracleMan2_smaller.jpg",
     "2015-08-12-far-from-the-madding-crowd-review/index.md",
@@ -186,11 +193,7 @@
     "2015-02-04-how-to-be-an-intolerable-teammate-in-heroes-of-the-storm/index.md",
     "2015-02-04-how-to-be-an-intolerable-teammate-in-heroes-of-the-storm/hots-muradin2.jpg",
     "2014-06-26-brief-review-of-no-country-for-old-men-2007/index.md",
-    "2014-06-26-brief-review-of-no-country-for-old-men-2007/no-country-for-old-men-cattle.png",
     "2012-06-19-google-music-why-arent-you-amazing/index.md",
-    "2012-06-19-google-music-why-arent-you-amazing/google-music.png",
-    "2012-06-19-google-music-why-arent-you-amazing/Google_vs_Apple.jpg",
-    "2024-11-21-that-fresh-new-website-feeling/index.md",
     "2019-12-29-the-sketch-files-5/index.md",
     "2012-09-11-review-of-game-of-thrones-season-2-soundtrack-by-ramin-djawadi/index.md",
     "2012-09-11-review-of-hugo-soundtrack-by-howard-shore/index.md",
@@ -207,10 +210,7 @@
     "2019-01-05-performing-in-black-comedy-loves-labours-lost/index.md",
     "2018-09-10-you-do-you-darwin-international-film-festival-spark-film-2018/index.md",
     "2018-09-10-darwin-fringe-show-vaudeville-knockout/index.md",
-    "2018-04-28-were-family-now-showing-at-deckchair-cinema/index.md",
-    "2016-05-19-on-battlestar-galactica/bsgiknowfarming.gif",
     "archive",
-    "2012-09-11-review-of-game-of-thrones-season-2-soundtrack-by-ramin-djawadi/game-of-thrones-season-2-liam-cunningham.jpg",
     "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya",
     "2017-08-09-darwin-fringe-show-vaudeville-variety-starring-chaplin",
     "2017-05-10-sideshow-sound-does-rogue-one-score-guide",
@@ -218,7 +218,6 @@
     "2017-05-10-dance-academy-film-review",
     "2017-04-17-podcasting-doctor-whos-10th-season",
     "2017-04-14-the-message-of-doctor-who-video",
-    "2017-03-04-two-new-podcasts-movies-and-memes",
-    "2017-02-18-the-making-of-a-feature-film"
+    "2017-03-04-two-new-podcasts-movies-and-memes"
   ]
 }
