@@ -10,9 +10,7 @@ tags:
 coverImage: ./thumbnail_v3.jpg
 listed: true
 ---
-# My Top 24 Original Scores of 2024
-
-For the 5th year in a row, I've created a list of my favourite soundtrack music of the year. This year I present my **24** top original scores released in the year 2024.
+For the sixth year in a row, I've created a list of my favourite soundtrack music of the year. This year I present my **24** top original scores released in the year 2024.
 
 <div class="flex justify-center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ujTxANp-6FA?si=7YNg_xTN2kIV7kzm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
