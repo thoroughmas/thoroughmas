@@ -8,6 +8,7 @@ tags:
   - films
   - games
   - music
+  - books
 coverImage: ./trakt2024.png
 listed: true
 ---
