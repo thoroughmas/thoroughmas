@@ -52,7 +52,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Behind The News',
-    description: "Check out my latest children's news story for the ABC's eternally fantastic BTN.",
+    description: "Check out one of my stories for the ABC's children's news show, BTN.",
     demoLink: 'https://www.abc.net.au/btn/high/the-rise-of-misinformation/104504042',
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'ABC',
