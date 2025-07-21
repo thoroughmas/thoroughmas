@@ -8,6 +8,7 @@ import Fiasco from '@src/assets/img/projects/fiascohero_1.png';
 import BTN from '@src/assets/img/projects/tmbtnnews_1.jpg';
 import Blog from '@src/assets/img/projects/tmmirrorselfie_1.jpg';
 import MutantReviewers from '@src/assets/img/projects/heartbeeps.jpg';
+import TheWatsons from '@src/assets/img/projects/thewatsons1.jpg';
 
 export interface Project {
   name: string;
@@ -41,12 +42,12 @@ export const projects: Project[] = [
     tags: ['Podcast']
   },
   {
-    name: 'Fair Punishment',
-    description: "I'll be performing in this gothic mask show in Darwin, May 2025.",
-    demoLink: 'https://brownsmart.com.au/fair-punishment/',
+    name: 'The Watsons',
+    description: "I'm performing in this chaotic spin on Jane Austen in Adelaide, August 2025.",
+    demoLink: 'https://trybooking.com/CXJIN',
     demoLinkRel: 'nofollow noopener noreferrer',
-    linkType: "Brown's Mart",
-    image: FairPunishment,
+    linkType: "Theatre Guild",
+    image: TheWatsons,
     tags: ['Theatre']
   },
   {
@@ -74,6 +75,15 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'Theatre Guild',
     image: ThirtyNineSteps,
+    tags: ['Theatre']
+  },
+  {
+    name: 'Fair Punishment',
+    description: "I performed in this gothic mask show in Darwin, May 2025.",
+    demoLink: 'https://brownsmart.com.au/fair-punishment/',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: "Brown's Mart",
+    image: FairPunishment,
     tags: ['Theatre']
   },
   {
