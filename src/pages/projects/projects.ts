@@ -43,7 +43,7 @@ export const projects: Project[] = [
   },
   {
     name: 'The Watsons',
-    description: "I'm performing in this chaotic spin on Jane Austen in Adelaide, August 2025.",
+    description: "I performed in this chaotic spin on Jane Austen in Adelaide, August 2025.",
     demoLink: 'https://trybooking.com/CXJIN',
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: "Theatre Guild",
