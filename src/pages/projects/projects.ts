@@ -8,7 +8,7 @@ import Fiasco from '@src/assets/img/projects/fiascohero_1.png';
 import BTN from '@src/assets/img/projects/tmbtnnews_1.jpg';
 import Blog from '@src/assets/img/projects/tmmirrorselfie_1.jpg';
 import MutantReviewers from '@src/assets/img/projects/heartbeeps.jpg';
-import TheWatsons from '@src/assets/img/projects/thewatsons1.jpg';
+import TheWatsons from '@src/assets/img/projects/thewatsons2.jpg';
 
 export interface Project {
   name: string;
