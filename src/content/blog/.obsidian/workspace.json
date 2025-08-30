@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-02-05-my-favourite-soundtracks-2023/index.md",
+                "file": "2025-08-26-becoming-a-fedora-fan/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -164,6 +164,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -174,9 +175,20 @@
   },
   "active": "d462ec9c3acbb4cd",
   "lastOpenFiles": [
-    "2024-02-05-my-favourite-soundtracks-2023/Brian-Tyler-conducting-an-orchestra.jpg",
     "2025-01-31-my-favourite-soundtracks-2024/index.md",
+    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
+    "2025-08-26-becoming-a-fedora-fan/index.md",
     "2024-02-05-my-favourite-soundtracks-2023/index.md",
+    "2025-08-26-becoming-a-fedora-fan/thumbnail_v3.jpg",
+    "2025-08-26-becoming-a-fedora-fan/9TalesofKenzera.jpg",
+    "2025-08-26-becoming-a-fedora-fan/8TransformersOne.jpg",
+    "2025-08-26-becoming-a-fedora-fan/7YoungWoman.jpg",
+    "2025-08-26-becoming-a-fedora-fan/6Dune2.jpg",
+    "2025-08-26-becoming-a-fedora-fan/5Helldivers2.jpg",
+    "2025-08-26-becoming-a-fedora-fan/4TheWarWithin.jpg",
+    "2025-08-26-becoming-a-fedora-fan/3StarWarsOutlaws.jpg",
+    "2025-08-26-becoming-a-fedora-fan/2DragonAge.jpg",
+    "2025-08-26-becoming-a-fedora-fan",
     "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya/index.md",
     "2019-12-29-the-sketch-files-5/index.md",
     "2019-04-10-clive-released-reactions/index.md",
@@ -184,16 +196,6 @@
     "2025-01-28-my-favourite-media-2024/index.md",
     "2025-01-31-my-favourite-soundtracks-2024/22TheDry2.jpg~RF490c861b.TMP",
     "2025-01-31-my-favourite-soundtracks-2024/22TheDry2.jpg.~tmp",
-    "2025-01-31-my-favourite-soundtracks-2024/22TheDry2.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/22TheDry2.jpeg",
-    "2025-01-31-my-favourite-soundtracks-2024/21Woodwalkers.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/20Penguin.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/19Wicked.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/18BlackOps6.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/17WeWereTheLuckyOnes.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/16Concord.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/15ThatChristmas.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/14ARKAnimatedSeries.jpg",
     "2025-01-31-my-favourite-soundtracks-2024/albums",
     "2025-01-31-my-favourite-soundtracks-2024/New folder",
     "2025-01-31-my-favourite-soundtracks-2024",
@@ -216,9 +218,7 @@
     "2019-03-13-activate-nathaniel-kelly-production-powerhouse/index.md",
     "2019-03-05-i-use-a-chromebook/index.md",
     "2019-03-05-a-wacky-short-story-podcast/index.md",
-    "2019-01-05-the-sketch-files-4/index.md",
     "archive",
-    "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya",
-    "2017-08-09-darwin-fringe-show-vaudeville-variety-starring-chaplin"
+    "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya"
   ]
 }
