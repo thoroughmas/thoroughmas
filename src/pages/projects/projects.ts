@@ -68,6 +68,15 @@ export const projects: Project[] = [
     image: MutantReviewers,
     tags: ['Movie Reviews']
   },
+    {
+    name: 'Fair Punishment',
+    description: "I performed in this gothic mask show in Darwin, May 2025.",
+    demoLink: 'https://brownsmart.com.au/fair-punishment/',
+    demoLinkRel: 'nofollow noopener noreferrer',
+    linkType: "Brown's Mart",
+    image: FairPunishment,
+    tags: ['Theatre']
+  },
   {
     name: 'The 39 Steps',
     description: "I performed in this romping hoot at Adelaide's Little Theatre, Oct-Nov 2024.",
@@ -75,15 +84,6 @@ export const projects: Project[] = [
     demoLinkRel: 'nofollow noopener noreferrer',
     linkType: 'Theatre Guild',
     image: ThirtyNineSteps,
-    tags: ['Theatre']
-  },
-  {
-    name: 'Fair Punishment',
-    description: "I performed in this gothic mask show in Darwin, May 2025.",
-    demoLink: 'https://brownsmart.com.au/fair-punishment/',
-    demoLinkRel: 'nofollow noopener noreferrer',
-    linkType: "Brown's Mart",
-    image: FairPunishment,
     tags: ['Theatre']
   },
   {
