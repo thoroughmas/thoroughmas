@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e07d38e3f379465d",
+        "id": "5ee8d362b0c7b8b5",
         "type": "tabs",
         "children": [
           {
-            "id": "d462ec9c3acbb4cd",
+            "id": "2a4c40bf65d6aa83",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"revenge\"",
+                "query": "\"fresh\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -189,24 +188,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "576d95e3a56c433e",
+  "active": "2a4c40bf65d6aa83",
   "lastOpenFiles": [
-    "2015-12-05-new-website-a-revenge-story/index.md",
+    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
+    "2025-01-31-my-favourite-soundtracks-2024/7YoungWoman.jpg",
+    "2025-01-31-my-favourite-soundtracks-2024/index.md",
+    "2025-01-31-my-favourite-soundtracks-2024/15ThatChristmas.jpg",
+    "2025-08-26-becoming-a-fedora-fan/10HouseoftheDragon.jpg",
+    "2015-08-20-utopia-s02e01-a-fresh-start-recap/index.md",
     "2025-08-26-becoming-a-fedora-fan/index.md",
+    "2015-12-05-new-website-a-revenge-story/index.md",
     "2018-09-10-you-do-you-darwin-international-film-festival-spark-film-2018/index.md",
     "2015-12-05-new-website-a-revenge-story/Capture.PNG",
     "2015-08-20-utopia-s02e01-a-fresh-start-recap/Capture.PNG",
     "2015-12-05-new-website-a-revenge-story/Capture_Thoroughmas.png",
-    "2015-08-20-utopia-s02e01-a-fresh-start-recap/index.md",
-    "2025-01-31-my-favourite-soundtracks-2024/index.md",
-    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
     "2024-02-05-my-favourite-soundtracks-2023/index.md",
     "2025-08-26-becoming-a-fedora-fan/thumbnail_v3.jpg",
     "2025-08-26-becoming-a-fedora-fan/9TalesofKenzera.jpg",
     "2025-08-26-becoming-a-fedora-fan/8TransformersOne.jpg",
     "2025-08-26-becoming-a-fedora-fan/7YoungWoman.jpg",
-    "2025-08-26-becoming-a-fedora-fan/6Dune2.jpg",
-    "2025-08-26-becoming-a-fedora-fan/5Helldivers2.jpg",
     "2025-08-26-becoming-a-fedora-fan",
     "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya/index.md",
     "2019-12-29-the-sketch-files-5/index.md",

@@ -7,7 +7,7 @@ pubDate: Jan 31 2025
 tags:
   - technology
   - linux
-coverImage: ./thumbnail_v3.jpg
+coverImage:
 listed: false
 ---
 For the sixth year in a row, I've created a list of my favourite soundtrack music of the year. This year I present my **24** top original scores released in the year 2024.

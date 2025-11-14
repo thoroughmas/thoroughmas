@@ -1,0 +1,12 @@
+```
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://thomid.me/sitemap-index.xml
+
+# Block admin and internal pages (if any)
+Disallow: /*.json$
+
+# Allow all crawlers to access everything
+Crawl-delay: 1
