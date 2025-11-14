@@ -7,12 +7,12 @@ interface Props {
 	picSize: PicSize;
 }
 const { picSize } = Astro.props;
+const aboutUrl = '/about';
 ---
 
 <div class='flex gap-4 items-center leading-tight not-prose'>
 	<a
-		href='https://thomid.me/about'
-		target='_blank'
+		href={aboutUrl}
 		rel='noopener noreferrer'
 		class:list={[
 			'rounded-full overflow-hidden shrink-0',
@@ -25,14 +25,7 @@ const { picSize } = Astro.props;
 	</a>
 	<div>
 		<div>
-			<a
-				href='https://thomid.me/about'
-				class='block font-bold text-inherit hover:text-[var(--link-color)]'
-				target='_blank'
-				rel='noopener noreferrer'
-			>
-				Thomas Midena
-			</a>
+			<a href={aboutUrl} class='block font-bold text-inherit hover:text-[var(--link-color)]' rel='noopener noreferrer'> Thomas Midena </a>
 		</div>
 		<small class='avatar__subtitle'></small>
 	</div>

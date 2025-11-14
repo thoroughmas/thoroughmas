@@ -1,6 +1,6 @@
 ---
 featured: false
-title: My favourite soundtracks of 2024
+title: Becoming a Fedora Fan
 slug: becoming-a-fedora-fan
 description: My top original scores from TV, movies and games
 pubDate: Jan 31 2025

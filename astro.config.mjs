@@ -1,24 +1,28 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import tailwind from "@astrojs/tailwind";
 import { autoNewTabExternalLinks } from './src/autoNewTabExternalLinks';
-import partytown from "@astrojs/partytown";
+import partytown from '@astrojs/partytown';
 
 export default defineConfig({
-  site: 'https://thomid.me',
-  integrations: [mdx(), sitemap(), tailwind(), partytown()],
-  markdown: {
-    extendDefaultPlugins: true,
-    rehypePlugins: [[autoNewTabExternalLinks, {
-      domain: 'https://thomid.me'
-    }]]
-  },
-  vite: {
-    resolve: {
-      alias: {
-        '@src': new URL('./src', import.meta.url).pathname
-      }
-    }
-  }
+	site: 'https://thomid.me',
+	integrations: [mdx(), sitemap(), partytown()],
+	markdown: {
+		extendDefaultPlugins: true,
+		rehypePlugins: [
+			[
+				autoNewTabExternalLinks,
+				{
+					domain: 'https://thomid.me'
+				}
+			]
+		]
+	},
+	vite: {
+		resolve: {
+			alias: {
+				'@src': new URL('./src', import.meta.url).pathname
+			}
+		}
+	}
 });

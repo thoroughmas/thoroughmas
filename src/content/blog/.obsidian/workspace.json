@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "untitl",
+                "query": "\"revenge\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -137,12 +138,12 @@
             "id": "c8a450262485f27e",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "outline-solid",
               "state": {
                 "file": "2024-11-21-that-fresh-new-website-feeling/index.md"
               },
-              "icon": "lucide-list",
-              "title": "Outline of index"
+              "icon": "lucide-ghost",
+              "title": "outline-solid"
             }
           },
           {
@@ -153,6 +154,21 @@
               "state": {},
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
+            }
+          },
+          {
+            "id": "d1414ac017fc8a48",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2025-08-26-becoming-a-fedora-fan/index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of index"
             }
           }
         ],
@@ -173,11 +189,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d462ec9c3acbb4cd",
+  "active": "576d95e3a56c433e",
   "lastOpenFiles": [
+    "2015-12-05-new-website-a-revenge-story/index.md",
+    "2025-08-26-becoming-a-fedora-fan/index.md",
+    "2018-09-10-you-do-you-darwin-international-film-festival-spark-film-2018/index.md",
+    "2015-12-05-new-website-a-revenge-story/Capture.PNG",
+    "2015-08-20-utopia-s02e01-a-fresh-start-recap/Capture.PNG",
+    "2015-12-05-new-website-a-revenge-story/Capture_Thoroughmas.png",
+    "2015-08-20-utopia-s02e01-a-fresh-start-recap/index.md",
     "2025-01-31-my-favourite-soundtracks-2024/index.md",
     "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
-    "2025-08-26-becoming-a-fedora-fan/index.md",
     "2024-02-05-my-favourite-soundtracks-2023/index.md",
     "2025-08-26-becoming-a-fedora-fan/thumbnail_v3.jpg",
     "2025-08-26-becoming-a-fedora-fan/9TalesofKenzera.jpg",
@@ -185,9 +207,6 @@
     "2025-08-26-becoming-a-fedora-fan/7YoungWoman.jpg",
     "2025-08-26-becoming-a-fedora-fan/6Dune2.jpg",
     "2025-08-26-becoming-a-fedora-fan/5Helldivers2.jpg",
-    "2025-08-26-becoming-a-fedora-fan/4TheWarWithin.jpg",
-    "2025-08-26-becoming-a-fedora-fan/3StarWarsOutlaws.jpg",
-    "2025-08-26-becoming-a-fedora-fan/2DragonAge.jpg",
     "2025-08-26-becoming-a-fedora-fan",
     "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya/index.md",
     "2019-12-29-the-sketch-files-5/index.md",
@@ -215,9 +234,6 @@
     "2012-09-12-malignant-morality-in-doctor-who/index.md",
     "2012-09-17-google-music-desktop-player-review/index.md",
     "2012-09-22-why-you-should-check-out-the-doctor-who-fan-orchestra/index.md",
-    "2019-03-13-activate-nathaniel-kelly-production-powerhouse/index.md",
-    "2019-03-05-i-use-a-chromebook/index.md",
-    "2019-03-05-a-wacky-short-story-podcast/index.md",
     "archive",
     "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya"
   ]
