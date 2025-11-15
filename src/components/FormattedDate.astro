@@ -6,13 +6,12 @@ interface Props {
 const { date } = Astro.props;
 ---
 
-<time datetime={date.toISOString()}>
+<time datetime={date.toISOString()} class='text-zinc-500 dark:text-zinc-400 tabular-nums'>
 	{
 		date.toLocaleDateString('en-us', {
-			year: 'numeric',
 			month: 'short',
-			day: '2-digit',
-			timeZone: 'Australia/Adelaide', // Set to Adelaide time zone
+			day: 'numeric',
+			timeZone: 'Australia/Adelaide'
 		})
 	}
 </time>
