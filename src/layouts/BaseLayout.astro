@@ -2,54 +2,28 @@
 import BaseHead from './components/BaseHead.astro';
 import Header from './components/Header.astro';
 import Footer from './components/Footer.astro';
-import { loadEnv } from 'vite';
 
-const { GTAG_MEASUREMENT_ID } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
 const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
-<html 
-  lang='en' 
-  prefix="og: https://ogp.me/ns#"
->
-  <head>
-    <BaseHead title={title} description={description} image={image} />
-    
-    {/* Open Graph metadata */}
-    <meta property="og:type" content="website" />
-    {image && <meta property="og:image" content={image} />}
-  </head>
-  
-  <body 
-    class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0"
-    itemscope 
-    itemtype="https://schema.org/WebPage"
-  >
-    <Header />
-    <div 
-      class='py-8 min-h-[calc(100vh-160px)]' 
-      itemprop="mainContentOfPage"
-    >
-      <slot />
-    </div>
-    <Footer />
-    
-    <!-- Google tag (gtag.js) -->
-    {
-      GTAG_MEASUREMENT_ID && (
-        <>
-          <script type='text/partytown' async is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_MEASUREMENT_ID}`}></script>
-          <script type='text/partytown' is:inline define:vars={{ GTAG_MEASUREMENT_ID }}>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', GTAG_MEASUREMENT_ID);
-          </script>
-        </>
-      )
-    }
-  </body>
+<html lang='en' prefix='og: https://ogp.me/ns#'>
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+
+		{/* Open Graph metadata */}
+		<meta property='og:type' content='website' />
+		{image && <meta property='og:image' content={image} />}
+	</head>
+
+	<body class='bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0' itemscope itemtype='https://schema.org/WebPage'>
+		<Header />
+		<div class='py-8 min-h-[calc(100vh-160px)]' itemprop='mainContentOfPage'>
+			<slot />
+		</div>
+		<Footer />
+
+		<!-- Umami Analytics -->
+		<script defer src='https://umami.glyph.au/script.js' data-website-id='5856ddeb-e4cb-469d-ab9d-65f0913160bb'></script>
+	</body>
 </html>

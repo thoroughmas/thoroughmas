@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5ee8d362b0c7b8b5",
+        "id": "e07d38e3f379465d",
         "type": "tabs",
         "children": [
           {
-            "id": "2a4c40bf65d6aa83",
+            "id": "d462ec9c3acbb4cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-08-26-becoming-a-fedora-fan/index.md",
+                "file": "2025-12-05-peertube/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"fresh\"",
+                "query": "untitl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -137,12 +137,12 @@
             "id": "c8a450262485f27e",
             "type": "leaf",
             "state": {
-              "type": "outline-solid",
+              "type": "outline",
               "state": {
                 "file": "2024-11-21-that-fresh-new-website-feeling/index.md"
               },
-              "icon": "lucide-ghost",
-              "title": "outline-solid"
+              "icon": "lucide-list",
+              "title": "Outline of index"
             }
           },
           {
@@ -153,21 +153,6 @@
               "state": {},
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
-            }
-          },
-          {
-            "id": "d1414ac017fc8a48",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "2025-08-26-becoming-a-fedora-fan/index.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of index"
             }
           }
         ],
@@ -188,25 +173,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2a4c40bf65d6aa83",
+  "active": "d462ec9c3acbb4cd",
   "lastOpenFiles": [
-    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/7YoungWoman.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/index.md",
-    "2025-01-31-my-favourite-soundtracks-2024/15ThatChristmas.jpg",
-    "2025-08-26-becoming-a-fedora-fan/10HouseoftheDragon.jpg",
-    "2015-08-20-utopia-s02e01-a-fresh-start-recap/index.md",
+    "2025-12-03-reaction-videos/index.md",
+    "2025-12-05-peertube/index.md",
+    "2013-06-16-intelligence-filming-has-begun/index.md",
+    "2025-12-05-peertube",
     "2025-08-26-becoming-a-fedora-fan/index.md",
-    "2015-12-05-new-website-a-revenge-story/index.md",
-    "2018-09-10-you-do-you-darwin-international-film-festival-spark-film-2018/index.md",
-    "2015-12-05-new-website-a-revenge-story/Capture.PNG",
-    "2015-08-20-utopia-s02e01-a-fresh-start-recap/Capture.PNG",
-    "2015-12-05-new-website-a-revenge-story/Capture_Thoroughmas.png",
+    "2025-12-03-reaction-videos",
+    "2025-01-31-my-favourite-soundtracks-2024/index.md",
+    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
     "2024-02-05-my-favourite-soundtracks-2023/index.md",
     "2025-08-26-becoming-a-fedora-fan/thumbnail_v3.jpg",
     "2025-08-26-becoming-a-fedora-fan/9TalesofKenzera.jpg",
     "2025-08-26-becoming-a-fedora-fan/8TransformersOne.jpg",
     "2025-08-26-becoming-a-fedora-fan/7YoungWoman.jpg",
+    "2025-08-26-becoming-a-fedora-fan/6Dune2.jpg",
+    "2025-08-26-becoming-a-fedora-fan/5Helldivers2.jpg",
+    "2025-08-26-becoming-a-fedora-fan/4TheWarWithin.jpg",
+    "2025-08-26-becoming-a-fedora-fan/3StarWarsOutlaws.jpg",
+    "2025-08-26-becoming-a-fedora-fan/2DragonAge.jpg",
     "2025-08-26-becoming-a-fedora-fan",
     "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya/index.md",
     "2019-12-29-the-sketch-files-5/index.md",
@@ -234,7 +220,6 @@
     "2012-09-12-malignant-morality-in-doctor-who/index.md",
     "2012-09-17-google-music-desktop-player-review/index.md",
     "2012-09-22-why-you-should-check-out-the-doctor-who-fan-orchestra/index.md",
-    "archive",
-    "2017-08-15-bamboo-moon-the-tale-of-princess-kaguya"
+    "2019-03-13-activate-nathaniel-kelly-production-powerhouse/index.md"
   ]
 }

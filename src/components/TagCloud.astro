@@ -25,9 +25,9 @@ const popularTags = Array.from(tagCounts.entries())
 
 {
 	popularTags.length > 0 && (
-		<div class='text-right'>
+		<div class='text-center md:text-right'>
 			<div class='text-[10px] text-zinc-400/70 dark:text-zinc-500/60 mb-1.5 uppercase tracking-wider'>Popular tags</div>
-			<div class='flex flex-wrap gap-1.5 justify-end max-w-xs'>
+			<div class='flex flex-wrap gap-1.5 justify-center md:justify-end max-w-xs mx-auto md:mr-0'>
 				{popularTags.map(({ tag, count }) => (
 					<a
 						href={`/tags/${slugifyTag(tag)}/`}
