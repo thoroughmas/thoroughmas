@@ -2,11 +2,15 @@
 featured: false
 title: Review of "Hugo" Soundtrack by Howard Shore
 slug: review-of-hugo-soundtrack-by-howard-shore
-description: 
+description:
 pubDate: Sep 11 2012
-tags: [soundtrack, review, films, music]
+tags:
+  - soundtrack
+  - review
+  - films
+  - music
 coverImage:
-listed: false
+listed: true
 ---
 How do you give a sense of magic and excitement to a film with only subtle, moderate doses of action, humour, romance, or any other variation of dramatic flare? Well, Howard Shore brings a wealth of scoring intelligence to this commendable feat.
 
@@ -41,10 +45,5 @@ For many, Shore’s *Hugo* may not rise above the level of “Mmm yeah that’s 
 ![Hugo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1Hbfsy8RKLXmWCFx9zhfsttUxg8YKwIkQQwLDDB8N_0nmx-XMRvCQS-Z1Ur7rx9yTfty5NtX00ztHPp07ZMeYzbu1zu5IlfItA-VrAoSnk5LIUXOCDVPH888q03Ep11lad2pLPogTCQ/s1600/hugo5.JPG)
 
 Without this excellent score, I believe the film would have had far less power and emotional weight; Shore speaks to the audience just as much as any of the acting, writing, or directing in *Hugo*, if not more. I find *Hugo* to be an inspiring album to listen to even after numerous repeats. Despite the repetition and occasional lack of variety, Shore has filled this soundtrack with enough energy and emotion to put it in not only a high spot in my favourites for 2011 but also in a special place in my heart.
-
-My scores for the soundtrack are below.
-
-Yours terminally,  
-**Thoroughmas**
 
 **Rating: 8/10**

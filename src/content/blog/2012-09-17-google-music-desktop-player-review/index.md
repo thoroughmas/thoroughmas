@@ -2,11 +2,14 @@
 featured: false
 title: Google Music Desktop Player Review
 slug: google-music-desktop-player-review
-description: 
+description:
 pubDate: Sep 17 2012
-tags: [review, technology, music]
+tags:
+  - review
+  - technology
+  - music
 coverImage:
-listed: false
+listed: true
 ---
 If you're a user of Google Music and Windows 7, you'll want to check out this [Google Music Desktop Player](http://vhanla.deviantart.com/art/Google-Music-Desktop-Player-253378729) that Victor Alberto Gil has designed.
 
@@ -40,6 +43,3 @@ I've messed around (played music) with it for a few days now, and here's some qu
   It's to be expected with a little user-created program like this, but there are some general little bugs in regards to navigation and the interface. These have never affected me too much though, and hopefully improvements will be made in the future!
 
 [Click here to go to the download page for the Google Music Desktop Player.](http://vhanla.deviantart.com/art/Google-Music-Desktop-Player-253378729)
-
-Yours initially,  
-**Thoroughmas**

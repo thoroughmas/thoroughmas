@@ -1,12 +1,16 @@
 ---
 featured: false
 title: Review of "Breaking Bad" Soundtrack by Dave Porter
-slug: review-of-breaking-bad-soundtrack-by-dave-porter
-description: 
+slug: review-of-breaking-bad-soundtrack
+description:
 pubDate: Oct 13 2012
-tags: [soundtrack, review, television, music]
-coverImage:
-listed: false
+tags:
+  - soundtrack
+  - review
+  - television
+  - music
+coverImage: ./51MPQbccKtL.jpg
+listed: true
 ---
 Since the first season aired in 2008, this American drama series created by Vince Gilligan has risen to small-screen fame, and is now one of the most popular shows on television. BREAKING BAD is a dark thriller which follows the story of Walter White, a man who descends into a life of crime in order to provide for his family. Supplying the soundtrack for the show since the beginning is composer DAVE PORTER. His music, however, takes a backseat in this production. It fulfills the necessary action and emotional beats, but never emerges beyond the format of a glorified soundscape.
 
@@ -22,6 +26,26 @@ Though it should come as no surprise, PORTER'S BREAKING BAD is an entirely under
 
 However the rich visual storytelling in BREAKING BAD is so powerful that it makes sense for this soundtrack to be soft and subtle, rendering most of the score imperceptible. Although elements of the soundtrack are interesting when examined in the context of the TV show, where I'd rate the score a 6/10, as a stand-alone listen PORTER'S BREAKING BAD simply fails to deliver an enjoyable listening experience, warranting only a 3/10. In the end, while PORTER'S score has style and ingenuity worth admiring, it is a less than average soundtrack, collecting a score of 4/10.
 
-![](./51MPQbccKtL.jpg)
-
-[Click here to jump over the the review at Tracksounds, including track ratings.](http://tracksounds.com/reviews/breaking_bad_dave_porter.htm)
+|**#**|**Track Title**|**Time**|**Rating**|
+|---|---|---|---|
+|1|Breaking Bad Main Title Theme (Extended)|1:15|***|
+|2|Matches in the Pool|2:09|*|
+|3|Smoking Jesse's Pot|2:01|***|
+|4|Gray Matter|3:10|**|
+|5|The Morning After|2:24|**|
+|6|Three Days Out|3:03|*|
+|7|Vent|1:35|**|
+|8|Baby's Coming|4:09|**|
+|9|Jane's Demise|2:20|*|
+|10|The Cousins|3:27|**|
+|11|Hank in Pursuit|3:50|**|
+|12|The Long Walk Alone (Heisenberg's Theme)|3:15|**|
+|13|Searching for Jesse|2:23|**|
+|14|Aztek|2:40|***|
+|15|Four Corners/ Waiting for the End|4:13|**|
+|16|Jesse in Mexico|3:53|*|
+|17|Crawl Space|3:34|**|
+|18|Parking Garage Standoff|3:25|**|
+|19|Cleaning House|1:46|**|
+|20|Disassemble|3:26|**|
+|**Total**|**Running Time (approx)**|**58m**||

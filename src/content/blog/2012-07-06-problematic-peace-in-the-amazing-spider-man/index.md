@@ -2,11 +2,14 @@
 featured: false
 title: Problematic Peace in The Amazing Spider-Man
 slug: problematic-peace-in-the-amazing-spider-man
-description: 
+description:
 pubDate: Jul 06 2012
-tags: [podcast, ramble, review]
+tags:
+  - podcast
+  - ramble
+  - review
 coverImage:
-listed: false
+listed: true
 ---
 This is my short rant about the villains in the Spider-Man films. You can either [read below](http://www.thoroughmas.com/2012/07/problematic-peace-in-amazing-spider-man.html), or [listen here](http://www.spreaker.com/user/thoroughmas/problematic_peace_in_spider_man):
 
@@ -41,6 +44,3 @@ Gwen's father doesn't take much convincing to run into battle alongside Spider-M
 If there's no one to fight, it's odd that there's so much fighting.
 
 All of that may sound somewhat negative, but I was thoroughly impressed by *The Amazing Spider-Man* and enjoyed every moment.
-
-Yours dutifully,  
-**Thoroughmas**

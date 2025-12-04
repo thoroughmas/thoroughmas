@@ -1,12 +1,17 @@
 ---
 featured: false
 title: Review of "Ain't Them Bodies Saints" Soundtrack by Daniel Hart
-slug: review-of-aint-them-bodies-saints-soundtrack-by-daniel-hart
-description: 
+slug: review-of-aint-them-bodies-saints-soundtrack
+description:
 pubDate: Nov 05 2013
-tags: [writing, soundtrack, review, films, music]
-coverImage:
-listed: false
+tags:
+  - writing
+  - soundtrack
+  - review
+  - films
+  - music
+coverImage: ./51kUQjACuFL._SL500_AA280_.jpg
+listed: true
 ---
 AIN’T THEM BODIES SAINTS is a romantic drama set in the picturesque hills of Texas and featuring the small-scale story of an outlaw who escapes from prison to reunite with his wife. This setting and plot is simple and familiar, leaving the tough job of creating a unique and engaging tone to up-and-coming composer DANIEL HART.
  
@@ -23,7 +28,3 @@ The album ends with 8 songs created by various artists and featuring a cowboy’
 This score was created to provide a simple bleak tone for the film it is attached to. On it’s own, the soundtrack is a little too ethereal, stagnant and empty. A lack of musical momentum, through rhythm or melody, meant I could never truly engage with the material. AIN’T THEM BODIES SAINTS operates on the same plane of anxious emotion from beginning to end, but since I couldn’t connect with the music in any personal way that anxiety did not become relevant. It’s like watching someone else be anxious, which is simply an uncomfortable experience. The regular use of body percussion struggles to stand as the main musical drive. How unique must a soundtrack be to be enjoyed on its own? A stretch more unique than this score, I would argue.
 
 If you enjoy minimalistic dark scores with eerie, depressing atmospheres, maybe AIN'T THEM BODIES SAINTS is one for you. However for the rest of us the complete lack of variety and melodic material makes this a fairly ordinary listening experience.
-
-[![](./51kUQjACuFL._SL500_AA280_.jpg)](http://tracksounds.com/reviews/aint_bodies_saints_daniel_hart.htm)
-
-[Check out the review on Tracksounds, including track ratings.](http://tracksounds.com/reviews/aint_bodies_saints_daniel_hart.htm)

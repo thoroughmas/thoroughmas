@@ -2,11 +2,14 @@
 featured: false
 title: Sideshow Sound does Rogue One Score Guide
 slug: sideshow-sound-does-rogue-one-score-guide
-description: 
+description:
 pubDate: May 10 2017
-tags: [podcast, soundtrack, music]
+tags:
+  - podcast
+  - soundtrack
+  - music
 coverImage:
-listed: false
+listed: true
 ---
 I'm an enormous fan of so many podcasts, and Sideshow Sound Radio is one of the big ones. One of their coolest projects is a series of "Score Guide" episodes, in which they present and discuss the entirity of a beloved soundtrack, including clever insights and a range of opinions. To make these episodes hosts Wendell Jones and William Dodson regularly seek contributions from listeners. So when I heard they were doing a new Score Guide on Michael Giacchino's fabulous Rogue One, I thought I'd better send something in.
 

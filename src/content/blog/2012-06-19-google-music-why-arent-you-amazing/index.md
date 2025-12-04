@@ -2,11 +2,13 @@
 featured: false
 title: Google Music Why Aren't You Amazing?
 slug: google-music-why-arent-you-amazing
-description: 
+description:
 pubDate: Nov 21 2024
-tags: [technology, review]
+tags:
+  - technology
+  - review
 coverImage:
-listed: false
+listed: true
 ---
 I'm not going to be going into that much depth here, but I've recently begun my involvement with Google's inevitable endeavor into the digital audio world, ironically named *[Google Music](http://music.google.com/)*. I'm accessing the service from here in Australia, where it's not yet officially available, *[but it's fairly easily to jump in anyway](http://thehysteric.blogspot.com.au/2011/11/google-music-accessing-outside-us.html)*. But I should note this doesn't give you access to the store where you can purchase music, that's still only available in the US. Typical.
 
@@ -35,9 +37,6 @@ Lemme break it all down:
 
 Overall, I'd have to say iTunes Match is currently pretty far ahead in this Match-off (get it? Match-off? Match? iTunes Match? Ahahaha yeah that was terrible ...). Google Music is nice, and I do want to like it, but it has some catching up to do.
 
-Well, that's my impressions so far. I'm going to continue using both services for my music-listening-goodness. And it'll be interesting to try Google Music on an Android device soon, and compare that with iTunes Match on my iPod Touch. Until then,
-
-Yours unmistakably,  
-**Thoroughmas**
+Well, that's my impressions so far. I'm going to continue using both services for my music-listening-goodness. And it'll be interesting to try Google Music on an Android device soon, and compare that with iTunes Match on my iPod Touch.
 
 P.S. I'm not even thinking about Amazon's music-in-the-cloud service yet. Ugh, that's too many options for my poor, indecisive little mind.

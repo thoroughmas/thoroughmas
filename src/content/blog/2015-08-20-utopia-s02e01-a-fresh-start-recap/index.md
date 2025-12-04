@@ -2,11 +2,15 @@
 featured: false
 title: Utopia S02E01 A Fresh Start (Recap)
 slug: utopia-s02e01-a-fresh-start-recap
-description: 
+description:
 pubDate: Aug 20 2015
-tags: [writing, review, television, recap]
+tags:
+  - writing
+  - review
+  - television
+  - recap
 coverImage:
-listed: false
+listed: true
 ---
 The second series of <b>Utopia</b> (Australia's, not <a href="http://www.imdb.com/title/tt3703500/?ref_=fn_al_tt_4" target="_blank">America's</a> or <a href="http://www.imdb.com/title/tt2384811/?ref_=fn_al_tt_1" target="_blank">Britain's</a>) premiered on ABC last night in the best way it could: a head-tiltingly understated web of 2015-relevant pessimistic satire. Everything you need to know is in that sentence, but I'll write some more about this enjoyable episode of Working Dog Productions' latest comedy anyway.
 

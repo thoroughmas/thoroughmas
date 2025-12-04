@@ -2,11 +2,13 @@
 featured: false
 title: Utopia S02E02 Shovels Ready (Recap)
 slug: utopia-s02e02-shovels-ready-recap
-description: 
+description:
 pubDate: Aug 27 2015
-tags: [television, recap]
+tags:
+  - television
+  - recap
 coverImage:
-listed: false
+listed: true
 ---
 This weeks recap is going to be quick and basic. Just reliving a few of the best moments from Utopia's latest episode!
 

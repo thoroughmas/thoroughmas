@@ -2,11 +2,15 @@
 featured: false
 title: Review of ABC TV's "The Code" Pilot
 slug: review-of-abc-tvs-the-code-pilot
-description: 
+description:
 pubDate: Sep 12 2014
-tags: [writing, ramble, review, television]
+tags:
+  - writing
+  - ramble
+  - review
+  - television
 coverImage:
-listed: false
+listed: true
 ---
 Last week I checked out the first episode of ABC's new political thriller series and, in an epihpany worthy of thriller storytelling, I found myself at the heart of a mindbending social media experiment. I realised that the episode had not actually been released, and that only myself and 299 other people were allowed to have an advance-preview. Why? So that they could sucker us into writing a review of what we had seen! They're forcing their viewers to do the dirty selling work for them! Crazy! I love it.
 
@@ -55,9 +59,5 @@ As a diligent television scientist seeking the truth, I undertook my own test of
 The big question is whether The Code can compete with current great political thrillers thrilling it up (a technical term) overseas, the likes of <i>Homeland</i> and <i>24</i>. The answer is not yet. The Code is not shining yet, but it's got legs. The pilot left me optimistic, and with a cliffhanger I care about and five more episodes to prove itself, The Code is one to watch.
 
 The series premieres for all on Sunday the 21st at 8:30pm on ABC.
-
-Yours thrillingly,
-
-Thoroughmas
 
 

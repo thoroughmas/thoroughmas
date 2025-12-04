@@ -31,6 +31,3 @@ One decade after the fact, here are my picks for the best film scores of 2004. A
 ***2**. The Glory Days, The Incredibles* - Michael Giacchino
 ***1**. A Window to the Past, Harry Potter and the Prisoner of Azkaban* - John Williams
 *Mischief Managed!, Harry Potter and the Prisoner of Azkaban* - John Williams
-
-Yours unendingly,
-Thoroughmas

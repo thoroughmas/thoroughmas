@@ -2,11 +2,14 @@
 featured: false
 title: Malignant Morality in Doctor Who
 slug: malignant-morality-in-doctor-who
-description: 
+description:
 pubDate: Sep 12 2012
-tags: [podcast, ramble, television]
+tags:
+  - podcast
+  - ramble
+  - television
 coverImage:
-listed: false
+listed: true
 ---
 Here is my little rant about actions taken by The Doctor in the latest episode of *Doctor Who*. You can either [read below](http://www.thoroughmas.com/2012/09/malignant-morality-in-doctor-who.html), or [listen here](http://www.spreaker.com/user/thoroughmas/malignant_morality_in_doctor_who):
 
@@ -33,7 +36,4 @@ But then, as I said a few moments ago, maybe lead writer Steven Moffat has done 
 Or maybe, despite his baby-like playfulness, Matt Smith's Doctor is simply far more cold and brutal than his previous incarnation as David Tennant. This is hard to believe though, since no time at all has been dedicated to demonstrating this idea.
 
 So in the end, much like all of the last couple of seasons, "Dinosaurs on a Spaceship" just left me confused, unsatisfied, and... really confused.
-
-Yours universally,  
-**Thoroughmas**
 

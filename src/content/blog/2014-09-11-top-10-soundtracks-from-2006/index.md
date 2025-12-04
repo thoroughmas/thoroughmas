@@ -30,6 +30,3 @@ In ranking my favourite film scores from 2006 I realised this year has a lot of 
 ***2**. Death Is The Road To Awe, The Fountain* - Clint Mansell
 ***1**. Eragon, Eragon* - Patrick Doyle
 *The Kraken, Pirates of the Caribbean: Dead Man's Chest* - Hans Zimmer
-
-Yours climatically,
-Thoroughmas

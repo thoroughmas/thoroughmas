@@ -44,6 +44,3 @@ It's only once the film had ended that I realised exactly what the film had achi
 As I guess you can probably tell, I liked this film. More than expected, more than most of Australian cinema, and more than enough to recommend it.
 
 ![](http://miff.com.au/assets/2014/sessions/1541/130126_19109_2_PAPER_PLANES.jpg)
-
-Yours frenziedly,
-Thorough-still-can't-make-a-paper-plane-for-the-life-of-him-mas

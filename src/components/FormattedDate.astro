@@ -1,6 +1,7 @@
 ---
 interface Props {
 	date: Date;
+	showYear?: boolean;
 }
 
 const { date } = Astro.props;
@@ -11,6 +12,7 @@ const { date } = Astro.props;
 		date.toLocaleDateString('en-us', {
 			month: 'short',
 			day: 'numeric',
+			year: Astro.props.showYear ? 'numeric' : undefined,
 			timeZone: 'Australia/Adelaide'
 		})
 	}

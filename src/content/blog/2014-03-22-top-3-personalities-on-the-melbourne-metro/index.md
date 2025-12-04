@@ -35,6 +35,3 @@ Stereotype: male, early 70s, grey hair, walking stick, old.
 You are quite old. You have a bit of a limp. Your back is heavily arched. We give you a bit of way to get through, but we don't need to. Woah, look at you go. You're overtaking everyone. You're practically pushing teenagers onto the train tracks. Are you really old or is that all just make up and acting? Well, I guess we'll never know 'cause you're yonks away already.
 
 Mmm. People are entertaining. More people soon maybe!
-
-Yours disgustedly,
-Thoroughmas

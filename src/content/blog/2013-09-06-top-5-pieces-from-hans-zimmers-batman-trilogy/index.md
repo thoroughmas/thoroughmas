@@ -2,11 +2,14 @@
 featured: false
 title: Top 5 Pieces From Hans Zimmer's Batman Trilogy
 slug: top-5-pieces-from-hans-zimmers-batman-trilogy
-description: 
+description:
 pubDate: Sep 06 2013
-tags: [writing, films, music]
-coverImage:
-listed: false
+tags:
+  - writing
+  - films
+  - music
+coverImage: ./top5_batmantrilogy.jpg
+listed: true
 ---
 Hi! Or as Batman would say, "WHERE IS SHE!?"
 
@@ -14,14 +17,37 @@ Even though he's one of the most mainstream entities around at the moment, I can
 
 Anyway, the recent trilogy of Batman Begins, The Dark Knight and The Dark Knight Rises by Christopher Nolan contained some top-notch Zimmer. I decided to make a list of my five favourite tracks from the three scores.
 
-You can check it out <a href="http://blog.tracksounds.com/2013/08/top-5-pieces-from-hans-zimmers-batman.html">right over here</a>!
+---
 
-![](./top5_batmantrilogy.jpg)
-
-Yours impertenently,
-
-Thoroughmas
-
-ps. Batman
+Hans Zimmer’s scores for The Dark Knight trilogy, with significant contributions from James Newton Howard, marry all of the dark, twisting tones of a gritty thriller with the noble, hopeful melodies of a hollywood superhero flick. Since Zimmer, Howard and Christopher Nolan teamed up to make Batman Begins eight years ago, we have been lucky enough to receive three incredible soundtracks from the series. Now that it’s all over and we’re as sonically attuned as a bat in a cave, I thought I’d share my five favourite pieces from the heap.  
+  
+**5. A Dark Knight (The Dark Knight)**  
+  
+It almost feels like cheating. This is a 16 minute track from The Dark Knight, which hits many of the main themes and emotional beats of the film, hence capturing the tone of The Dark Knight film perfectly. With gorgeously woeful strings it meanders through the black city of Gotham. Occasionally there is a whiff of a heroic theme. But every time one tries to rise, it either fails or is overwhelmed by the tragic undertones like a footballer in a collapsing stadium.  
+  
+Near the end of the piece the tension builds into a long stalemate, which is eventually dissipated by the arrival of a powerful action theme. Then follows the powerful two-note theme for Batman, finally strong enough to compete with the dark tones of Gotham.  
+  
+**4. Molossus (Batman Begins)**  
+  
+This is the ultimate Batman action cue. It’s from Batman Begins, and although it is undoubtedly repetitive it’s also an intensely rewarding listen. The powerful action melody repeats itself again and again, Batman’s two-note theme making appearances throughout. And just when you think the track has exhausted it’s energies, and it seems to peter out, the orchestra rises for yet another moment of heroism.  
+Don’t worry, it’s natural to feel exhausted after elbow-fighting your way through “Molossus”.  
+    
+**3. Imagine The Fire (The Dark Knight Rises)**  
+  
+Still got a little bit of fight in ya? I like that. “Imagine The Fire” takes us through the final action set piece of the trilogy, in The Dark Knight Rises. Familiar themes representing Batman and Gotham get an extra dose of adrenalin as they mix with the even more maniacal sounds of Bane in a 7 minute long battle of melodies which is actually toe-tappingly rhythmic. By the time the “deshi deshi basara basara” chanting arrives it’s obvious that some serious Batman is occurring. The track barely takes a breath, maintaining it’s heart-pounding energy to the last note.  
+  
+Though the rather electronic sound might not be to everyone’s tastes, it’s Zimmer at his best. Fans will find similarities to many of his other works, such as “The Battle” from Gladiator and “The Kraken” from Pirates of the Caribbean: Dead Man’s Chest.  
+  
+**2. Harvey Two-Face (The Dark Knight)**  
+  
+There is a speck of hope for Gotham, a brief glint of nobility in the dark. I find this piece from The Dark Knight particularly emotionally effective because the music tells the story of a single shred of hope which is trying to rise, but is weighed down by all the darkness of Gotham. The contrast to the rest of the soundtrack is unmistakable, this is probably the only real romantic cue in the whole trilogy. The final section of the track, which is never heard within the films themselves, builds into quite a powerful fanfare of brass. The tragedy of Harvey Dent is told masterfully here.  
+  
+Unless I’m mistaken, most of this piece comes courtesy of James Newton Howard’s side of the composing partnership. Kudos, Mr Howard.  
+  
+**1. Gotham’s Reckoning (The Dark Knight Rises)**  
+  
+Bane - a huge, threatening man with a mask. What is he capable of? This track holds the chaotic answer. Bane is a terrifying and unstoppable, and so is Zimmer’s music here.  
+  
+A superb companion to The Dark Knight Rises’ opening action set piece, Zimmer has filled this track with a powerful and unpredictable sense of fear. For the first couple of minutes “Gotham’s Reckoning” chugs along moodily, it’s catchy-as-hell 5/4 time signature etching itself into your mind. Then, all of a sudden, strings start stabbing through the soundscape. A powerful melody fills the background which rises and falls, rises and falls. It effectively gives the sense that events are going tragically awry. When the loud, raw brass gets going - stabbing at uncomfortably high notes relentlessly - it feels as though Zimmer is sweating to fill me with adrenalin and fear, and I love it.
 
 

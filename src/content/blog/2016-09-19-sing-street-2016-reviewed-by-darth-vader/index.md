@@ -2,14 +2,17 @@
 featured: false
 title: Sing Street (2016) Reviewed by Darth Vader
 slug: sing-street-2016-reviewed-by-darth-vader
-description: 
+description:
 pubDate: Sep 19 2016
-tags: [writing, comedy, films]
+tags:
+  - writing
+  - comedy
+  - films
 coverImage:
-listed: false
+listed: true
 ---
 <div id="yui_3_17_2_3_1480309160769_3555">
-<img height="200" id="yui_3_17_2_3_1480309160769_3572" src="https://drive.google.com/uc?export=download&amp;id=0B3n2EA9xVbsSODgyeFpoYTlHWGs" style="border-style: solid; border-width: 0px; float: right; margin: 0px 10px;" width="167" />My name is Darth Vader and recently I formed a Galactic Empire with my master, Emperor Palpatine. Bringing about such momentous change required me to go through some tough transformations, and now that things are settling down I decided to take a break and watch John Carney's Irish musical comedy-drama Sing Street, which I've heard is a very enjoyable film.</div>
+<img height="200" id="yui_3_17_2_3_1480309160769_3572" src="https://live.staticflickr.com/5284/5251842208_f989f31b8f_b.jpg" style="border-style: solid; border-width: 0px; float: right; margin: 0px 10px;" width="167" /> My name is Darth Vader and recently I formed a Galactic Empire with my master, Emperor Palpatine. Bringing about such momentous change required me to go through some tough transformations, and now that things are settling down I decided to take a break and watch John Carney's Irish musical comedy-drama Sing Street, which I've heard is a very enjoyable film.</div>
 
 <div id="yui_3_17_2_3_1480309160769_3558">
 This uplifting coming-of-age story follows a group of schoolboys in Dublin in 1985. They go to a really terrible state-school called Synge Street, which I swear is probably an even worse institution than the Jedi Academy was. I mean, both were really strict and most of the teachers were pretentious assholes, but at least the other padawans at the Jedi Academy were fairly nice. Synge Street in comparison is full of gross bullies who give our protagonist Conor a really hard time for no reason. The worst bully was Barry, who reminded me of that idiot on Tattooine, Sebulba. That takes some good acting—Sebulba was CGI!</div>

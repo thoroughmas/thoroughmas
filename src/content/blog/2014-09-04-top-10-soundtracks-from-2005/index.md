@@ -33,6 +33,3 @@ As always, you can experience my list in audio or text form below:
 ***2**. Golden Egg, Harry Potter and the Goblet of Fire* - Patrick Doyle
 ***1**. Battle of the Heroes, Star Wars Episode III: Revenge of the Sith* - John Williams
 *Hogwarts March, Harry Potter and the Goblet of Fire* - Patrick Doyle
-
-Yours craftily,
-Thoroughmas

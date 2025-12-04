@@ -1,12 +1,17 @@
 ---
 featured: false
 title: Review of "Europa Report" Soundtrack by Bear McCreary
-slug: review-of-europa-report-soundtrack-by-bear-mccreary
-description: 
+slug: review-of-europa-report-soundtrack
+description:
 pubDate: Oct 07 2013
-tags: [writing, soundtrack, review, films, music]
-coverImage:
-listed: false
+tags:
+  - writing
+  - soundtrack
+  - review
+  - films
+  - music
+coverImage: ./europacover_zpscbf5e8d9.jpg
+listed: true
 ---
 A scientific expedition travels further into space than humanity has ever gone before and uncovers an incredible mystery about our universe? Sounds like the recipe for an excellent science fiction soundtrack! 
 
@@ -22,8 +27,22 @@ So is it repetitive? The answer is absolutely yes. But do I mind? No, for the mo
 
 It's pretty clear that I am really fond of this score by BEAR MCCREARY. While I don’t think it’s anything new or unexpected, it's another very solid entry in the space exploration genre. It takes the tension of a thriller and the magic of an adventure and melds the two together with understated radiance. Ultimately, EUROPA REPORT’s only downfall is a lack of diversity, but if the title theme grabs you you’ll enjoy the journey. A treat for science fiction fans.
 
-![](./europacover_zpscbf5e8d9.jpg)
-<div>
+**Rating: 8/10**
 
-<a href="http://tracksounds.com/reviews/europa_report_bear_mccreary.htm" target="_blank">Click here</a> to visit the full review, including track ratings.</div>
-
+|**#**|**Track Title**|**Time**|**Rating**|
+|---|---|---|---|
+|1|Lift Off|3:11|****|
+|2|The View|2:47|****|
+|3|Landing on Europa|4:17|****|
+|4|Mausoleum|4:24|****|
+|5|The Drill|3:55|***|
+|6|Europa Report (For Solo Piano)|2:47|****|
+|7|Cosmically Astounding|5:10|***|
+|8|Water|2:45|****|
+|9|Under the Ice|5:01|***|
+|10|Hydrazine|5:24|***|
+|11|That Brings Us to Now|6:10|****|
+|12|Airlock|3:16|****|
+|13|A World Other Than Our Own|1:47|****|
+|14|Theme from Europa Report|5:30|*****|
+|**Total**|**Running Time (approx)**|**56m**||

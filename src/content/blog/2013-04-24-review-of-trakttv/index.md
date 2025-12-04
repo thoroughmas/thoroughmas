@@ -24,6 +24,3 @@ There is an optional paid "VIP" service ($15/y), which is nice but definitely no
 In conclusion: Trakt is a magnificent website which I highly recommend to lovers of TV or film. You can join for free right now at [Trakt.tv](http://trakt.tv/).
 
 Yes, I'm very positive about it. No, this little review was not endorsed by anyone. No, I'm not signing autographs right now. Yes, I am answering real questions. No, there aren't any more questions to answer.
-
-Yours fictitiously,
-Thoroughmas

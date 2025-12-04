@@ -40,8 +40,3 @@ Now I will quote Doctor Who.
 ![](http://www.doctorwhotv.co.uk/wp-content/uploads/p57326-570x320.jpg)
 
 That'll do it. If you gleamed anything useful from my rambling, congratulations dear reader. And I'll see you on the other side. Of what? No idea.
-
-Have a good one,
-
-Yours indefinitely,
-Thoroughmas

@@ -1,16 +1,16 @@
 ---
 featured: false
 title: Review of Game Of Thrones Season 2 Soundtrack by Ramin Djawadi
-slug: review-of-game-of-thrones-season-2-soundtrack-by-ramin-djawadi
-description: 
+slug: review-of-game-of-thrones-season-2-soundtrack
+description:
 pubDate: Sep 11 2012
 tags:
   - soundtrack
   - review
   - television
   - music
-coverImage: 
-listed: false
+coverImage:
+listed: true
 ---
 Ramin Djawadi is back to score the second season of the heavy fantasy show, *Game Of Thrones*. I enjoyed his work on the last season, but thought there was plenty that could be improved on this second time around. One thing's for sure though, we’re going dark places!
 
@@ -48,31 +48,28 @@ With Ramin Djawadi returning to this second chapter in the series, I had hoped h
 
 My scores for the soundtrack are below.
 
-Yours scrumptiously,  
-**Thoroughmas**
-
-| Track No. | Track Name                             | Score (out of 5) |
-|-----------|----------------------------------------|------------------|
-| 1         | Main Title                             | 4.5              |
-| 2         | The Throne is Mine                    | 4                |
-| 3         | What Is Dead May Never Die            | 3.5              |
-| 4         | Warrior Of Light                       | 2.5              |
-| 5         | Valar Morghulis                        | 2                |
-| 6         | Winterfell                             | 4                |
-| 7         | Qarth                                  | 1.5              |
-| 8         | Wildfire                               | 3                |
-| 9         | I Am Hers, She Is Mine                | 4                |
-| 10        | Pyat Pree                              | 3                |
-| 11        | Don't Die With A Clean Sword          | 4                |
-| 12        | We Are The Watchers On The Wall       | 2.5              |
-| 13        | Pay The Iron Price                     | 4                |
-| 14        | One More Drink Before The War         | 3                |
-| 15        | House Of The Undying                   | 2                |
-| 16        | Stand And Fight                        | 3                |
-| 17        | The Old Gods And The New              | 2.5              |
-| 18        | Mother Of Dragons                      | 4                |
-| 19        | I Will Keep You Safe                   | 2                |
-| 20        | The Rains Of Castomere                | 3.5              |
-| 21        | Three Blasts                           | 1.5              |
+| Track No. | Track Name                      | Score (out of 5) |
+| --------- | ------------------------------- | ---------------- |
+| 1         | Main Title                      | 4.5              |
+| 2         | The Throne is Mine              | 4                |
+| 3         | What Is Dead May Never Die      | 3.5              |
+| 4         | Warrior Of Light                | 2.5              |
+| 5         | Valar Morghulis                 | 2                |
+| 6         | Winterfell                      | 4                |
+| 7         | Qarth                           | 1.5              |
+| 8         | Wildfire                        | 3                |
+| 9         | I Am Hers, She Is Mine          | 4                |
+| 10        | Pyat Pree                       | 3                |
+| 11        | Don't Die With A Clean Sword    | 4                |
+| 12        | We Are The Watchers On The Wall | 2.5              |
+| 13        | Pay The Iron Price              | 4                |
+| 14        | One More Drink Before The War   | 3                |
+| 15        | House Of The Undying            | 2                |
+| 16        | Stand And Fight                 | 3                |
+| 17        | The Old Gods And The New        | 2.5              |
+| 18        | Mother Of Dragons               | 4                |
+| 19        | I Will Keep You Safe            | 2                |
+| 20        | The Rains Of Castomere          | 3.5              |
+| 21        | Three Blasts                    | 1.5              |
 
 **Overall Score: 3 out of 5**

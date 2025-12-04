@@ -29,6 +29,3 @@ Scores of Scores is back after a big weird random unexpected hiatus! Hope you en
 ***2**. Harvey Two-Face, The Dark Knight* - Hans Zimmer & James Newton Howard
 ***1**. Hero, Kung Fu Panda* - Hans Zimmer & John Powell
 *Raider's March, Indiana Jones and the Kingdom of the Crystal Skull* - John Williams
-
-Yours dancingly,
-T

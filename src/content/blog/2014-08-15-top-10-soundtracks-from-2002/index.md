@@ -40,6 +40,3 @@ You can also see a list of each track after the bump:
 *Stan Getz - The Girl From Impanema*
 
 Hope you'll join me in future weeks. You can listen live on Wednesdays [at 3SSR.org](http://3ssr.org/show/scores-of-scores/), but I'll also post each future episode here on my blog for you.
-
-Yours lethargically,
-Thoroughmas

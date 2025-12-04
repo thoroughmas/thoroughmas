@@ -2,11 +2,13 @@
 featured: false
 title: The Making of A Feature Film
 slug: the-making-of-a-feature-film
-description: 
+description:
 pubDate: Feb 18 2017
-tags: [films, anecdote]
+tags:
+  - films
+  - anecdote
 coverImage:
-listed: false
+listed: true
 ---
 Over the past month I've been involved in the production of Nathaniel Kelly's first feature film, *The Adopted One* (working title). The crazy guy's made countless short films, and attempting a feature was the logical next step! The production was modest, and no-budget as ever, but for this film Nathaniel not only made good use of his regular stable of cast and crew, he also pulled in some extra special talent. Key example: Phil O'Brien.
 

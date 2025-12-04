@@ -30,6 +30,3 @@ Yet another year with a wonderfully diverse selection of film scores. Here are m
 ***2**. Wong Chia Chi's Theme, Lust, Caution* - Alexandre Desplat
 ***1**. Up Is Down, Pirates of the Caribbean: At World's End* - Hans Zimmer
 *Elegy For Dunkirk, Atonement* - Dario Marianelli
-
-Yours rousingly,
-Thoroughmas

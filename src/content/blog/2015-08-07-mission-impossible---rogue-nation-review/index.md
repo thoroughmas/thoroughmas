@@ -1,15 +1,15 @@
 ---
 featured: false
 title: Mission Impossible - Rogue Nation (Review)
-slug: mission-impossible---rogue-nation-review
-description: 
+slug: mission-impossible-rogue-nation-review
+description:
 pubDate: Aug 07 2015
 tags:
   - writing
   - soundtrack
   - review
   - films
-coverImage: 
+coverImage:
 listed: true
 ---
 The facet of the Mission Impossible franchise that keeps me fascinated with each installment is its crystal clear contract with audiences. When you sit down in front of any Mission Impossible film, you know almost precisely what kind of experience you are about to have. Which is not to say that you know what you are going to see, or that the direction of the plot will be predictable. On the contrary, Mission Impossible's suspenseful, set-piece-focused, constantly twisting formula is as riveting as it is consistent. It feels like a TV series on the big screen, with all the production values of the latter but what keeps bringing you back is the characters and themes that feel like a show. (Of course, this makes sense, because the film franchise spawned from a TV series.)

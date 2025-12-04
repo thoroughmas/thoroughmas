@@ -54,4 +54,3 @@ Did someone say brilliant pieces? Oh yes, I did. “To Save the Doctor” (2-30)
 Doctor Who’s 7th season since the revival in 2005 may have been the most rough, inconsistent and convoluted, but MURRAY GOLD’s music hasn’t missed a beat. Once again he has struck a pleasurable balance between introducing new themes and rehashing old ones. A few new themes stand firmly among GOLD’s best, and I hope we’ll hear these spectacular earworms again in the future. The only disappointment here is how short-lived some of these wonderful tracks are, but you can only spread butter so thin and you can only squeeze so much brilliance out of a composer each year. 
 
 This soundtrack isn’t surprising, but it does stand strong beside it’s stellar predecessors. It’s a no-brainer for anyone with passing interest in Doctor Who or MURRAY GOLD, who appears content to continue manipulating our emotions and skyrocketing our adrenalin for years to come.
-

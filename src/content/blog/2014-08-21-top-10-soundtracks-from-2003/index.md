@@ -34,6 +34,3 @@ You can listen to a recording of Scores of Scores here, where I introduce and pl
 ***2**. Barbossa is Hungry, Pirates of the Caribbean* - Klaus Badelt
 ***1**. The White Tree, Lord of the Rings: Return of the King* - Howard Shore
 *Into The West (feat. Annie Lennox), Lord of the Rings: Return of the King* - Howard Shore
-
-Yours profusely,
-Thoroughmas

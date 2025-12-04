@@ -13,6 +13,25 @@ import TomandMax from '@src/assets/img/about/tomandmax_small.jpg';
 import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 ---
 
+<style>
+	/* Override float behavior on mobile to prevent janky text wrapping */
+	@media (max-width: 767px) {
+		.image-left,
+		.image-right {
+			float: none !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			margin-bottom: 1.5rem !important;
+		}
+
+		.image-left img,
+		.image-right img {
+			width: 100% !important;
+			max-width: 300px !important;
+		}
+	}
+</style>
+
 <BaseLayout title='About Me' description="Thomas Midena's Bio">
 	<div class='container'>
 		<main class='prose text-lg dark:prose-invert'>
@@ -20,7 +39,7 @@ import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 				<div class='text-pretty leading-8'>
 					<h1 class='text-4xl font-bold mb-4'>What manner of man is this?</h1>
 
-					<figure class='image-right max-w-[300px] md:max-w-[300px] mx-auto md:ml-auto md:mr-0'>
+					<figure class='image-right max-w-[300px] md:max-w-[300px] mx-auto md:ml-auto md:mr-0 my-4! md:my-0!'>
 						<Image src={TomStorm} alt='Thomas Midena in a storm' />
 						<figcaption class='text-sm text-center mt-2 text-gray-600 dark:text-gray-400'>Storm chasing in Darwin</figcaption>
 					</figure>
@@ -34,7 +53,7 @@ import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 						kookier, the better.
 					</p>
 
-					<figure class='image-left max-w-[300px] md:max-w-[300px] mx-auto md:ml-0 md:mr-auto'>
+					<figure class='image-left max-w-[300px] md:max-w-[300px] mx-auto md:ml-0 md:mr-auto my-4! md:my-0!'>
 						<Image src={ThomasCD3d} alt='Thomas with CD' />
 						<figcaption class='text-sm text-center mt-2 text-gray-600 dark:text-gray-400'>
 							Preparing to do something dastardly with a CD
@@ -59,7 +78,7 @@ import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 						Mart Theatre.
 					</p>
 
-					<figure class='image-right max-w-[400px] md:max-w-[400px] mx-auto md:ml-auto md:mr-0'>
+					<figure class='image-right max-w-[400px] md:max-w-[400px] mx-auto md:ml-auto md:mr-0 my-4! md:my-0!'>
 						<Image src={TwelfthNight} alt='Twelfth Night' />
 						<figcaption class='text-sm text-center mt-2 text-gray-600 dark:text-gray-400'>
 							Performing in Twelfth Night at Brown's Mart Theatre
@@ -78,7 +97,7 @@ import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 						Festival.
 					</p>
 
-					<figure class='image-left max-w-[300px] md:max-w-[300px] mx-auto md:ml-0 md:mr-auto'>
+					<figure class='image-left max-w-[300px] md:max-w-[300px] mx-auto md:ml-0 md:mr-auto my-4! md:my-0!'>
 						<Image src={PrescriptionDrugsFringe} alt="I'm on prescription drugs" />
 						<figcaption class='text-sm text-center mt-2 text-gray-600 dark:text-gray-400'>
 							A cold photo shoot for "I'm on prescription drugs"; credit: Nat Kelly
@@ -96,7 +115,7 @@ import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 						Director and Best Film at the Darwin International Film Festival's SPARK Short Film Awards.
 					</p>
 
-					<figure class='image-right max-w-[300px] md:max-w-[300px] mx-auto md:ml-auto md:mr-0'>
+					<figure class='image-right max-w-[300px] md:max-w-[300px] mx-auto md:ml-auto md:mr-0 my-4! md:my-0!'>
 						<Image src={DirectingBattlefieldYear7} alt='Thomas directing Battlefield Year 7' />
 						<figcaption class='text-sm text-center mt-2 text-gray-600 dark:text-gray-400'>Directing "Battlefield Year 7"</figcaption>
 					</figure>

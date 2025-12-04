@@ -28,6 +28,3 @@ A few days ago the Doctor Who Fan Orchestra released their fifth piece, ["The Im
 So what are you waiting for? Check out the DWFO's latest piece here:
 
 [YouTube Video](http://youtu.be/SfNVhEN50VU)
-
-Yours momentarily,
-Thoroughmas
