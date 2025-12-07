@@ -4,7 +4,6 @@ title: My favourite soundtracks of 2024
 slug: my-favourite-soundtracks-2024
 description: My top original scores from TV, movies and games
 pubDate: Jan 31 2025
-updatedDate: Dec 6 2025
 tags:
   - music
   - soundtracks
