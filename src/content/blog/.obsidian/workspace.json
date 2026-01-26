@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-01-28-my-favourite-media-2024/index.md",
+                "file": "2026-01-26-fedora-helped-me-live-with-linux/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTimeReverse",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 455.5
+    "width": 345.5
   },
   "right": {
     "id": "a4822340f99bb6fc",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2025-01-28-my-favourite-media-2024/index.md",
+                "file": "2025-08-26-becoming-a-fedora-fan/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -153,7 +153,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,51 +169,51 @@
   },
   "active": "d462ec9c3acbb4cd",
   "lastOpenFiles": [
-    "2025-01-31-my-favourite-soundtracks-2024/index.md",
-    "2025-12-05-peertube/index.md",
-    "2025-01-28-my-favourite-media-2024/index.md",
-    "2026-01-26-fedora-helped-me-live-with-linux/index.md",
-    "2024-11-21-that-fresh-new-website-feeling/index.md",
-    "2026-01-07-my-favourite-media-2025/index.md",
-    "2025-12-03-reaction-videos/index.md",
-    "2019-03-13-activate-nathaniel-kelly-production-powerhouse/index.md",
-    "2017-12-26-books-out-for-courting-101/index.md",
-    "2018-04-21-corrugated-irons-whiplash/index.md",
-    "2019-04-10-clive-released-reactions/index.md",
+    "2026-01-26-fedora-helped-me-live-with-linux/Fedora.jpg",
+    "2025-08-26-becoming-a-fedora-fan/index.md",
     "2026-01-26-fedora-helped-me-live-with-linux/vlcsnap-2026-01-25-15h55m29s082.png",
     "2026-01-26-fedora-helped-me-live-with-linux/Screenshot_20260125_100851.png",
-    "2014-03-18-outside-the-underappreciateds-studio-episode-2/index.md",
-    "2014-03-18-ambition-and-aversion/index.md",
-    "2014-02-13-face-the-cliff-face-with-your-cliffs-face-no-wait-what/index.md",
-    "2014-01-08-a-serendipitous-short-film/index.md",
-    "2013-09-20-intelligence-episode-3-breaking-and-entering/index.md",
-    "2013-09-16-intelligence-episode-2-that-is-the-question/index.md",
-    "2013-09-06-top-5-pieces-from-hans-zimmers-batman-trilogy/index.md",
-    "2013-09-06-intelligence-episode-1-good-cop-bad-cop/index.md",
-    "2013-06-16-intelligence-filming-has-begun/index.md",
-    "2013-04-24-review-of-trakttv/index.md",
-    "2013-04-24-review-of-frozen-planet-soundtrack-by-george-fenton/index.md",
-    "2013-04-05-one-video-to-rule-them-all/index.md",
-    "2013-02-09-soundtrack-review-nobody-walks-by-fall-on-your-sword-lakeshore-records-2012/index.md",
-    "2012-12-01-top-ten-pieces-from-the-harry-potter-scores/index.md",
-    "2012-11-22-outside-the-underappreciateds-studio-episode-1/index.md",
-    "2012-09-26-review-of-star-wars-the-old-republic-soundtrack-by-mark-griskey-et-al/swtordual.jpg",
-    "2012-10-02-10-best-pieces-from-doctor-who-seasons-1-4/topten_doctorwho1_4.jpg",
+    "2026-01-26-fedora-helped-me-live-with-linux/index.md",
+    "2026-01-26-fedora-helped-me-live-with-linux",
+    "2025-08-26-becoming-a-fedora-fan/Screenshot_20260125_100851.png",
+    "2025-08-26-becoming-a-fedora-fan/~syncthing~index.md.tmp",
+    "2026-01-07-my-favourite-media-2025/~syncthing~index.md.tmp",
+    "2025-08-26-becoming-a-fedora-fan/~syncthing~Screenshot_20260125_100851.png.tmp",
+    "2026-01-07-my-favourite-media-2025/index.md",
+    "2025-01-28-my-favourite-media-2024/index.md",
+    "2026-01-07-my-favourite-media-2025/trakt2024.png",
+    "2026-01-07-my-favourite-media-2025/thomastvshowstrakt2024.png",
+    "2026-01-07-my-favourite-media-2025/thomasmoviestrakt2024.png",
+    "2026-01-07-my-favourite-media-2025/thomasbooksstorygraph2024.png",
+    "2026-01-07-my-favourite-media-2025/Screenshot 2025-01-27 213529.png",
+    "2026-01-07-my-favourite-media-2025",
+    "2025-12-05-peertube/index.md",
+    "2012-09-26-review-of-star-wars-the-old-republic-soundtrack-by-mark-griskey-et-al/index.md",
+    "2012-09-22-why-you-should-check-out-the-doctor-who-fan-orchestra/index.md",
+    "2012-09-17-google-music-desktop-player-review/index.md",
+    "2012-09-12-malignant-morality-in-doctor-who/index.md",
+    "2012-09-11-review-of-hugo-soundtrack-by-howard-shore/index.md",
+    "2012-09-11-review-of-game-of-thrones-season-2-soundtrack-by-ramin-djawadi/index.md",
+    "2012-07-06-problematic-peace-in-the-amazing-spider-man/index.md",
+    "2012-06-19-google-music-why-arent-you-amazing/index.md",
+    "2012-06-05-the-dream-i-had-last-night/index.md",
+    "2025-12-04-test-new-blog-post/index.md",
+    "2025-12-04-test-new-blog-post",
+    "2025-12-03-reaction-videos/index.md",
+    "2025-12-04-well-well-well/index.md",
     "2025-12-04-well-well-well",
+    "2025-01-31-my-favourite-soundtracks-2024/index.md",
+    "2024-02-05-my-favourite-soundtracks-2023/index.md",
+    "2025-12-03-ok-really-now/index.md",
+    "2025-12-03-really-testing-now/index.md",
+    "2025-12-03-ok-last-test/index.md",
     "2025-12-03-ok-really-now",
     "2025-12-03-ok-last-test",
+    "2025-12-03-test-post-now-now/index.md",
     "2025-12-03-really-testing-now",
-    "2025-12-03-test-post-now-now",
-    "2025-12-03-well hello there",
-    "_templates",
-    "New folder",
-    "test",
-    "Templates",
+    "2025-12-03-well hello there/index.md",
+    "test/index.md",
     "2025-01-31-my-favourite-soundtracks-2024/10HouseoftheDragon.jpg",
-    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg",
-    "2025-08-26-becoming-a-fedora-fan/thumbnail_v3.jpg",
-    "2025-08-26-becoming-a-fedora-fan/9TalesofKenzera.jpg",
-    "2025-08-26-becoming-a-fedora-fan/8TransformersOne.jpg",
-    "2025-08-26-becoming-a-fedora-fan/7YoungWoman.jpg"
+    "2025-01-31-my-favourite-soundtracks-2024/thumbnail_v3.jpg"
   ]
 }

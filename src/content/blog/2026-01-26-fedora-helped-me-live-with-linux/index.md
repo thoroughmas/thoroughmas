@@ -7,7 +7,7 @@ pubDate: Jan 26 2026
 tags:
   - technology
   - linux
-coverImage:
+coverImage: ./Fedora.jpg
 listed: true
 ---
 Windows is awful. Some tell themselves it's a necessary evil to get through the day, but let's be real, we all hate it. I've dreamed of ditching Windows for many years. But every time I've tried Linux, I haven't been able to stick with it.
