@@ -78,16 +78,6 @@ export const projects: Project[] = [
 		date: 'Ongoing'
 	},
 	{
-		name: 'Pride and Prejudice',
-		description: 'I performed in this colourful classic around Adelaide.',
-		demoLink: 'https://www.blueskytheatre.com.au/current-production/',
-		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Blue Sky Theatre',
-		image: PrideandPrejudice,
-		tags: ['Theatre'],
-		date: 'Jan 2026'
-	},
-	{
 		name: 'Behind The News',
 		description: "Check out one of my stories for the ABC's children's news show, BTN.",
 		demoLink: 'https://www.abc.net.au/btn/high/the-rise-of-misinformation/104504042',
@@ -96,6 +86,16 @@ export const projects: Project[] = [
 		image: BTN,
 		tags: ['Reporting'],
 		date: 'Ongoing'
+	},
+	{
+		name: 'Pride and Prejudice',
+		description: 'I performed in this colourful classic around Adelaide.',
+		demoLink: 'https://www.blueskytheatre.com.au/current-production/',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'Blue Sky Theatre',
+		image: PrideandPrejudice,
+		tags: ['Theatre'],
+		date: 'Jan 2026'
 	},
 	{
 		name: 'A Streetcar Named Desire',
