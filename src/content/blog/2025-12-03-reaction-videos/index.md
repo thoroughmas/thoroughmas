@@ -1,9 +1,9 @@
 ---
 featured: false
-title: Becoming a Fedora Fan
-slug: becoming-a-fedora-fan
+title: Making Reaction Videos
+slug: making-reaction-videos
 description: I love loving stories
-pubDate: Jan 31 2025
+pubDate: Jan 31 2026
 tags:
   - videos
   - reactions

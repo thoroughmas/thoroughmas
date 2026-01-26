@@ -1,9 +1,9 @@
 ---
 featured: false
-title: Becoming a Fedora Fan
-slug: becoming-a-fedora-fan
+title: I'm publishing on Peertube now
+slug: publishing-on-peertube
 description: My top original scores from TV, movies and games
-pubDate: Jan 31 2025
+pubDate: Jan 31 2026
 tags:
   - technology
 coverImage:

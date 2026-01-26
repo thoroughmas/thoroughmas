@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Thomas Midena</title><description>Generally genuinely enthusiastic</description><link>https://thomid.me/</link><language>en-us</language><lastBuildDate>Tue, 09 Dec 2025 08:53:02 GMT</lastBuildDate><item><title>My favourite soundtracks of 2024</title><link>https://thomid.me/posts/my-favourite-soundtracks-2024/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-soundtracks-2024/</guid><description>My top original scores from TV, movies and games</description><pubDate>Thu, 30 Jan 2025 13:30:00 GMT</pubDate><content:encoded>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Thomas Midena</title><description>Generally genuinely enthusiastic</description><link>https://thomid.me/</link><language>en-us</language><lastBuildDate>Mon, 26 Jan 2026 00:36:57 GMT</lastBuildDate><item><title>Fedora helped me finally ditch Windows for good</title><link>https://thomid.me/posts/fedora-helped-me-live-with-linux/</link><guid isPermaLink="true">https://thomid.me/posts/fedora-helped-me-live-with-linux/</guid><description>How Fedora became my operating system of choice</description><pubDate>Sun, 25 Jan 2026 13:30:00 GMT</pubDate><content:encoded>
+                &lt;div class=&quot;post-content&quot;&gt;
+                    
+                    &lt;p&gt;Windows is awful. Some tell themselves it&amp;#39;s a necessary evil to get through the day, but let&amp;#39;s be real, we all hate it. I&amp;#39;ve dreamed of ditching Windows for many years. But every time I&amp;#39;ve tried Linux, I haven&amp;#39;t been able to stick with it.&lt;/p&gt;
+&lt;p&gt;Until now, that is!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A year ago I decided to try Fedora for the first time. I&amp;#39;ve always been daunted by it. People talk about it as if it&amp;#39;s a hardcore tinkerer&amp;#39;s operating system, best for those who already live and breathe Linux, and who aren&amp;#39;t daunted by constant issues caused by cutting edge updates.&lt;/p&gt;
+&lt;p&gt;But after not being totally satisfied with more entry-level distros like Linux Mint and Zorin OS, I was keen to try something different. In 2024 I attempted to go full-time with Linux Mint, and although there was much to appreciate, I felt like I was often fighting against the OS to get it to do what I needed it to do. I&amp;#39;m still a big fan of these Ubuntu-based operating systems -- I&amp;#39;ve set up Zorin OS as a Windows replacement for several family members. But as a power user, they just don&amp;#39;t satisfy my needs.&lt;/p&gt;
+&lt;p&gt;For me, a desktop operating system needs to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;be reliable (relatively stable and crash-free)&lt;/li&gt;
+&lt;li&gt;be efficient (quiet, easy to use, effortless to complete simple tasks)&lt;/li&gt;
+&lt;li&gt;run all the software (there shouldn&amp;#39;t be anything I&amp;#39;m simply unable to do)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For me, Fedora ticks all of these boxes. &lt;/p&gt;
+&lt;p&gt;I was surprised to find Fedora 42 KDE Plasma incredibly welcoming and accessible. Contrary to what I&amp;#39;d heard about it being advanced and complicated, I actually consider it to be the most &amp;quot;ready to go&amp;quot; flavour of Linux I&amp;#39;ve ever used.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s better than Windows, though that&amp;#39;s a very low bar. It&amp;#39;s heaps faster than Windows 11. Not just in everyday tasks, but also in most video games (thanks Proton!). And out of the box Fedora is actually incredibly easy to use... I came thinking I&amp;#39;d need to tweak and customise for ages before I was happy with the setup, but that&amp;#39;s not the case.&lt;/p&gt;
+&lt;p&gt;(Granted, I suppose I do have a fair bit of Linux experience at this point. After tinkering with Debian on Chromebooks years ago, and using Unraid for servers, I&amp;#39;m certainly no longer afraid of the Terminal.)&lt;/p&gt;
+&lt;p&gt;There a lots of great touches throughout the Fedora operating system. Useful little quality of life features like the &amp;quot;Extract here and delete archive&amp;quot; option in Dolphin&amp;#39;s (file browser) context menu. When I saw it, I thought that&amp;#39;s such a no-brainer, why hasn&amp;#39;t it always been an option across every operating system ever? How often do you really want to keep a zip file after extracting it?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/_astro/vlcsnap-2026-01-25-15h55m29s082.DNeRjIQe.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s not to say there are no issues. Fedora&amp;#39;s cutting edge update stream is one of the best and worst things about it. Imperfect updates have broken things for me over hte last year:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for a little while Flatpaks wouldn&amp;#39;t open&lt;/li&gt;
+&lt;li&gt;for a month Zed wouldn&amp;#39;t launch&lt;/li&gt;
+&lt;li&gt;Feishin wouldn&amp;#39;t play audio smoothly to monitor over HDMI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But Fedora&amp;#39;s updates are fast and comprehensive and all of these issues disappeared on their own within a couple of weeks. All I needed was a little patience.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/_astro/Screenshot_20260125_100851.-QjuJf_u.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s not to say I was trapped with these issues though. These were all issues that I probably could have fixed if I put in some time and effort. That&amp;#39;s one of my favourite things about Linux... since the code keeping everything running is easy to see (and largely open source), most issues really are fixable.&lt;/p&gt;
+&lt;p&gt;When something breaks on Linux, there&amp;#39;s a reason. A reason that can usually be discovered. It&amp;#39;s possible to actually investigate what&amp;#39;s occurring, as opposed to Windows, where the background code is so obfuscated that if you want to fix something you may as well throw a wishing stone into a well and try again later.&lt;/p&gt;
+&lt;p&gt;The biggest thing that&amp;#39;s prevented me from sticking with Linux is the past is the difficulty of running a mainstream video editing application. I&amp;#39;ve found Davinci Resolve relatively fiddly to set up on every Linux distro, and Fedora is no exception. Things are better than they&amp;#39;ve ever been though, and I do now have Davinci running adequately. This was made achievable by some very helpful Github projects: &lt;a href=&quot;https://github.com/H3rz3n/davinci-helper&quot;&gt;Davinci Helper&lt;/a&gt; is what got me going last year, but more recently I&amp;#39;ve preferred the &lt;a href=&quot;https://github.com/zelikos/davincibox&quot;&gt;Davincibox&lt;/a&gt; setup.&lt;/p&gt;
+&lt;p&gt;Every other piece of software is much more effortless. I&amp;#39;ve replaced Adobe Lightroom with Darktable and Visual Studio Code with Zed (although VS Code does run fine on Linux). Every other application I use is already Linux-friendly.&lt;/p&gt;
+&lt;p&gt;All in all, I&amp;#39;ve never been happier with my computer! With Fedora I feel like I&amp;#39;m in full control of my powerful desktop PC, and I very rarely have any headaches. I&amp;#39;m excited by the endless customisation and improvements that&amp;#39;s possible when you live in the Linux ecosystem. I&amp;#39;m thrilled to be out of the clutches of seriously-fairly-evil big tech. And I genuinely feel awful for everyone who&amp;#39;s still having to put up with Windows.&lt;/p&gt;
+&lt;p&gt;It turns out, this really was the year of the Linux desktop. For me, anyway. And with the &lt;a href=&quot;https://store.steampowered.com/hardware&quot;&gt;Steam Machine launching very soon&lt;/a&gt;... I reckon 2026 will be the year of Linux for a lot of people.&lt;/p&gt;
+
+                &lt;/div&gt;
+            </content:encoded><category>technology</category><category>linux</category></item><item><title>My favourite soundtracks of 2024</title><link>https://thomid.me/posts/my-favourite-soundtracks-2024/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-soundtracks-2024/</guid><description>My top original scores from TV, movies and games</description><pubDate>Thu, 30 Jan 2025 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/thumbnail_v3.D3oXGXiW.jpg&quot; alt=&quot;My favourite soundtracks of 2024&quot; /&gt;
                     &lt;p&gt;For the sixth year in a row, I&amp;#39;ve created a list of my favourite soundtrack music of the year. This year I present my &lt;strong&gt;24&lt;/strong&gt; top original scores released in the year 2024.&lt;/p&gt;
@@ -684,18 +720,4 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Nathaniel hopes to finish the film this Winter, so look out for it!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>films</category><category>anecdote</category></item><item><title>La La Land Worst thing ever or best thing ever?</title><link>https://thomid.me/posts/la-la-land-worst-thing-ever-or-best-thing-ever/</link><guid isPermaLink="true">https://thomid.me/posts/la-la-land-worst-thing-ever-or-best-thing-ever/</guid><pubDate>Sat, 11 Feb 2017 13:30:00 GMT</pubDate><content:encoded>
-                &lt;div class=&quot;post-content&quot;&gt;
-                    
-                    &lt;p&gt;La La Land is a fun musical and an optimistic fairytale about the entertainment industry. I would have thought it&amp;#39;d be an unlikely target for critical controversy, but here we are. People love to hate La La Land just as much as others love to love it. Most audiences and critics I&amp;#39;ve come across are firmly on one side or the other.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/_astro/rs-248320-emma-stone-ryan-goseling-la-la-land-sing-dance-trailer1.BcTM8p02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Seems like a lame division to me. Firstly, haters: you&amp;#39;re wrong. The film just wants to be pure joy. How can you hate pure joy? Or even an attempt at pure joy? Are you Hitler? Hitler probably didn&amp;#39;t hate joy, so who do you think you are?&lt;/p&gt;
-&lt;p&gt;Secondly, lovers: I love your love, but you know those hugs that are painful? Like, bear hugs, you know? Many of you are hugging La La Land to death! It&amp;#39;s a movie, an imperfect movie, possibly a great imperfect movie, but there&amp;#39;s no need to stab its critics in the face. I mean, are you Hitler? I don&amp;#39;t think Hitler stabbed people in the face, so who do you think you are?&lt;/p&gt;
-&lt;p&gt;But hey, I get it. It&amp;#39;s emotional. It&amp;#39;s a movie about a glowing spirit in the face of adversity. A song and a dance in hard times. The other day I was in a lovely casual conversation when one guy said he walked out of La La Land. WALKED OUT. Hated it that much. Yes, that triggered me. My lips wanted to scream-forth: &amp;quot;BUT THAT OPENING NUMBER WAS IT NOT MAGICAL?&amp;quot; But I held strong. I extracted myself from the conversation, taking deep breaths, thinking about simpler times. Then I got a knife and ran back and stabbed the idiot in the face.&lt;/p&gt;
-&lt;p&gt;Kiddin&amp;#39;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/_astro/lalalandcinema_-_Edited.CuI_cN0f.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Yes, it&amp;#39;s going to win too many Oscars, but we simply ought not start a war over La La Land. La La Land wouldn&amp;#39;t want that. Respect La La Land.&lt;/p&gt;
-&lt;p&gt;Some people just don&amp;#39;t know how wonder-filled this movie (and soundtrack) is. Are they wrong? Yes. Are they Hitler? Probably not. They&amp;#39;re just not La La.&lt;/p&gt;
-
-                &lt;/div&gt;
-            </content:encoded><category>anecdote</category><category>soundtrack</category><category>films</category><category>music</category><category>ramble</category><category>review</category></item></channel></rss>
+            </content:encoded><category>films</category><category>anecdote</category></item></channel></rss>
