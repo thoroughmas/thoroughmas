@@ -9,7 +9,7 @@ import Blog from '@src/assets/img/projects/tmmirrorselfie_1.jpg';
 import MutantReviewers from '@src/assets/img/projects/heartbeeps.jpg';
 import TheWatsons from '@src/assets/img/projects/thewatsons2.jpg';
 import Genius from '@src/assets/img/projects/genius2.jpg';
-import PrideandPrejudice from '@src/assets/img/projects/prideandprejudice1.jpg';
+import PrideandPrejudice from '@src/assets/img/projects/prideandprejudice2.jpg';
 import Streetcar from '@src/assets/img/projects/streetcar1.webp';
 import Thomity from '@src/assets/img/projects/Thomity_1.jpg';
 
