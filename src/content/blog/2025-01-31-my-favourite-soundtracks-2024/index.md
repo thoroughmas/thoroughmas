@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 title: My favourite soundtracks of 2024
 slug: my-favourite-soundtracks-2024
 description: My top original scores from TV, movies and games

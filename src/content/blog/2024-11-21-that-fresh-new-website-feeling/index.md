@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 title: That fresh new website feeling
 slug: fresh-new-website
 description: I've built a lot of personal websites in the past, but this one is my favourite! (obvs)

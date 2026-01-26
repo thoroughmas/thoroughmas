@@ -11,6 +11,7 @@ import TheWatsons from '@src/assets/img/projects/thewatsons2.jpg';
 import Genius from '@src/assets/img/projects/genius2.jpg';
 import PrideandPrejudice from '@src/assets/img/projects/prideandprejudice1.jpg';
 import Streetcar from '@src/assets/img/projects/streetcar1.webp';
+import Thomity from '@src/assets/img/projects/Thomity_1.jpg';
 
 export interface Project {
 	name: string;
@@ -47,26 +48,6 @@ export const projects: Project[] = [
 		date: 'Ongoing'
 	},
 	{
-		name: 'Pride and Prejudice',
-		description: "I'm performing in this colourful classic around Adelaide, Jan 2026.",
-		demoLink: 'https://www.blueskytheatre.com.au/current-production/',
-		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Blue Sky Theatre',
-		image: PrideandPrejudice,
-		tags: ['Theatre'],
-		date: 'Jan 2026'
-	},
-	{
-		name: 'A Streetcar Named Desire',
-		description: "I'm performing in the Tennessee Williams classic in Port Adelaide.",
-		demoLink: 'https://butterflytheatre.net/next-production/',
-		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Butterfly Theatre',
-		image: Streetcar,
-		tags: ['Theatre'],
-		date: 'Nov 2025-Jan 2026'
-	},
-	{
 		name: 'Genius',
 		description: "I'm performing in this provocative new play in Cairns & Darwin.",
 		demoLink: 'https://jute.com.au/genius/',
@@ -75,6 +56,36 @@ export const projects: Project[] = [
 		image: Genius,
 		tags: ['Theatre'],
 		date: 'Sep 2025-Mar 2026'
+	},
+	{
+		name: 'Principle of Thomity',
+		description: 'My reaction channel where I watch TV and listen to music.',
+		demoLink: 'https://www.youtube.com/@Thomity',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'YouTube',
+		image: Thomity,
+		tags: ['Video Channel'],
+		date: 'Ongoing'
+	},
+	{
+		name: 'Mutant Reviewers',
+		description: "I'm an irregular (in every sense) writer on this long-standing cult movie site.",
+		demoLink: 'https://mutantreviewersmovies.com/category/reviewer/thomas/',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'Website',
+		image: MutantReviewers,
+		tags: ['Movie Reviews'],
+		date: 'Ongoing'
+	},
+	{
+		name: 'Pride and Prejudice',
+		description: 'I performed in this colourful classic around Adelaide.',
+		demoLink: 'https://www.blueskytheatre.com.au/current-production/',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'Blue Sky Theatre',
+		image: PrideandPrejudice,
+		tags: ['Theatre'],
+		date: 'Jan 2026'
 	},
 	{
 		name: 'Behind The News',
@@ -87,6 +98,16 @@ export const projects: Project[] = [
 		date: 'Ongoing'
 	},
 	{
+		name: 'A Streetcar Named Desire',
+		description: 'I performed in the Tennessee Williams classic in Port Adelaide.',
+		demoLink: 'https://butterflytheatre.net/next-production/',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'Butterfly Theatre',
+		image: Streetcar,
+		tags: ['Theatre'],
+		date: 'Nov 2025'
+	},
+	{
 		name: 'The Watsons',
 		description: 'I performed in this chaotic spin on Jane Austen in Adelaide, August 2025.',
 		demoLink: 'https://trybooking.com/CXJIN',
@@ -96,16 +117,7 @@ export const projects: Project[] = [
 		tags: ['Theatre'],
 		date: 'Aug 2025'
 	},
-	{
-		name: 'Mutant Reviewers',
-		description: "I'm an irregular (in every sense) writer on this long-standing cult movie site.",
-		demoLink: 'https://mutantreviewersmovies.com/category/reviewer/thomas/',
-		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Website',
-		image: MutantReviewers,
-		tags: ['Movie Reviews'],
-		date: 'Ongoing'
-	},
+
 	{
 		name: 'Fair Punishment',
 		description: 'I performed in this gothic mask show in Darwin, May 2025.',

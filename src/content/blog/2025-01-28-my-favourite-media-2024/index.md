@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 title: My favourite media of 2024
 slug: my-favourite-media-2024
 description: The things I watched, read and listened to most (and what they say about my year)
