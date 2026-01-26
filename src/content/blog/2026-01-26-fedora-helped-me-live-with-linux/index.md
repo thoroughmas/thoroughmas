@@ -1,7 +1,7 @@
 ---
 featured: true
 title: Fedora helped me finally ditch Windows for good
-slug: fedora-helped-me-live-with-linux
+slug: one-year-with-fedora
 description: How Fedora became my operating system of choice
 pubDate: Jan 26 2026
 tags:
