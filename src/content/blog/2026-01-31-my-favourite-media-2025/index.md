@@ -2,7 +2,7 @@
 featured: true
 title: My favourite media of 2025
 slug: my-favourite-media-2025
-description: The things I watched, read and listened to most (and what they say about my year)
+description: These are the things I watched, read and listened to in 2025 that had a big impact on my year
 pubDate: Jan 31 2026
 tags:
   - films
