@@ -62,10 +62,15 @@ export const projects: Project[] = [
 		description: "I'm performing in this provocative new play in Cairns & Darwin.",
 		demoLink: 'https://jute.com.au/genius/',
 		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Jute Theatre',
+		linkType: 'Jute',
 		image: Genius,
 		tags: ['Theatre'],
-		date: 'Sep 2025-Mar 2026'
+		date: 'Sep 2025-Mar 2026',
+		secondaryLink: {
+			url: 'https://brownsmart.com.au/genius/',
+			label: 'Browns Mart',
+			rel: 'nofollow noopener noreferrer'
+		}
 	},
 	{
 		name: 'Principle of Thomity',
