@@ -13,7 +13,7 @@ tags:
 coverImage: ./listenbrainztop.png
 listed: true
 ---
-Another year made so much better by great stories.
+2025 has come and gone. Another year made so much better by great stories. And the only thing better than watching, reading, listening to and playing... is sharing those experiences with other human beings. So here we go!
 ## TV Shows
 
 Of all the mediums, in my opinion TV continues to feature the most stand-out original art.
