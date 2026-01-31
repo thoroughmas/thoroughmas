@@ -24,6 +24,11 @@ export interface Project {
 	linkType: string;
 	date?: string;
 	[key: string]: any;
+	secondaryLink?: {
+		url: string;
+		label: string;
+		rel?: string;
+	};
 }
 
 export const projects: Project[] = [
@@ -35,7 +40,12 @@ export const projects: Project[] = [
 		linkType: 'YouTube',
 		image: Thoroughmas,
 		tags: ['Video Channel'],
-		date: 'Ongoing'
+		date: 'Ongoing',
+		secondaryLink: {
+			url: 'https://codec.au/c/thoroughmas/videos',
+			label: 'PeerTube',
+			rel: 'nofollow noopener noreferrer'
+		}
 	},
 	{
 		name: 'Community Rewatching 101',
@@ -65,7 +75,12 @@ export const projects: Project[] = [
 		linkType: 'YouTube',
 		image: Thomity,
 		tags: ['Video Channel'],
-		date: 'Ongoing'
+		date: 'Ongoing',
+		secondaryLink: {
+			url: 'https://codec.au/c/thomity/videos',
+			label: 'PeerTube',
+			rel: 'nofollow noopener noreferrer'
+		}
 	},
 	{
 		name: 'Mutant Reviewers',
