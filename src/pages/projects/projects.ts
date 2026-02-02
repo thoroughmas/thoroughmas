@@ -34,7 +34,7 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		name: 'Thoroughmas',
-		description: 'My personal YouTube Channel, covering all manner of technology and entertainment.',
+		description: 'My personal video channel, covering all manner of technology and entertainment.',
 		demoLink: 'https://www.youtube.com/@Thoroughmas',
 		demoLinkRel: 'nofollow noopener noreferrer',
 		linkType: 'YouTube',
