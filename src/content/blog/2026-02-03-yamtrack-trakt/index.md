@@ -43,7 +43,7 @@ Why? Because it's simply worse. It's harder to navigate. It has missing features
 
 ![](Pasted%20image%2020260203201857.png)
 
-These changes go hand in hand with a mobile app redesign that recently came out of the blue and changed things for everyone. The pushback against these changes on Reddit and Trakt's forums over the past few weeks has been loud and clear...
+These changes go hand in hand with a mobile app redesign that recently came out of the blue and changed things for everyone. The pushback against these changes on [Reddit](https://www.reddit.com/r/trakt/comments/1qtfh3k/removed_by_moderator/) and [Trakt's forums](https://forums.trakt.tv/t/myth-busters/97618) over the past few weeks has been loud and clear...
 
 ![](Pasted%20image%2020260203204026.png)
 
