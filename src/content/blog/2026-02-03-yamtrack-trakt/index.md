@@ -72,7 +72,7 @@ But I've been burned enough. Sure, I could try my luck with another one of these
 
 [Yamtrack](https://github.com/FuzzyGrim/Yamtrack) is a self-hosted open source media tracking app that began development just a few years ago.
 
-Yep, you've gotta self-host it. I swear that's not as daunting as it may sound. But I get it, if you've never self-hosted before, it can be hard to get started. Since I've been self-hosting for a couple years now, it's a topic I'm keen to write about much more soon. It's something that should be accessible to everyone, especially in this day and age.
+Yep, you've gotta self-host it. I swear that's not as daunting as it may sound. But I get it, if you've never self-hosted before, it can be hard to get started. Since I've been self-hosting for a couple years now, it's a topic I'm keen to write about much more soon. It's something that should be accessible to everyone, especially in this day and age. (I might make a video about setting up Yamtrack in the near future.)
 
 Being free and open source are huge boons here. My data isn't trapped in some service with a tenuous future, it's mine forever. There's no chance of it being sold or misused, I'm the only one with access to it. Each update and change is transparent and community-led. The worst possible outcome for a project like this is that it's abandoned by the developer. Certainly a potential scenario, especially in this case where the project is led by [one sole developer](https://www.fuzzygrim.com/). But the collapse of Yamtrack's development would still leave me in full control of all of my data and plenty of options on where to take it next.
 
