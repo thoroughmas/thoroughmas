@@ -13,8 +13,8 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props;
 		class='text-zinc-600 text-sm w-28 dark:text-zinc-400 shrink-0 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors duration-200'
 	>
 		<FormattedDate date={post.data.pubDate} />
-		{post.data.updatedDate && <span class='text-zinc-400 dark:text-zinc-500 mx-1'>•</span>}
-		{post.data.updatedDate && <FormattedDate date={post.data.updatedDate} />}
+		{post.data.updatedDate && post.data.updatedDate.getTime() > 0 && <span class='text-zinc-400 dark:text-zinc-500 mx-1'>•</span>}
+		{post.data.updatedDate && post.data.updatedDate.getTime() > 0 && <FormattedDate date={post.data.updatedDate} />}
 	</div>
 	<h3 class='font-medium grow group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors duration-200'>
 		<a href={`/${post.slug}/`} class='hover:no-underline'>
