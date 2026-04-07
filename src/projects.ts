@@ -12,6 +12,7 @@ import Genius from '@src/assets/img/projects/genius2.jpg';
 import PrideandPrejudice from '@src/assets/img/projects/prideandprejudice2.jpg';
 import Streetcar from '@src/assets/img/projects/streetcar1.webp';
 import Thomity from '@src/assets/img/projects/Thomity_1.jpg';
+import Pomona from '@src/assets/img/projects/pomona1.jpg';
 
 export interface Project {
 	name: string;
@@ -58,19 +59,14 @@ export const projects: Project[] = [
 		date: 'Ongoing'
 	},
 	{
-		name: 'Genius',
-		description: "I'm performing in this provocative new play in Cairns & Darwin.",
-		demoLink: 'https://jute.com.au/genius/',
+		name: 'Pomona',
+		description: "I'm directing this modern existential horror in Adelaide.",
+		demoLink: 'https://pomonaplay.au',
 		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Jute',
-		image: Genius,
+		linkType: 'Theatre Guild',
+		image: Pomona,
 		tags: ['Theatre'],
-		date: 'Sep 2025-Mar 2026',
-		secondaryLink: {
-			url: 'https://brownsmart.com.au/genius/',
-			label: 'Browns Mart',
-			rel: 'nofollow noopener noreferrer'
-		}
+		date: 'Aug 2026'
 	},
 	{
 		name: 'Principle of Thomity',
@@ -106,6 +102,21 @@ export const projects: Project[] = [
 		image: BTN,
 		tags: ['Reporting'],
 		date: 'Ongoing'
+	},
+	{
+		name: 'Genius',
+		description: "I'm performing in this provocative new play in Cairns & Darwin.",
+		demoLink: 'https://jute.com.au/genius/',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'Jute',
+		image: Genius,
+		tags: ['Theatre'],
+		date: 'Sep 2025-Mar 2026',
+		secondaryLink: {
+			url: 'https://brownsmart.com.au/genius/',
+			label: 'Browns Mart',
+			rel: 'nofollow noopener noreferrer'
+		}
 	},
 	{
 		name: 'Pride and Prejudice',
@@ -273,15 +284,8 @@ export function categorizeProjectsByDate(projects: Project[]) {
 		archive: [] as Project[]
 	};
 
-	const getDateValue = (dateStr: string, project: Project): { year: number; month: number; fullDate: Date } => {
-		// Find ALL years in the date string (handles ranges like \"Sep 2025-Mar 2026\")
-		const yearMatches = dateStr.match(/(19|20)\d{2}/g);
-		const years = yearMatches ? yearMatches.map((y) => parseInt(y)) : [currentYear];
-		// Use the LATEST year (for ranges, this gives us the end year)
-		const year = Math.max(...years);
-
-		// Find ALL months in the date string
-		const months: { [key: string]: number } = {
+	const getDateValue = (dateStr: string): { year: number; month: number; fullDate: Date } => {
+		const monthMap: { [key: string]: number } = {
 			Jan: 1,
 			January: 1,
 			Feb: 2,
@@ -307,15 +311,35 @@ export function categorizeProjectsByDate(projects: Project[]) {
 			December: 12
 		};
 
-		const foundMonths: number[] = [];
-		for (const [monthName, value] of Object.entries(months)) {
-			if (dateStr.includes(monthName)) {
-				foundMonths.push(value);
+		// Find ALL year-month pairs in the date string (handles ranges like "Sep 2025-Mar 2026")
+		// e.g. "Sep 2025-Mar 2026" → pairs (Sep,2025) and (Mar,2026) → latest is (Mar,2026)
+		const yearMatches = dateStr.match(/(19|20)\d{2}/g);
+		const years = yearMatches ? yearMatches.map((y) => parseInt(y)) : [currentYear];
+
+		const yearMonthPairs: Array<{ year: number; month: number }> = [];
+		for (const year of years) {
+			// Find the month that appears closest before this year in the string
+			let bestMonth = 12; // default to December if no month found
+			for (const [monthName, value] of Object.entries(monthMap)) {
+				const idx = dateStr.indexOf(monthName);
+				if (idx !== -1) {
+					// Check this month appears before or near this year
+					const yearIdx = dateStr.indexOf(year.toString());
+					if (idx < yearIdx + 10) {
+						// Month is within a reasonable distance before the year
+						if (value <= bestMonth) bestMonth = value;
+					}
+				}
 			}
+			yearMonthPairs.push({ year, month: bestMonth });
 		}
 
-		// For ranges, use the latest month; if no months found, default to December of the latest year
-		const month = foundMonths.length > 0 ? Math.max(...foundMonths) : 12;
+		// Pick the pair with the latest date
+		yearMonthPairs.sort((a, b) => {
+			if (a.year !== b.year) return b.year - a.year;
+			return b.month - a.month;
+		});
+		const { year, month } = yearMonthPairs[0];
 
 		return {
 			year,
@@ -336,7 +360,7 @@ export function categorizeProjectsByDate(projects: Project[]) {
 			return;
 		}
 
-		const dateInfo = getDateValue(project.date, project);
+		const dateInfo = getDateValue(project.date);
 
 		// Compare with current date
 		if (dateInfo.year > currentYear || (dateInfo.year === currentYear && dateInfo.month > currentMonth)) {
@@ -355,8 +379,8 @@ export function categorizeProjectsByDate(projects: Project[]) {
 			if (a.date === 'Ongoing') return -1;
 			if (b.date === 'Ongoing') return 1;
 
-			const dateA = getDateValue(a.date || '', a);
-			const dateB = getDateValue(b.date || '', b);
+			const dateA = getDateValue(a.date || '');
+			const dateB = getDateValue(b.date || '');
 
 			// Sort upcoming in chronological order (earliest first)
 			// Sort archive in reverse chronological order (most recent first)

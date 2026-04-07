@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Prose from '../components/Prose.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
@@ -17,17 +17,21 @@ const { GISCUS_REPO, GISCUS_REPO_ID, GISCUS_CATEGORY, GISCUS_CATEGORY_ID } = loa
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
-	return posts.map((post: any) => ({
-		params: { slug: post.slug },
+	return posts.map((post) => ({
+		// 2.
+		params: { slug: post.data.slug },
 		props: post
 	}));
 }
+
 type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const {
 	data: { title, seoTitle, description, coverImage, pubDate, updatedDate, tags }
 } = post;
-const { Content, headings } = await post.render();
+
+// 3. Changed post.render() to the new render(post) function
+const { Content, headings } = await render(post);
 ---
 
 <BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>

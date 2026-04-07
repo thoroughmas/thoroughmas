@@ -8,7 +8,6 @@ type BlogPost = CollectionEntry<'blog'>;
 const allPosts: BlogPost[] = await getCollection('blog');
 const listedPosts = allPosts.filter((post) => post.data.listed !== false);
 
-// Extract and count tags
 const tagCounts = new Map<string, number>();
 listedPosts.forEach((post) => {
 	post.data.tags?.forEach((tag) => {
@@ -16,7 +15,6 @@ listedPosts.forEach((post) => {
 	});
 });
 
-// Sort by popularity and take top 6 for minimal display
 const popularTags = Array.from(tagCounts.entries())
 	.sort(([, a], [, b]) => b - a)
 	.slice(0, 6)

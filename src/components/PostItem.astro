@@ -17,7 +17,7 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props;
 		{post.data.updatedDate && post.data.updatedDate.getTime() > 0 && <FormattedDate date={post.data.updatedDate} />}
 	</div>
 	<h3 class='font-medium grow group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors duration-200'>
-		<a href={`/${post.slug}/`} class='hover:no-underline'>
+		<a href={`/${post.data.slug}/`} class='hover:no-underline'>
 			{post.data.title}
 		</a>
 	</h3>
@@ -30,7 +30,7 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props;
                     transition-all duration-200 opacity-80 group-hover:opacity-100
                     hover:border-zinc-500 dark:hover:border-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'
 					href={`/tags/${slugifyTag(tag)}`}>
-					{tag} {/* Tag is already formatted by the schema transform */}
+					{tag}
 				</a>
 			))
 		}

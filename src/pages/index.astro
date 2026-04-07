@@ -15,20 +15,13 @@ const top6Projects = projects.slice(0, 6);
 const posts = (await getCollection('blog'))
 	.filter((post): post is BlogPost => {
 		const isListed = post.data.listed !== false;
-		console.log(`Post ${post.slug} - listed: ${isListed}`);
 		return isListed;
 	})
 	.filter((post) => {
 		const isFeatured = post.data.featured === true;
-		console.log(`Post ${post.slug} - featured: ${isFeatured}`);
 		return isFeatured;
 	})
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-console.log(
-	'Featured posts:',
-	posts.map((p) => p.slug)
-);
 ---
 
 <BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
@@ -38,7 +31,7 @@ console.log(
 				<div class='text-pretty leading-9'>
 					<h1 class='text-5xl font-bold mb-4 custom-name-title'>Thomas Midena</h1>
 					<Prose>
-						<div class='text-base text-gray-400 dark:text-gray-300 leading-relaxed space-y-2'>
+						<div class='text-base text-gray-700 dark:text-gray-300 leading-relaxed space-y-2'>
 							<p>I'm big into storytelling, technology, and technology-driven storytelling.</p>
 							<p>This website is a portal to all my online activities.</p>
 						</div>

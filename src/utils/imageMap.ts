@@ -15,7 +15,7 @@ export async function createImageMap() {
 
       // Create mappings for each image
       Object.entries(images).forEach(([path, imageModule]: [string, any]) => {
-        if (path.includes(post.slug)) {
+        if (path.includes(post.data.slug)) {
           const originalName = path.split('/').pop()?.split('.')[0];
           const hashedSrc = imageModule.src;
           if (originalName) {

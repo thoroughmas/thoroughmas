@@ -110,15 +110,12 @@ const menu = [
 	</style>
 
 	<script is:inline>
-		// Set the initial theme to 'dark'
 		let theme = 'dark';
 
-		// Check if the user has a previously saved theme preference
 		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 			theme = localStorage.getItem('theme');
 		}
 
-		// Apply the initial theme
 		if (theme === 'light') {
 			document.documentElement.classList.remove('dark');
 		} else {

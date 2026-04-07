@@ -31,12 +31,10 @@ function groupTagsByFirstLetter(tags: Tag[]) {
 
 const allPosts: BlogPost[] = await getCollection('blog');
 
-// Use flatMap to extract all tags from listed posts
 const tags = allPosts
   .filter((post) => post.data.listed !== false)
   .flatMap((post) => post.data.tags || []);
 
-// Reduce the list of tags into the mappedTags object
 const mappedTags = tags.reduce((acc, tag) => {
   const tagValue = slugify(tag);
   if (acc[tagValue]) {

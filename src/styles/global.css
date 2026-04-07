@@ -18,9 +18,7 @@
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentcolor);
 	}
-}
 
-@layer base {
 	pre,
 	code {
 		font-size: 0.875rem;
@@ -28,24 +26,24 @@
 
 	/* Increase specificity to target only captions inside figures */
 	figure {
-		margin: 0; /* Removes the default margin */
+		margin: 0;
 	}
 
 	figure > figcaption {
-		margin-top: 4px; /* Adjusts space between image and caption */
-		font-style: italic; /* Keeps italic for captions */
+		margin-top: 4px;
+		font-style: italic;
 	}
-}
 
-/* Default styling for icons */
-.social-icons img {
-	filter: none; /* Default for light mode */
-	transition: filter 0.3s ease; /* Smooth transition when toggling themes */
-}
+	/* Default styling for icons */
+	.social-icons img {
+		filter: none;
+		transition: filter 0.3s ease;
+	}
 
-/* Adjust icons for dark mode */
-html.dark .social-icons img {
-	filter: invert(1) brightness(2); /* Makes icons white in dark mode */
+	/* Adjust icons for dark mode */
+	html.dark .social-icons img {
+		filter: invert(1) brightness(2);
+	}
 }
 
 @font-face {
@@ -62,13 +60,13 @@ html.dark .social-icons img {
 
 .image-left {
 	float: left;
-	margin-right: 1rem; /* Space between text and image */
+	margin-right: 1rem;
 	margin-bottom: 1rem;
 }
 
 .image-right {
 	float: right;
-	margin-left: 1rem; /* Space between text and image */
+	margin-left: 1rem;
 	margin-bottom: 1rem;
 }
 
@@ -77,5 +75,5 @@ img:not(.rounded-full) {
 }
 
 figure {
-	display: inline-block; /* Prevent layout breaking */
+	display: inline-block;
 }

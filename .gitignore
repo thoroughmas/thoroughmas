@@ -28,3 +28,6 @@ pnpm-debug.log*
 .obsidian/workspace
 .obsidian/workspace.json
 .obsidian/app.json
+
+# Obsidian sync/staging
+.stversions/

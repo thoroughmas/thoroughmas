@@ -19,25 +19,19 @@ export async function GET(context) {
 
 		renderer.image = (href, title, text) => {
 			try {
-				// Handle case where href is an object
 				const imagePath = typeof href === 'object' ? href.href : href;
 				if (!imagePath) return '';
 
-				// If it's already a full URL, use it as is
 				if (typeof imagePath === 'string' && imagePath.startsWith('http')) {
 					return `<img src="${imagePath}" alt="${text || ''}" />`;
 				}
 
-				// Get original filename without extension and ./
 				const originalName = imagePath.replace('./', '').split('.')[0];
-
-				// Look up the hashed version from our map
 				const hashedPath = imageMap.get(originalName);
 				if (hashedPath) {
 					return `<img src="${hashedPath}" alt="${text || ''}" />`;
 				}
 
-				// Fallback to original behavior
 				const cleanPath = typeof imagePath === 'string' ? imagePath.replace('./', '') : '';
 				return `<img src="${siteUrl}/_astro/${cleanPath}" alt="${text || ''}" />`;
 			} catch (error) {
@@ -54,15 +48,14 @@ export async function GET(context) {
 		description: SITE_DESCRIPTION,
 		site: context.site,
 		items: posts.map((post) => {
-			// Render post content with custom image handling
 			const renderer = createRssRenderer();
-			const content = marked(post.body, {
+			// In Astro 6 Content Layer, post.body still contains the raw markdown string
+			const content = marked(post.body || '', {
 				renderer,
 				mangle: false,
 				headerIds: false
 			});
 
-			// Handle the cover image
 			const coverImageHtml = post.data.coverImage?.src ? `<img src="${post.data.coverImage.src}" alt="${post.data.title}" />` : '';
 
 			const fullContent = `
@@ -76,7 +69,8 @@ export async function GET(context) {
 				title: post.data.title,
 				pubDate: post.data.pubDate,
 				description: post.data.description || '',
-				link: `${siteUrl}/posts/${post.slug}/`,
+				// Changed post.slug to post.data.slug
+				link: `${siteUrl}/posts/${post.data.slug}/`,
 				content: fullContent,
 				...(post.data.tags && {
 					categories: post.data.tags
