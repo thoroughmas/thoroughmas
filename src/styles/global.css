@@ -77,3 +77,12 @@ img:not(.rounded-full) {
 figure {
 	display: inline-block;
 }
+
+/* Shrink album covers in blog posts — applied via the float-left divs in markdown */
+.float-left img {
+	max-width: 160px;
+	height: auto;
+	/* Override prose default vertical margins on images */
+	margin-top: 0;
+	margin-bottom: 0;
+}

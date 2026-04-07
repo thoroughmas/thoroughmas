@@ -3,17 +3,17 @@ featured: false
 title: My favourite soundtracks of 2025
 slug: my-favourite-soundtracks-2025
 description: My top original scores from TV, movies and games
-pubDate: 2026-04-08
+pubDate: 2026-04-11
 tags:
   - music
   - soundtracks
-coverImage: ./thumbnail_v3.jpg
+coverImage: ./thumbnail.jpg
 listed: false
 ---
 Once again I've forced myself to organise my favourite music from the last year into a big long list. I present to you my **25** top original scores released in the year 2025.
 
-<div class="flex justify-center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ujTxANp-6FA?si=7YNg_xTN2kIV7kzm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="display: flex; justify-content: center;">
+<iframe title="My favourite 25 soundtracks of 2025" width="560" height="315" src="https://codec.au/videos/embed/f28ciwaGNMJ8G8DypQzVcW" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 </div>
 
 The video above presents this list with short excerpts from each score, but below you can find my list in written form.
@@ -22,9 +22,9 @@ The video above presents this list with short excerpts from each score, but belo
 
 ## 25. **MARTY SUPREME** – Daniel Lopatin
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![IF Soundtrack Album Cover](24IF.jpg)
+![Marty Supreme Soundtrack Album Cover](01.jpg)
 
 </div>
 
@@ -36,9 +36,9 @@ I love how big it gets. It takes Marty's perspective on his own life, depicting 
 
 ## 24. **HADES II** – Darren Korb
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![IF Soundtrack Album Cover](24IF.jpg)
+![Hades II Soundtrack Album Cover](02.jpg)
 
 </div>
 
@@ -50,9 +50,9 @@ There's a solid few hours of exciting new music here, and I particularly love th
 
 ## 23. **LE SECRET DE MARTHA** – Romain Paillot
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Red Rooms Soundtrack Album Cover](23RedRooms.jpg)
+![Le Secret de Martha Soundtrack Album Cover](03.jpg)
 
 </div>
 
@@ -64,9 +64,9 @@ Just a really beautiful dramatic score that doesn't overstay its welcome.
 
 ## 22. **ANDOR (SEASON 2)** – Brandon Roberts
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![The Dry 2 Soundtrack Album Cover](22TheDry2.jpg)
+![Andor Season 2 Soundtrack Album Cover](04.jpg)
 
 </div>
 
@@ -78,9 +78,9 @@ There are also some exceptionally tense cues here that accompany the major set p
 
 ## 21. **OUTLANDER: BLOOD OF MY BLOOD (SEASON 1)** – Bear McCreary
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Woodwalkers Soundtrack Album Cover](21Woodwalkers.jpg)
+![Outlander Blood Of My Blood Soundtrack Album Cover](05.jpg)
 
 </div>
 
@@ -92,9 +92,9 @@ The wistful sense of romantic longing this series has excelled at since the begi
 
 ## 20. **KINGDOM COME: DELIVERANCE II** – Jan Valta
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Penguin Soundtrack Album Cover](20Penguin.jpg)
+![Kingdom Come Deliverance II Soundtrack Album Cover](06.jpg)
 
 </div>
 
@@ -106,9 +106,9 @@ For the most part it holds off from getting too heroic or grandiose, but when it
 
 ## 19. **CLAIR OBSCUR: EXPEDITION 33** – Lorien Testard
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Wicked Soundtrack Album Cover](19Wicked.jpg)
+![Clair Obscur Soundtrack Album Cover](07.jpg)
 
 </div>
 
@@ -120,9 +120,9 @@ This is a huge, dynamic musical journey that tells a rich story. And one with su
 
 ## 18. **SWORD OF THE SEA** – Austin Wintory
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Call of Duty: Black Ops 6 Soundtrack Album Cover](18BlackOps6.jpg)
+![Sword of the Sea Soundtrack Album Cover](08.jpg)
 
 </div>
 
@@ -134,9 +134,9 @@ It has the sweeping adventure of *Journey*, the gentle nature-inspired sense of 
 
 ## 17. **STAR WARS OUTLAWS: WILD CARD & A PIRATE'S FORTUNE** – Wilbert Roget, II & Cody Matthew Johnson
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Concord Soundtrack Album Cover](16Concord.jpg)
+![Star Wars Outlaws Soundtrack Album Cover](09.jpg)
 
 </div>
 
@@ -149,9 +149,9 @@ This isn't another one of those 5-10 hour long game scores; the album is only an
 ---
 ## 16. **ABSOLUM** – Gareth Coker
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![We Were The Lucky Ones Soundtrack Album Cover](17WeWereTheLuckyOnes.jpg)
+![Absolum Soundtrack Album Cover](10.jpg)
 
 </div>
 
@@ -167,9 +167,9 @@ All in all, **Absolum** is absolutely beautiful.
 
 ## 15. **THE WAR BETWEEN THE LAND AND THE SEA** – Lorne Balfe
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![That Christmas Soundtrack Album Cover](15ThatChristmas.jpg)
+![The War Between The Land And The Sea Soundtrack Album Cover](11.jpg)
 
 </div>
 
@@ -181,9 +181,9 @@ It's Lorne Balfe completely in *His Dark Materials* mode; stomping-big fantasy, 
 
 ## 14. **PERCY JACKSON AND THE OLYMPIANS (SEASON 2)** – Bear McCreary & Sparks & Shadows
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![ARK Animated Series Soundtrack Album Cover](14ARKAnimatedSeries.jpg)
+![Percy Jackson Soundtrack Album Cover](12.jpg)
 
 </div>
 
@@ -197,9 +197,9 @@ Turns out Bear McCreary's team kinda know what they're doing. Go figure.
 
 ## 13. **PREDATOR: BADLANDS** – Sarah Schachner
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Final Fantasy Soundtrack Album Cover](13FinalFantasy.jpg)
+![Predator Badlands Soundtrack Album Cover](13.jpg)
 
 </div>
 
@@ -211,9 +211,9 @@ Despite clearly using so much synth and digital technology, there's also such a 
 
 ## 12. **DOCTOR WHO (SERIES 10)** – Murray Gold
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Prince of Persia Soundtrack Album Cover](12PrinceofPersia.jpg)
+![Doctor Who Series 10 Soundtrack Album Cover](14.jpg)
 
 </div>
 
@@ -229,9 +229,9 @@ Between Bill's theme and some incredible cues from the final few episodes of Ser
 
 ## 11. **GHOST OF YOTEI** – Wataru Hokoyama, Toma Otowa
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Masters of the Air Soundtrack Album Cover](11MastersoftheAir.jpg)
+![Ghost of Yotei Soundtrack Album Cover](15.jpg)
 
 </div>
 
@@ -243,9 +243,9 @@ I'm also really glad that just like *Ghost of Tsushima*, this soundtrack feature
 
 ## 10. **AVATAR: FIRE AND ASH** – Simon Franglen
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![House of the Dragon Season 2 Soundtrack Album Cover](10HouseoftheDragon.jpg)
+![Avatar Fire and Ash Soundtrack Album Cover](16.jpg)
 
 </div>
 
@@ -259,9 +259,9 @@ This is the kind of epic classical orchestral score that we only seem to get a f
 
 ## 9. **CREATION OF THE GODS II** – Gordy Haab
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Tales of Kenzera Soundtrack Album Cover](9TalesofKenzera.jpg)
+![Creation of the Gods II Soundtrack Album Cover](17.jpg)
 
 </div>
 
@@ -273,11 +273,11 @@ I also find a unique joy in these amazing scores for movies I've never heard of 
 
 ---
 
-## 8. **AION2** – Simon Franglen, Ryo Kunihiko & NCSOUND
+## 8. **THE ECHOES OF ETERNITY (AION2)** – Simon Franglen, Ryo Kunihiko & NCSOUND
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Transformers One Soundtrack Album Cover](8TransformersOne.jpg)
+![Aion 2 Soundtrack Album Cover](18.jpg)
 
 </div>
 
@@ -295,9 +295,9 @@ Later in the album things mellow out into some fairly stock standard action stuf
 
 ## 7. **DUNE: AWAKENING** – Knut Avenstroup Haugen
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Young Woman and the Sea Soundtrack Album Cover](7YoungWoman.jpg)
+![Dune Awakening Soundtrack Album Cover](19.jpg)
 
 </div>
 
@@ -311,9 +311,9 @@ I don't think this would work if it didn't sound so incredibly confident and sel
 
 ## 6. **CAPTAIN AMERICA: BRAVE NEW WORLD** – Laura Karpman & Nora Kroll-Rosenbaum
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Dune Part Two Soundtrack Album Cover](6Dune2.jpg)
+![Brave New World Soundtrack Album Cover](20.jpg)
 
 </div>
 
@@ -327,9 +327,9 @@ The movie itself may not live up to it, but this soundtrack is brilliantly dange
 
 ## 5. **HOLLOW KNIGHT: SILKSONG** – Christopher Larkin
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Helldivers 2 Soundtrack Album Cover](5Helldivers2.jpg)
+![Hollow Knight Silksong Soundtrack Album Cover](21.jpg)
 
 </div>
 
@@ -343,9 +343,9 @@ I was lucky enough to hear some of this soundtrack played by the Adelaide Sympho
 
 ## 4. **F1** – Hans Zimmer
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![The War Within Soundtrack Album Cover](4TheWarWithin.jpg)
+![F1 Soundtrack Album Cover](22.jpg)
 
 </div>
 
@@ -359,9 +359,9 @@ It's not unlike things we've heard Zimmer do a bunch of times before, and it's n
 
 ## 3. **STAR WARS: SKELETON CREW** – Mick Giacchino
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Star Wars Outlaws Soundtrack Album Cover](3StarWarsOutlaws.jpg)
+![Skeleton Crew Soundtrack Album Cover](23.jpg)
 
 </div>
 
@@ -377,9 +377,9 @@ A little warning... there are different mixes depending on where you listen to t
 
 ## 2. **MISSION: IMPOSSIBLE - THE FINAL RECKONING** – Max Aruj & Alfie Godfrey
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![Dragon Age Soundtrack Album Cover](2DragonAge.jpg)
+![The Final Reckoning Soundtrack Album Cover](24.jpg)
 
 </div>
 
@@ -395,15 +395,13 @@ This is action melodrama on the biggest scale imaginable.
 
 ## 1. **THE FANTASTIC FOUR: FIRST STEPS** – Michael Giacchino
 
-<div class="float-left mr-4 mb-4">
+<div class="float-left mr-4 mb-2">
 
-![The Lord of the Rings: The Rings of Power Soundtrack Album Cover](1RingsofPower.jpg)
+![Fantastic Four First Steps Soundtrack Album Cover](25.jpg)
 
 </div>
 
-**Fantastic Four: First Steps** is utterly delightful, and an easy pick for my favourite score of the year!
-
-This is probably my favourite Michael Giacchino score since *Doctor Strange*. It's just a full-throated and sophisticated superhero score which isn't too cool to sing its own title for the main theme. That's hard to pull off, and very few get away with it... but just like *Robocop 2*, here it works. It's fun and cheeky and playful, but not a joke.
+**Fantastic Four: First Steps** is utterly delightful, and an easy pick for my favourite score of the year! This is probably my favourite Michael Giacchino score since *Doctor Strange*. It's just a full-throated and sophisticated superhero score which isn't too cool to sing its own title for the main theme. That's hard to pull off, and very few get away with it... but just like *Robocop 2*, here it works. It's fun and cheeky and playful, but not a joke.
 
 The space-faring optimism seeded throughout this soundtrack is really exciting, and it's perfectly balanced by darker themes with real stakes. The villain material here is just as good as any of the heroic material, and gives the score as a whole such fantastic light and shade.
 
