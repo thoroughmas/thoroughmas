@@ -183,7 +183,7 @@ export const projects: Project[] = [
 	{
 		name: 'Absurdity Unit',
 		description: 'A short fictional podcast about patients in a hospital with kinda annoying superpowers.',
-		demoLink: 'https://pca.st/3pwltsia',
+		demoLink: 'https://podcasts.thomid.me/@absurdity/episodes',
 		demoLinkRel: 'nofollow noopener noreferrer',
 		linkType: 'Pocket Casts',
 		image: AbsurdityUnit,
