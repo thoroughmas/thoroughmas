@@ -24,7 +24,7 @@ const menu = [
 		<nav class='flex gap-4 items-center justify-between py-3'>
 			<h2 class='m-0'>
 				<a href='/' class='flex gap-4 items-center text-xl font-black uppercase'>
-					<Image src={TommyLogo} alt='Thomas Midena' class='rounded-full w-11 border-white border-2 shadow-lg' />
+					<Image src={TommyLogo} alt='Thomas Midena' class='rounded-full w-11 border-white border-2 shadow-lg logo-spin' />
 				</a>
 			</h2>
 			<div class='flex'>
@@ -106,6 +106,19 @@ const menu = [
 		}
 		.dark #themeToggle .moon {
 			display: block;
+		}
+
+		a:hover .logo-spin {
+			animation: spin 0.2s linear;
+		}
+
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(700deg);
+			}
 		}
 	</style>
 

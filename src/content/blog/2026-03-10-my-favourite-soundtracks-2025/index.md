@@ -1,5 +1,5 @@
 ---
-featured: false
+featured: true
 title: My favourite soundtracks of 2025
 slug: my-favourite-soundtracks-2025
 description: My top original scores from TV, movies and games
@@ -8,7 +8,7 @@ tags:
   - music
   - soundtracks
 coverImage: ./thumbnail.jpg
-listed: false
+listed: true
 ---
 Once again I've forced myself to organise my favourite music from the last year into a big long list. I present to you my **25** top original scores released in the year 2025.
 

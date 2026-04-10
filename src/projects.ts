@@ -13,6 +13,7 @@ import PrideandPrejudice from '@src/assets/img/projects/prideandprejudice2.jpg';
 import Streetcar from '@src/assets/img/projects/streetcar1.webp';
 import Thomity from '@src/assets/img/projects/Thomity_1.jpg';
 import Pomona from '@src/assets/img/projects/pomona1.jpg';
+import Podcasts from '@src/assets/img/projects/podcasts1.jpg';
 
 export interface Project {
 	name: string;
@@ -188,6 +189,15 @@ export const projects: Project[] = [
 		image: AbsurdityUnit,
 		tags: ['Podcast'],
 		date: '2020'
+	},
+	{
+		name: 'Podcast Library',
+		description: "These are all my old podcasts. Who knows, perhaps I'll record again some day!",
+		demoLink: 'https://podcasts.thomid.me/',
+		linkType: 'Listen',
+		image: Podcasts,
+		tags: ['Podcast'],
+		date: 'Ongoing'
 	},
 	{
 		name: 'Blog',
