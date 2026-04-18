@@ -2,15 +2,15 @@
 const today = new Date();
 ---
 
-<footer class='container mt-8'>
-	<div class='flex gap-3 py-8 justify-center items-center flex-wrap'>
+<!-- Sticky social bar -->
+<div id='sticky-social-bar' class='sticky-social-bar'>
+	<div class='flex gap-3 py-4 justify-center items-center flex-wrap'>
 		<a
 			href='https://bsky.app/profile/thomid.me'
 			target='_blank'
 			rel='noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='Bluesky'
-		>
+			title='Bluesky'>
 			Bluesky
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
@@ -19,8 +19,7 @@ const today = new Date();
 			target='_blank'
 			rel='me noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='Mastodon'
-		>
+			title='Mastodon'>
 			Mastodon
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
@@ -29,8 +28,7 @@ const today = new Date();
 			target='_blank'
 			rel='noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='Pixelfed'
-		>
+			title='Pixelfed'>
 			Pixelfed
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
@@ -39,8 +37,7 @@ const today = new Date();
 			target='_blank'
 			rel='noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='YouTube'
-		>
+			title='YouTube'>
 			YouTube
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
@@ -49,8 +46,7 @@ const today = new Date();
 			target='_blank'
 			rel='noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='PeerTube'
-		>
+			title='PeerTube'>
 			Peertube
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
@@ -59,16 +55,14 @@ const today = new Date();
 			target='_blank'
 			rel='noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='Matrix'
-		>
+			title='Matrix'>
 			Matrix
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
 		<a
 			href='mailto:thomas@thomid.me'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='Contact'
-		>
+			title='Contact'>
 			Email
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
@@ -77,12 +71,13 @@ const today = new Date();
 			target='_blank'
 			rel='noopener noreferrer'
 			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
-			title='RSS'
-		>
+			title='RSS'>
 			RSS
 		</a>
 	</div>
+</div>
 
+<footer id='page-footer' class='container mt-8'>
 	<div class='py-4 border-t dark:border-t-zinc-700'>
 		<div class='md:flex text-sm text-zinc-500/80 dark:text-zinc-400/70 justify-between'>
 			<div class='text-sm text-zinc-500/80 dark:text-zinc-400/70'>Copyright © {today.getFullYear()} Thomas.</div>
@@ -97,3 +92,62 @@ const today = new Date();
 		</div>
 	</div>
 </footer>
+
+<script>
+	// When the footer enters the viewport, dock the social bar to it (no gap).
+	// When the footer leaves, go back to fixed at the bottom.
+	const bar = document.getElementById('sticky-social-bar');
+	const footer = document.getElementById('page-footer');
+
+	if (bar && footer) {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				bar.classList.toggle('is-docked', entry.isIntersecting);
+				// When docked: pull bar up into footer's margin-top gap; restore padding when floating
+				if (entry.isIntersecting) {
+					bar.style.marginBottom = '-2rem';
+					footer.style.paddingBottom = '0';
+				} else {
+					bar.style.marginBottom = '';
+					footer.style.paddingBottom = '5rem';
+				}
+			},
+			{ threshold: 0 }
+		);
+		observer.observe(footer);
+	}
+</script>
+
+<style>
+	.sticky-social-bar {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		border-top: 1px solid #e4e4e7;
+		z-index: 50;
+		transition: opacity 0.2s ease;
+	}
+
+	.sticky-social-bar.is-docked {
+		position: relative;
+		border-top: none;
+	}
+
+	:global(.dark) .sticky-social-bar {
+		background: rgba(23, 23, 23, 0.9);
+		border-top-color: #44403c;
+	}
+
+	:global(.dark) .sticky-social-bar.is-docked {
+		border-top-color: transparent;
+	}
+
+	/* Push footer content up so it's not hidden behind the sticky bar when floating */
+	footer {
+		padding-bottom: 5rem;
+	}
+</style>
