@@ -27,9 +27,14 @@ import TomandLexie from '@src/assets/img/about/tomandlexie_small.jpg';
 		}
 
 		.image-left img,
-		.image-right img {
+		.image-right img,
+		.image-left :global(span),
+		.image-right :global(span) {
 			width: 100% !important;
 			max-width: 300px !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			display: block !important;
 		}
 	}
 </style>
