@@ -96,6 +96,16 @@ const posts = (await getCollection('blog'))
 </BaseLayout>
 
 <style>
+	.custom-name-title {
+		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		.custom-name-title {
+			text-align: left;
+		}
+	}
+
 	.social-icons {
 		display: flex;
 		gap: 1rem;

@@ -17,10 +17,10 @@
 		"@astrojs/sitemap": "^3.7.2",
 		"@tailwindcss/vite": "^4.2.2",
 		"astro": "^6.1.7",
-		"marked": "^17.0.6",
+		"marked": "^18.0.1",
 		"sharp": "^0.34.5",
 		"tailwindcss": "^4.2.2",
-		"typescript": "^5.9.3",
+		"typescript": "^6.0.3",
 		"unist-util-visit": "^5.1.0"
 	},
 	"devDependencies": {
@@ -28,6 +28,6 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"prettier": "^3.8.3",
 		"prettier-plugin-astro": "^0.14.1",
-		"vite": "^7.3.2"
+		"vite": "^8.0.8"
 	}
 }
