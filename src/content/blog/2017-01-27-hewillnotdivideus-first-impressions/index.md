@@ -2,13 +2,13 @@
 featured: false
 title: "#HeWillNotDivideUs First Impressions"
 slug: hewillnotdivideus-first-impressions
-description: 
+description:
 pubDate: Jan 27 2017
 tags:
   - world
   - ramble
-coverImage: 
-listed: true
+coverImage:
+listed: false
 ---
 A single video camera hangs from a wall on 37th Street in New York, beaming live pictures around planet Earth, for anyone to see. It was activated last week and shall continue for the next four years. But what is the significance of this one shot; what is this little camera hoping to capture?
 
