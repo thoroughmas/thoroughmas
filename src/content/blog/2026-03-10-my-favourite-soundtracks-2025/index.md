@@ -16,7 +16,7 @@ Once again I've forced myself to organise my favourite music from the last year 
 <iframe title="My favourite 25 soundtracks of 2025" width="560" height="315" src="https://codec.au/videos/embed/f28ciwaGNMJ8G8DypQzVcW" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 </div>
 
-The video above presents this list with short excerpts from each score, but below you can find my list in written form.
+The video above presents this list with short excerpts from each score, but below you can find my list in written form. You can also listen to [the playlist on Spotify](https://link.glyph.au/soundtracks2025spotifyplaylist).
 
 ---
 

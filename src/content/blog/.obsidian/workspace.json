@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 455.5
+    "width": 473.5
   },
   "right": {
     "id": "a4822340f99bb6fc",
@@ -168,8 +168,9 @@
   },
   "active": "d462ec9c3acbb4cd",
   "lastOpenFiles": [
-    "2017-01-27-hewillnotdivideus-first-impressions/index.md",
     "2026-03-10-my-favourite-soundtracks-2025/index.md",
+    "2026-01-26-fedora-helped-me-live-with-linux/index.md",
+    "2017-01-27-hewillnotdivideus-first-impressions/index.md",
     "2025-01-31-my-favourite-soundtracks-2024/index.md",
     "2026-03-10-my-favourite-soundtracks-2025/01.jpg",
     "2026-03-10-my-favourite-soundtracks-2025/01 - Daniel Lopatin - I Love You, Tokyo.jpg",
@@ -197,7 +198,6 @@
     "2026-01-31-my-favourite-media-2025/index.md",
     "2026-01-30-yamtrack-trakt/index.md",
     "2025-01-28-my-favourite-media-2024/index.md",
-    "2026-01-26-fedora-helped-me-live-with-linux/index.md",
     "2025-12-05-peertube/index.md",
     "2026-01-26-fedora-helped-me-live-with-linux/index~20260130-121732.md",
     "2026-01-26-fedora-helped-me-live-with-linux/index~20260130-122056.md",

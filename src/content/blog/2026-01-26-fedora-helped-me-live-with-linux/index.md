@@ -14,6 +14,8 @@ Windows is awful. Some tell themselves it's a necessary evil to get through the 
 
 Until now, that is!
 
+<iframe title="I finally ditched Windows for good" width="560" height="315" src="https://codec.au/videos/embed/hnTqRzRQSLWYBN346F8thd" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+
 ---
 
 A year ago I decided to try Fedora for the first time. I've always been daunted by it. People talk about it as if it's a hardcore tinkerer's operating system, best for those who already live and breathe Linux, and who aren't daunted by constant issues caused by cutting edge updates.
