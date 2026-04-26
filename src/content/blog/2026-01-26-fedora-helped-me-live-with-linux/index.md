@@ -13,8 +13,7 @@ listed: true
 Windows is awful. Some tell themselves it's a necessary evil to get through the day, but let's be real, we all hate it. I've dreamed of ditching Windows for many years. But every time I've tried Linux, I haven't been able to stick with it.
 
 Until now, that is!
-
-<iframe title="I finally ditched Windows for good" width="560" height="315" src="https://codec.au/videos/embed/hnTqRzRQSLWYBN346F8thd" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+<iframe title="I finally ditched Windows for good" width="560" height="315" src="https://codec.au/videos/embed/hnTqRzRQSLWYBN346F8thd" style="border: 0px; display: block; margin: 0 auto;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 
 ---
 
