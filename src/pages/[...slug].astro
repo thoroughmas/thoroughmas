@@ -7,13 +7,11 @@ import FormattedDate from '../components/FormattedDate.astro';
 import AboutTheAuthor from '../components/widgets/AboutTheAuthor.astro';
 import TableOfContent from '../components/widgets/TableOfContent.astro';
 import { slugify } from '../utils';
-import { loadEnv } from 'vite';
 
-const { GISCUS_REPO, GISCUS_REPO_ID, GISCUS_CATEGORY, GISCUS_CATEGORY_ID } = loadEnv(
-	process.env.NODE_ENV || 'production',
-	process.cwd(),
-	''
-);
+const GISCUS_REPO = import.meta.env.GISCUS_REPO;
+const GISCUS_REPO_ID = import.meta.env.GISCUS_REPO_ID;
+const GISCUS_CATEGORY = import.meta.env.GISCUS_CATEGORY;
+const GISCUS_CATEGORY_ID = import.meta.env.GISCUS_CATEGORY_ID;
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');

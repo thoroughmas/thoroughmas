@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026-04-26-matrix-bridges-got-me-off-social-media/index.md",
+                "file": "2016-05-30-top-10-warcraft-soundtracks/index.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "index"
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#hewill",
+                "query": "warcraft",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2026-04-26-matrix-bridges-got-me-off-social-media/index.md",
+                "file": "2016-05-30-top-10-warcraft-soundtracks/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -168,23 +168,31 @@
   },
   "active": "d462ec9c3acbb4cd",
   "lastOpenFiles": [
+    "2026-01-26-fedora-helped-me-live-with-linux/index.md",
+    "2026-03-10-my-favourite-soundtracks-2025/index.md",
+    "2026-04-26-matrix-bridges-got-me-off-social-media/index.md",
+    "2016-05-30-top-10-warcraft-soundtracks/index.md",
+    "2025-01-31-my-favourite-soundtracks-2024/index.md",
+    "2026-02-03-yamtrack-trakt/index.md",
+    "2015-10-31-top-5-retired-mmo-launcherspatchers/index.md",
+    "_templates/NewPost.md",
+    "2024-11-21-that-fresh-new-website-feeling/index.md",
+    "2025-01-28-my-favourite-media-2024/index.md",
+    "2025-12-03-reaction-videos/index.md",
+    "2025-12-05-peertube/index.md",
+    "2026-01-31-my-favourite-media-2025/index.md",
     "2026-04-26-matrix-bridges-got-me-off-social-media/matrix_beeper.jpg",
     "2026-04-26-matrix-bridges-got-me-off-social-media/tech lofi royalty free.jpg",
     "2026-04-26-matrix-bridges-got-me-off-social-media/Pasted image 20260426173005 - Edited.png",
     "2026-04-26-matrix-bridges-got-me-off-social-media/Pasted image 20260426174404.png",
     "2026-04-26-matrix-bridges-got-me-off-social-media/Pasted image 20260420174612.png",
-    "2026-01-26-fedora-helped-me-live-with-linux/index.md",
     "2026-04-26-matrix-bridges-got-me-off-social-media/vlcsnap-2026-01-25-15h55m29s082.png",
-    "2026-04-26-matrix-bridges-got-me-off-social-media/index.md",
     "2026-04-26-matrix-bridges-got-me-off-social-media/Screenshot_20260125_100851.png",
     "2026-04-26-matrix-bridges-got-me-off-social-media/Fedora.jpg",
     "2026-04-26-matrix-bridges-got-me-off-social-media",
-    "2026-03-10-my-favourite-soundtracks-2025/index.md",
     "2017-01-27-hewillnotdivideus-first-impressions/index.md",
-    "2025-01-31-my-favourite-soundtracks-2024/index.md",
     "2026-03-10-my-favourite-soundtracks-2025/01.jpg",
     "2026-03-10-my-favourite-soundtracks-2025/01 - Daniel Lopatin - I Love You, Tokyo.jpg",
-    "2026-03-10-my-favourite-soundtracks-2025/thumbnail.jpg",
     "2026-03-10-my-favourite-soundtracks-2025/thumbnail.jpg~",
     "2026-03-10-my-favourite-soundtracks-2025/25 - Michael Giacchino - The Light Speed of Your Life.jpg~",
     "2026-03-10-my-favourite-soundtracks-2025/24 - Max Aruj & Alfie Godfrey - I'll Be Waiting.jpg~",
@@ -194,25 +202,17 @@
     "2026-03-10-my-favourite-soundtracks-2025/20 - Laura Karpman & Nora Kroll-Rosenbaum - Brave New World.jpg~",
     "2026-03-10-my-favourite-soundtracks-2025/19 - Knut Avenstroup Haugen - Welcome to Arrakis.jpg~",
     "2026-03-10-my-favourite-soundtracks-2025/18 - Fran Soto - Memory Beneath the Stars.jpg~",
-    "2026-02-03-yamtrack-trakt/index.md",
     "2012-06-19-google-music-why-arent-you-amazing/index.md",
     "2012-09-17-google-music-desktop-player-review/index.md",
-    "2026-01-31-my-favourite-media-2025/index.md",
     "2026-01-30-yamtrack-trakt/index.md",
-    "2025-01-28-my-favourite-media-2024/index.md",
-    "2025-12-05-peertube/index.md",
     "2026-01-26-fedora-helped-me-live-with-linux/index~20260130-121732.md",
     "2026-01-26-fedora-helped-me-live-with-linux/index~20260130-122056.md",
     "2026-01-26-fedora-helped-me-live-with-linux/index~20260126-135342.md",
     "index~20260130-122056.md",
     "Untitled.md",
-    "2025-12-03-reaction-videos/index.md",
-    "2024-11-21-that-fresh-new-website-feeling/index.md",
     "2019-03-13-activate-nathaniel-kelly-production-powerhouse/index.md",
     "2017-12-26-books-out-for-courting-101/index.md",
     "2018-04-21-corrugated-irons-whiplash/index.md",
-    "2019-04-10-clive-released-reactions/index.md",
-    "2014-03-18-outside-the-underappreciateds-studio-episode-2/index.md",
-    "2014-03-18-ambition-and-aversion/index.md"
+    "2019-04-10-clive-released-reactions/index.md"
   ]
 }

@@ -2,7 +2,7 @@
 const today = new Date();
 ---
 
-<!-- Sticky social bar -->
+<!-- Sticky social bar: fixed at viewport bottom until footer arrives -->
 <div id='sticky-social-bar' class='sticky-social-bar'>
 	<div class='flex gap-3 py-4 justify-center items-center flex-wrap'>
 		<a
@@ -43,6 +43,16 @@ const today = new Date();
 			title='Loops'
 		>
 			Loops
+		</a>
+		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
+		<a
+			href='https://www.tiktok.com/@thoroughmas'
+			target='_blank'
+			rel='noopener noreferrer'
+			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			title='TikTok'
+		>
+			TikTok
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
 		<a
@@ -112,8 +122,6 @@ const today = new Date();
 </footer>
 
 <script>
-	// When the footer enters the viewport, dock the social bar to it (no gap).
-	// When the footer leaves, go back to fixed at the bottom.
 	const bar = document.getElementById('sticky-social-bar');
 	const footer = document.getElementById('page-footer');
 
@@ -121,16 +129,13 @@ const today = new Date();
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				bar.classList.toggle('is-docked', entry.isIntersecting);
-				// When docked: pull bar up into footer's margin-top gap; restore padding when floating
-				if (entry.isIntersecting) {
-					bar.style.marginBottom = '-2rem';
-					footer.style.paddingBottom = '0';
-				} else {
-					bar.style.marginBottom = '';
+				// Only add padding back when undocking (footer has scrolled back up / away).
+				// When docking, no padding needed — the bar is already in-flow above it.
+				if (!entry.isIntersecting) {
 					footer.style.paddingBottom = '5rem';
 				}
 			},
-			{ threshold: 0 }
+			{ rootMargin: '0px 0px -80px 0px', threshold: 0 }
 		);
 		observer.observe(footer);
 	}
@@ -147,7 +152,6 @@ const today = new Date();
 		-webkit-backdrop-filter: blur(8px);
 		border-top: 1px solid #e4e4e7;
 		z-index: 50;
-		transition: opacity 0.2s ease;
 	}
 
 	.sticky-social-bar.is-docked {
@@ -162,10 +166,5 @@ const today = new Date();
 
 	:global(.dark) .sticky-social-bar.is-docked {
 		border-top-color: transparent;
-	}
-
-	/* Push footer content up so it's not hidden behind the sticky bar when floating */
-	footer {
-		padding-bottom: 5rem;
 	}
 </style>
