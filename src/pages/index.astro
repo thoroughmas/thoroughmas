@@ -38,31 +38,31 @@ const posts = (await getCollection('blog'))
 					</Prose>
 				</div>
 				<div class='social-icons mt-4 mb-8 md:mb-0'>
-					<a href='https://bsky.app/profile/thomid.me' target='_blank' rel='noopener noreferrer'>
+					<a href='https://bsky.app/profile/thomid.me' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='bluesky'>
 						<img src='/icons/bluesky_1.svg' alt='Bluesky' title='Bluesky' />
 					</a>
-					<a href='https://mastodon.au/@thoroughmas' target='_blank' rel='me noopener noreferrer'>
+					<a href='https://mastodon.au/@thoroughmas' target='_blank' rel='me noopener noreferrer' class='social-icon' data-platform='mastodon'>
 						<img src='/icons/mastodon_1.svg' alt='Mastodon' title='Mastodon' />
 					</a>
-					<a href='https://pixelfed.au/thoroughmas' target='_blank' rel='noopener noreferrer'>
+					<a href='https://pixelfed.au/thoroughmas' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='pixelfed'>
 						<img src='/icons/pixelfed_1.svg' alt='Pixelfed' title='Pixelfed' />
 					</a>
-					<a href='https://www.instagram.com/thoroughmas' target='_blank' rel='noopener noreferrer'>
+					<a href='https://www.instagram.com/thoroughmas' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='instagram'>
 						<img src='/icons/instagram_1.svg' alt='Instagram' title='Instagram' />
 					</a>
-					<a href='https://spool.au/@thomas' target='_blank' rel='noopener noreferrer'>
+					<a href='https://spool.au/@thomas' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='loops'>
 						<img src='/icons/loops_1.svg' alt='Loops' title='Loops' />
 					</a>
-					<a href='https://www.tiktok.com/@thoroughmas' target='_blank' rel='noopener noreferrer'>
+					<a href='https://www.tiktok.com/@thoroughmas' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='tiktok'>
 						<img src='/icons/tiktok_1.svg' alt='TikTok' title='TikTok' />
 					</a>
-					<a href='https://codec.au/a/thomas/video-channels' target='_blank' rel='noopener noreferrer'>
+					<a href='https://codec.au/a/thomas/video-channels' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='peertube'>
 						<img src='/icons/peertube_1.svg' alt='PeerTube' title='PeerTube' />
 					</a>
-					<a href='https://youtube.com/@thoroughmas' target='_blank' rel='noopener noreferrer'>
+					<a href='https://youtube.com/@thoroughmas' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='youtube'>
 						<img src='/icons/youtube_1.svg' alt='YouTube' title='YouTube' />
 					</a>
-					<a href='https://thomid.me/rss.xml' target='_blank' rel='noopener noreferrer' style='transform: scale(1.3);'>
+					<a href='https://thomid.me/rss.xml' target='_blank' rel='noopener noreferrer' class='social-icon' data-platform='rss' style='transform: scale(1.3);'>
 						<img src='/icons/rss_1.svg' alt='RSS' title='RSS' />
 					</a>
 				</div>
@@ -144,4 +144,18 @@ const posts = (await getCollection('blog'))
 	.social-icons a:hover img {
 		transform: scale(1.1);
 	}
+
+	/* ── Platform hover colours (tint the SVG) ── */
+	.social-icon { display: contents; }
+	.social-icon:hover img { filter: none; }
+
+	.social-icon[data-platform='bluesky']:hover img    { filter: drop-shadow(0 0 5px #4da6ff) drop-shadow(0 0 10px #4da6ff); }
+	.social-icon[data-platform='mastodon']:hover img   { filter: drop-shadow(0 0 5px #8b84ff) drop-shadow(0 0 10px #8b84ff); }
+	.social-icon[data-platform='pixelfed']:hover img   { filter: drop-shadow(0 0 5px #5ee9ff) drop-shadow(0 0 10px #5ee9ff); }
+	.social-icon[data-platform='instagram']:hover img  { filter: drop-shadow(0 0 5px #ff6ba9) drop-shadow(0 0 10px #ff6ba9); }
+	.social-icon[data-platform='loops']:hover img      { filter: drop-shadow(0 0 5px #fde68a) drop-shadow(0 0 10px #fde68a); }
+	.social-icon[data-platform='tiktok']:hover img     { filter: drop-shadow(0 0 5px #ff5c7c) drop-shadow(0 0 10px #ff5c7c); }
+	.social-icon[data-platform='peertube']:hover img   { filter: drop-shadow(0 0 5px #ffb96b) drop-shadow(0 0 10px #ffb96b); }
+	.social-icon[data-platform='youtube']:hover img    { filter: drop-shadow(0 0 5px #ff4444) drop-shadow(0 0 10px #ff4444); }
+	.social-icon[data-platform='rss']:hover img         { filter: drop-shadow(0 0 5px #ff9a5c) drop-shadow(0 0 10px #ff9a5c); }
 </style>
