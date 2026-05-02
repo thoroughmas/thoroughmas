@@ -9,7 +9,8 @@ const today = new Date();
 			href='https://bsky.app/profile/thomid.me'
 			target='_blank'
 			rel='me noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='bluesky'
 			title='Bluesky'
 		>
 			Bluesky
@@ -19,7 +20,8 @@ const today = new Date();
 			href='https://mastodon.au/@thoroughmas'
 			target='_blank'
 			rel='me noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='mastodon'
 			title='Mastodon'
 		>
 			Mastodon
@@ -29,17 +31,30 @@ const today = new Date();
 			href='https://pixelfed.au/thoroughmas'
 			target='_blank'
 			rel='me noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='pixelfed'
 			title='Pixelfed'
 		>
 			Pixelfed
 		</a>
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
 		<a
+			href='https://www.instagram.com/thoroughmas'
+			target='_blank'
+			rel='me noopener noreferrer'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='instagram'
+			title='Instagram'
+		>
+			Instagram
+		</a>
+		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
+		<a
 			href='https://spool.au/@thomas'
 			target='_blank'
 			rel='me noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='loops'
 			title='Loops'
 		>
 			Loops
@@ -49,7 +64,8 @@ const today = new Date();
 			href='https://www.tiktok.com/@thoroughmas'
 			target='_blank'
 			rel='noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='tiktok'
 			title='TikTok'
 		>
 			TikTok
@@ -59,7 +75,8 @@ const today = new Date();
 			href='https://youtube.com/@thoroughmas'
 			target='_blank'
 			rel='noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='youtube'
 			title='YouTube'
 		>
 			YouTube
@@ -69,7 +86,8 @@ const today = new Date();
 			href='https://codec.au/a/thomas'
 			target='_blank'
 			rel='me noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='peertube'
 			title='PeerTube'
 		>
 			PeerTube
@@ -79,7 +97,8 @@ const today = new Date();
 			href='https://matrix.to/#/@thomas:thicket.au'
 			target='_blank'
 			rel='noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='matrix'
 			title='Matrix'
 		>
 			Matrix
@@ -87,7 +106,8 @@ const today = new Date();
 		<span class='text-zinc-400 dark:text-zinc-500 text-xs'>·</span>
 		<a
 			href='mailto:thomas@thomid.me'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='email'
 			title='Contact'
 		>
 			Email
@@ -97,7 +117,8 @@ const today = new Date();
 			href='/rss.xml'
 			target='_blank'
 			rel='noopener noreferrer'
-			class='text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-sm font-medium transition-colors duration-200 no-underline'
+			class='social-link text-zinc-600 dark:text-zinc-400 text-sm font-medium transition-colors duration-200 no-underline'
+			data-platform='rss'
 			title='RSS'
 		>
 			RSS
@@ -166,5 +187,50 @@ const today = new Date();
 
 	:global(.dark) .sticky-social-bar.is-docked {
 		border-top-color: transparent;
+	}
+
+	/* ── Platform hover colours ── */
+	.social-link:hover {
+		text-decoration: none;
+	}
+	.social-link[data-platform='bluesky']:hover {
+		color: #1185fe !important;
+	}
+	.social-link[data-platform='mastodon']:hover {
+		color: #6364ff !important;
+	}
+	.social-link[data-platform='pixelfed']:hover {
+		color: #00daf6 !important;
+	}
+	.social-link[data-platform='instagram']:hover {
+		color: #e1306c !important;
+	}
+	.social-link[data-platform='loops']:hover {
+		color: #facc15 !important;
+	}
+	.social-link[data-platform='tiktok']:hover {
+		color: #fe2c55 !important;
+	}
+	.social-link[data-platform='youtube']:hover {
+		color: #ff0000 !important;
+	}
+	.social-link[data-platform='peertube']:hover {
+		color: #ffa13c !important;
+	}
+	.social-link[data-platform='matrix']:hover {
+		color: #0f0f0f !important;
+	}
+	.social-link[data-platform='email']:hover {
+		color: #3b82f6 !important;
+	}
+	.social-link[data-platform='rss']:hover {
+		color: #f97316 !important;
+	}
+
+	:global(.dark) .social-link[data-platform='peertube']:hover {
+		color: #ffa13c !important;
+	}
+	:global(.dark) .social-link[data-platform='matrix']:hover {
+		color: #a78bfa !important;
 	}
 </style>
