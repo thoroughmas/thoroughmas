@@ -14,6 +14,8 @@ import Streetcar from '@src/assets/img/projects/streetcar1.webp';
 import Thomity from '@src/assets/img/projects/Thomity_1.jpg';
 import Pomona from '@src/assets/img/projects/pomona1.jpg';
 import Podcasts from '@src/assets/img/projects/podcasts1.jpg';
+import MidnightMurder from '@src/assets/img/projects/midnightmurder1.jpg';
+import Musketeers from '@src/assets/img/projects/musketeers1.jpg';
 
 export interface Project {
 	name: string;
@@ -58,16 +60,26 @@ export const projects: Project[] = [
 		image: Community101,
 		tags: ['Podcast'],
 		date: 'Ongoing'
-	},
-	{
-		name: 'Pomona',
-		description: "I'm directing this modern existential horror in Adelaide.",
-		demoLink: 'https://pomonaplay.au',
+  },
+  {
+		name: 'The Three Musketeers',
+		description: "I'm performing in this swashbuckling outdoor caper.",
+		demoLink: 'https://www.blueskytheatre.com.au/current-production',
 		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'Theatre Guild',
-		image: Pomona,
+		linkType: 'Blue Sky Theatre',
+		image: Musketeers,
 		tags: ['Theatre'],
-		date: 'Aug 2026'
+		date: 'Jan 2027'
+	},
+  {
+		name: 'Midnight Murder at Hamlington Hall',
+		description: "I'm performing in this light and fun Aussie play-gone-wrong.",
+		demoLink: 'https://stjudesplayers.asn.au/midnight-murder-at-hamlington-hall/',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: "St Jude's Players",
+		image: MidnightMurder,
+		tags: ['Theatre'],
+		date: 'Nov 2026'
 	},
 	{
 		name: 'Principle of Thomity',
@@ -103,6 +115,16 @@ export const projects: Project[] = [
 		image: BTN,
 		tags: ['Reporting'],
 		date: 'Ongoing'
+  },
+  {
+		name: 'Pomona',
+		description: "I directed this modern existential horror in Adelaide.",
+		demoLink: 'https://pomonaplay.au',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'Theatre Guild',
+		image: Pomona,
+		tags: ['Theatre'],
+		date: 'Aug 2026'
 	},
 	{
 		name: 'Genius',
