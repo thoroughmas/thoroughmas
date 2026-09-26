@@ -15,7 +15,7 @@ const { title, description, image } = Astro.props;
 		{image && <meta property='og:image' content={image} />}
 	</head>
 
-	<body class='bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0' itemscope itemtype='https://schema.org/WebPage'>
+	<body class='bg-[#f3f1e8] text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0' itemscope itemtype='https://schema.org/WebPage'>
 		<Header />
 		<div class='py-8 min-h-[calc(100vh-160px)]' itemprop='mainContentOfPage'>
 			<slot />

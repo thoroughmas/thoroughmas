@@ -3,6 +3,14 @@
 @config '../../tailwind.config.mjs';
 
 /*
+  Dark mode: subtle radial gradient — slightly lighter at top-center, deeper near-black at edges.
+  Adds depth without changing any other colors in the design.
+*/
+html.dark body {
+	background-image: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(63, 63, 70, 0.35), transparent 70%);
+}
+
+/*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
