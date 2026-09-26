@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2016-05-30-top-10-warcraft-soundtracks/index.md",
+                "file": "2012-06-05-the-dream-i-had-last-night/index.md",
                 "mode": "source",
                 "source": true
               },
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byModifiedTimeReverse",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "warcraft",
+                "query": "\"dream i had\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2016-05-30-top-10-warcraft-soundtracks/index.md",
+                "file": "2012-06-05-the-dream-i-had-last-night/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline"
             }
           }
         ],
@@ -166,12 +168,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d462ec9c3acbb4cd",
+  "active": "0c18d3c32ddf1032",
   "lastOpenFiles": [
+    "2016-05-30-top-10-warcraft-soundtracks/index.md",
     "2026-01-26-fedora-helped-me-live-with-linux/index.md",
     "2026-03-10-my-favourite-soundtracks-2025/index.md",
     "2026-04-26-matrix-bridges-got-me-off-social-media/index.md",
-    "2016-05-30-top-10-warcraft-soundtracks/index.md",
     "2025-01-31-my-favourite-soundtracks-2024/index.md",
     "2026-02-03-yamtrack-trakt/index.md",
     "2015-10-31-top-5-retired-mmo-launcherspatchers/index.md",
