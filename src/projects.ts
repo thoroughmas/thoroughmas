@@ -50,7 +50,17 @@ export const projects: Project[] = [
 			label: 'PeerTube',
 			rel: 'nofollow noopener noreferrer'
 		}
-	},
+  },
+  {
+		name: 'Behind The News',
+		description: "Check out one of my stories for the ABC's children's news show, BTN.",
+		demoLink: 'https://www.abc.net.au/btn/high/the-rise-of-misinformation/104504042',
+		demoLinkRel: 'nofollow noopener noreferrer',
+		linkType: 'ABC',
+		image: BTN,
+		tags: ['Reporting'],
+		date: 'Ongoing'
+   },
 	{
 		name: 'Community Rewatching 101',
 		description: "I'm a co-host of this lighthearted rewatch podcast for the 2009 sitcom, Community.",
@@ -96,16 +106,6 @@ export const projects: Project[] = [
 			rel: 'nofollow noopener noreferrer'
 		}
   },
-  {
-		name: 'Behind The News',
-		description: "Check out one of my stories for the ABC's children's news show, BTN.",
-		demoLink: 'https://www.abc.net.au/btn/high/the-rise-of-misinformation/104504042',
-		demoLinkRel: 'nofollow noopener noreferrer',
-		linkType: 'ABC',
-		image: BTN,
-		tags: ['Reporting'],
-		date: 'Ongoing'
-   },
 	{
 		name: 'Mutant Reviewers',
 		description: "I'm an irregular (in every sense) writer on this long-standing cult movie site.",
