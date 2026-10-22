@@ -12,7 +12,6 @@ export default defineConfig({
 
 	markdown: {
 		processor: unified({
-			extendDefaultPlugins: true,
 			rehypePlugins: [
 				[
 					autoNewTabExternalLinks,
