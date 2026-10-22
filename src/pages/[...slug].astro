@@ -16,7 +16,6 @@ const GISCUS_CATEGORY_ID = import.meta.env.GISCUS_CATEGORY_ID;
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
-		// 2.
 		params: { slug: post.data.slug },
 		props: post
 	}));
@@ -28,7 +27,6 @@ const {
 	data: { title, seoTitle, description, coverImage, pubDate, updatedDate, tags }
 } = post;
 
-// 3. Changed post.render() to the new render(post) function
 const { Content, headings } = await render(post);
 ---
 

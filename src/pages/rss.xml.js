@@ -69,7 +69,6 @@ export async function GET(context) {
 				title: post.data.title,
 				pubDate: post.data.pubDate,
 				description: post.data.description || '',
-				// Changed post.slug to post.data.slug
 				link: `${siteUrl}/posts/${post.data.slug}/`,
 				content: fullContent,
 				...(post.data.tags && {
