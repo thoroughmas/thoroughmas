@@ -20,10 +20,21 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "22.x"
+          # Astro 7.4.2+ hard-fails at runtime on Node < 22.23.4 (astro/bin/astro.mjs).
+          # A bare "22.x" is not enough: setup-node reuses a version already in the
+          # runner's tool cache when it satisfies the spec, and ubuntu-latest ships
+          # 22.23.3 cached. A floor range excludes that, and check-latest makes
+          # setup-node resolve against the current manifest instead of the cache.
+          node-version: ">=22.23.4 <23"
+          check-latest: true
       - uses: pnpm/action-setup@v3
         with:
           version: 11.12.0
+      - name: Check toolchain
+        run: |
+          echo "node: $(node --version)"
+          echo "node used by pnpm: $(pnpm exec node --version)"
+          echo "pnpm: $(pnpm --version)"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Clean Cache
