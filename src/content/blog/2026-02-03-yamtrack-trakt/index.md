@@ -21,7 +21,7 @@ Well it seems like bad decision has followed bad decision and now even more user
 
 ## Trakt
 
-It is a shame, really. I discovered [Trakt](https://trakt.tv) around 2012, and even [wrote a blog post about it](https://thomid.me/review-of-trakttv/) around that time, describing it as "a magnificent website which I highly recommend to lovers of TV or film." 
+It is a shame, really. I discovered [Trakt](https://trakt.tv) around 2012, and even [wrote a blog post about it](/review-of-trakttv/) around that time, describing it as "a magnificent website which I highly recommend to lovers of TV or film." 
 
 For years it was a pretty-good-looking website that made it easy as pie to track the media you watch. And simply by including TV shows as well as movies, it blew competitors like Letterboxd out of the water (TV is good!).
 

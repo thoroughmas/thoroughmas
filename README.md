@@ -1,6 +1,6 @@
 ## Salut 👋
 
-I'm Thomas. This repository hosts my personal website: [thomid.me](https://thomid.me)
+I'm Thomas. This repository hosts my personal website: [thomasmidena.au](https://thomasmidena.au)
 
 ### About this site
 Built with Astro and based on the [Devolio](https://github.com/devaradise/devolio) template.

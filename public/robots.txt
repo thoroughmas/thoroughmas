@@ -1,9 +1,8 @@
-```
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://thomid.me/sitemap-index.xml
+Sitemap: https://thomasmidena.au/sitemap-index.xml
 
 # Block admin and internal pages (if any)
 Disallow: /*.json$

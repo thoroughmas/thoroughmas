@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Thomas Midena</title><description>Thomas is a theatremaker and filmmaker with a passion for ethical technology. This website is a portal to all of his projects.</description><link>https://thomid.me/</link><language>en-us</language><lastBuildDate>Fri, 23 Oct 2026 00:08:23 GMT</lastBuildDate><item><title>Matrix bridges mean I don&apos;t have to use social media anymore</title><link>https://thomid.me/posts/matrix-bridges-got-me-off-social-media/</link><guid isPermaLink="true">https://thomid.me/posts/matrix-bridges-got-me-off-social-media/</guid><description>How Matrix got me off the social media I didn&apos;t want to be on</description><pubDate>Sat, 25 Apr 2026 14:30:00 GMT</pubDate><content:encoded>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Thomas Midena</title><description>Thomas is a theatremaker and filmmaker with a passion for ethical technology. This website is a portal to all of his projects.</description><link>https://thomasmidena.au/</link><language>en-us</language><lastBuildDate>Fri, 30 Oct 2026 04:39:58 GMT</lastBuildDate><item><title>Matrix bridges mean I don&apos;t have to use social media anymore</title><link>https://thomasmidena.au/matrix-bridges-got-me-off-social-media/</link><guid isPermaLink="false">https://thomid.me/posts/matrix-bridges-got-me-off-social-media/</guid><description>How Matrix got me off the social media I didn&apos;t want to be on</description><pubDate>Sat, 25 Apr 2026 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/matrix_beeper.B7Apzi2H.jpg&quot; alt=&quot;Matrix bridges mean I don&apos;t have to use social media anymore&quot; /&gt;
                     &lt;p&gt;Setting up my own Matrix server came with the unexpected benefit of distancing me from all the worst social media platforms.&lt;/p&gt;
@@ -7,7 +7,7 @@
 &lt;h1&gt;Social Media&lt;/h1&gt;
 &lt;p&gt;None of us really want to be on social media, do we? I mean, some platforms are better than others, but at this point we&amp;#39;re pretty familiar with their capacity to drain the life force from our very souls.&lt;/p&gt;
 &lt;p&gt;Like many of you, I try to use them only when and as much as I need to. Over the years I&amp;#39;ve done a pretty good job of deleting apps from my phone and using &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/news-feed-eradicator/&quot;&gt;browser extensions&lt;/a&gt; to limit my exposure to annoying social feeds, but it&amp;#39;s hard to completely break that reliance on social media platforms. Particularly if you&amp;#39;ve been on some of them for 15 years.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260420174612.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260420174612.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;The biggest thing that has made removing Instagram or Facebook Messenger from my phone totally unfeasible is that all of these apps are also direct message services. And I don&amp;#39;t know about your generation, but all the millennials I know use these far and above SMS text messages.&lt;/p&gt;
 &lt;p&gt;I mean, I can&amp;#39;t just tell everyone that I&amp;#39;m only using Signal now, and that&amp;#39;s the only place I can be contacted. Well, I could. But I don&amp;#39;t think that would leave me with many friends.&lt;/p&gt;
 &lt;p&gt;So the only way to become less reliant on these apps was to effectively funnel direct messages from all these disparate apps into another place that was more under my control.&lt;/p&gt;
@@ -25,7 +25,7 @@
 &lt;p&gt;And effectively, these bridges make messages from all those other services appear as if they are any other message in Matrix. I can see all the chat history, I can send and receive messages and media files. It&amp;#39;s really so flexible. This is digital minimalism at its finest. Admittedly kinda complicated and cutting-edge in the background, but logical and effortless in my everyday life.&lt;/p&gt;
 &lt;p&gt;I&amp;#39;ve been using this setup for nearly 6 months now, and I can no longer imagine life without it. One glance at my phone or my computer and I know that I&amp;#39;m across all my incoming messages from every app. I know that I can respond to any message from any of my devices. I can start a conversation on my desktop and continue it on my phone. And it&amp;#39;s always easy as pie to see a list of the several people I haven&amp;#39;t responded to in weeks and really should (sorry).&lt;/p&gt;
 &lt;p&gt;What&amp;#39;s wild is that most of the time I don&amp;#39;t even know (or care!) what apps other people are using to message me. It could literally be any of these and it makes no practical difference to me.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260426174404.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260426174404.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;It really did surprise me that this Matrix implementation works &lt;em&gt;beautifully&lt;/em&gt;. I&amp;#39;ve used message aggregator apps and services in the past which were all useless.&lt;/p&gt;
 &lt;p&gt;Well, it&amp;#39;s not entirely perfect. Some of the bridges (particularly Meta and Google Messages) get logged out from time to time. But honestly, far less frequently than I expected. I consider a quick reconnect once every month or two to be totally acceptable maintenance.&lt;/p&gt;
 &lt;p&gt;And thanks to this setup, I&amp;#39;ve been able to completely remove Facebook Messenger and Instagram from my phone. I have to keep Whatsapp and Signal running, because those messages have to be delivered to the phone before the Matrix bridges can pick them up. But I&amp;#39;ve turned off all notifications for those apps and Google Messages, so Element X (my current Matrix Android client of choice) essentially acts as my one and only messaging app.&lt;/p&gt;
@@ -37,13 +37,13 @@
 &lt;p&gt;I&amp;#39;ve dabbled with the Beeper app, and it&amp;#39;s really easy to use. No Matrix configuration, just create an account and you can dive straight into all the message bridges.&lt;/p&gt;
 &lt;p&gt;It&amp;#39;s also cool that Beeper has options for cloud-based and device-based bridges. In theory this lets you completely remove WhatsApp (for example) from your phone. How well it works though, I haven&amp;#39;t investigated.&lt;/p&gt;
 &lt;p&gt;It&amp;#39;s also worth noting that Beeper is a private US-based company, so if you use their service you&amp;#39;ve got to have a bit of trust there.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260426173005%20-%20Edited.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260426173005%20-%20Edited.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Honestly, if I had discovered Beeper before experimenting with Matrix, I likely would have been satisfied with that. But at this point I&amp;#39;m definitely sticking with the Matrix setup. Not only because I&amp;#39;m a big sunk cost fallacy guy, but also because Matrix does give me a lot of ownership, control and flexibility that any pre-packaged software will struggle to match.&lt;/p&gt;
 &lt;p&gt;It&amp;#39;s also nice to have all of Matrix&amp;#39;s features that go beyond just the Mautrix bridges that Beeper offers: flexible self-hosted secure chat, compatibility with every Matrix client on desktop and mobile, a solid foundation for all future developments.&lt;/p&gt;
 &lt;p&gt;Right now though, I&amp;#39;m just so glad I don&amp;#39;t have to use Meta&amp;#39;s apps on my phone. Obviously, long-term we want to abandon many of these abominable social media platforms entirely... but I consider this to be a big step towards relying on them less, and progress is progress!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>technology</category><category>self hosting</category><category>internet</category></item><item><title>My favourite soundtracks of 2025</title><link>https://thomid.me/posts/my-favourite-soundtracks-2025/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-soundtracks-2025/</guid><description>My top original scores from TV, movies and games</description><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>technology</category><category>self hosting</category><category>internet</category></item><item><title>My favourite soundtracks of 2025</title><link>https://thomasmidena.au/my-favourite-soundtracks-2025/</link><guid isPermaLink="false">https://thomid.me/posts/my-favourite-soundtracks-2025/</guid><description>My top original scores from TV, movies and games</description><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/thumbnail.SqUrZaIS.jpg&quot; alt=&quot;My favourite soundtracks of 2025&quot; /&gt;
                     &lt;p&gt;Once again I&amp;#39;ve forced myself to organise my favourite music from the last year into a big long list. I present to you my &lt;strong&gt;25&lt;/strong&gt; top original scores released in the year 2025.&lt;/p&gt;
@@ -207,27 +207,27 @@
 &lt;p&gt;Should be a good list next year... I&amp;#39;ve already been listening to some amazing new releases for 2026. Until next time!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>music</category><category>soundtracks</category></item><item><title>Yamtrack is the best escape from Trakt&apos;s enshitification</title><link>https://thomid.me/posts/yamtrack-beats-trakt/</link><guid isPermaLink="true">https://thomid.me/posts/yamtrack-beats-trakt/</guid><description>I&apos;m tired of investing in online platforms that don&apos;t just go nowhere — they actively get worse over time.</description><pubDate>Mon, 02 Feb 2026 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>music</category><category>soundtracks</category></item><item><title>Yamtrack is the best escape from Trakt&apos;s enshitification</title><link>https://thomasmidena.au/yamtrack-beats-trakt/</link><guid isPermaLink="false">https://thomid.me/posts/yamtrack-beats-trakt/</guid><description>I&apos;m tired of investing in online platforms that don&apos;t just go nowhere — they actively get worse over time.</description><pubDate>Mon, 02 Feb 2026 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/trakt_yamtrack.BAoXlSwh.jpg&quot; alt=&quot;Yamtrack is the best escape from Trakt&apos;s enshitification&quot; /&gt;
                     &lt;p&gt;About a year ago I &lt;a href=&quot;https://www.youtube.com/watch?v=ht75bGtniyc&quot;&gt;made a video&lt;/a&gt; about some dreadful decisions being made by the people behind Trakt, which until then had been my favourite movie and TV show tracking website.&lt;/p&gt;
 &lt;p&gt;Well it seems like bad decision has followed bad decision and now even more users, alienated by Trakt&amp;#39;s latest blunders, are searching for alternative platforms.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;Trakt&lt;/h2&gt;
-&lt;p&gt;It is a shame, really. I discovered &lt;a href=&quot;https://trakt.tv&quot;&gt;Trakt&lt;/a&gt; around 2012, and even &lt;a href=&quot;https://thomid.me/review-of-trakttv/&quot;&gt;wrote a blog post about it&lt;/a&gt; around that time, describing it as &amp;quot;a magnificent website which I highly recommend to lovers of TV or film.&amp;quot; &lt;/p&gt;
+&lt;p&gt;It is a shame, really. I discovered &lt;a href=&quot;https://trakt.tv&quot;&gt;Trakt&lt;/a&gt; around 2012, and even &lt;a href=&quot;/review-of-trakttv/&quot;&gt;wrote a blog post about it&lt;/a&gt; around that time, describing it as &amp;quot;a magnificent website which I highly recommend to lovers of TV or film.&amp;quot; &lt;/p&gt;
 &lt;p&gt;For years it was a pretty-good-looking website that made it easy as pie to track the media you watch. And simply by including TV shows as well as movies, it blew competitors like Letterboxd out of the water (TV is good!).&lt;/p&gt;
 &lt;p&gt;It also had a great community feel. It was big enough to get clever little comments on most episodes of popular shows, but small enough that you&amp;#39;d often see the same commenters and get to know their tastes. There are a handful of other users I genuinely enjoyed following, always interested in their take on the latest episode of Dexter or The Good Wife. Some of my own little one-line reviews were even pretty popular:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260203170205.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260203170205.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Trakt always had VIP features behind a paywall, but they were never related to the main tracking or list-making features. VIP was primarily sold as a way to support the site and the community. It was affordable, too. At $15 USD a year, it was early on that I thought, &amp;quot;hey, I like this site, I&amp;#39;m happy to throw in a few bucks!&amp;quot;&lt;/p&gt;
 &lt;p&gt;Cut to now, my 13 year VIP subscription is ending in a few weeks. Because this is no longer the friendly little tracking website it used to be. &lt;/p&gt;
 &lt;p&gt;Basic features like making lists are now partially locked behind a paywall. And VIP subscriptions have blown up to $60 USD a year — for everyone, no grandfathered rates.&lt;/p&gt;
 &lt;p&gt;Alongside this, the developers seem determined to continually try to fix what ain&amp;#39;t broke. &lt;/p&gt;
 &lt;p&gt;&amp;quot;Trakt Lite&amp;quot; is the latest version of the site, that&amp;#39;s been available in preview for some time. When it was first announced, I was one of many who asked &amp;quot;what is this and why are you making it?&amp;quot;, and never received a coherent response. Now, it seems they&amp;#39;re gearing up to replace the existing version of Trakt with this &amp;quot;Trakt Lite&amp;quot; monstrosity. And people aren&amp;#39;t happy.&lt;/p&gt;
 &lt;p&gt;Why? Because it&amp;#39;s simply worse. It&amp;#39;s harder to navigate. It has missing features. It obscures access to simple navigation and tracking. The whole thing looks more like a mobile app than a website. There&amp;#39;s only one positive thing I&amp;#39;ve heard anyone say about it — it runs fast. It&amp;#39;s technically a slicker, faster version of the site. But it&amp;#39;s no fun to use.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260203201857.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260203201857.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;These changes go hand in hand with a mobile app redesign that recently came out of the blue and changed things for everyone. The pushback against these changes on &lt;a href=&quot;https://www.reddit.com/r/trakt/comments/1qtfh3k/removed_by_moderator/&quot;&gt;Reddit&lt;/a&gt; and &lt;a href=&quot;https://forums.trakt.tv/t/myth-busters/97618&quot;&gt;Trakt&amp;#39;s forums&lt;/a&gt; over the past few weeks has been loud and clear...&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260203204026.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Screenshot%202026-02-03%20201120.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260203204026.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Screenshot%202026-02-03%20201120.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;These two posts capture the sentiment of many hundreds of disgruntled users who have been prompted to share their comments in recent weeks.&lt;/p&gt;
 &lt;p&gt;Possibly most egregious of all, in my opinion, is Trakt&amp;#39;s partnership with &lt;a href=&quot;https://www.younify.tv/product/&quot;&gt;Younify&lt;/a&gt;, to facilitate automatic scrobbling from streaming services. A feature that sounds pretty cool and useful on paper but is rumoured to be one of the key reasons they now need to charge $60/year. The collaboration was never openly described or explained to Trakt&amp;#39;s users, and it demonstrates a core mission change from friendly community website to expensive commercial platform.&lt;/p&gt;
 &lt;p&gt;I have nothing against automatic scrobbling features, but if that&amp;#39;s what they cost to run for each user, something is rotten. &lt;a href=&quot;https://github.com/FoxxMD/multi-scrobbler&quot;&gt;The best scrobblers use open source code to send basic data from one location to another&lt;/a&gt;. &lt;/p&gt;
@@ -238,12 +238,12 @@
 &lt;p&gt;There are actually a lot of alternatives out there, like &lt;a href=&quot;https://simkl.com/&quot;&gt;Simkl&lt;/a&gt; or &lt;a href=&quot;https://www.serializd.com/&quot;&gt;Serializd&lt;/a&gt; (why are the names all just letter salads nowadays?).&lt;/p&gt;
 &lt;p&gt;But I&amp;#39;ve been burned enough. Sure, I could try my luck with another one of these closed source web services, from developers I don&amp;#39;t know, with unclear monetisation plans. But I&amp;#39;ve decided to break free.&lt;/p&gt;
 &lt;h2&gt;Yamtrack&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260203173132.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260203173132.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/FuzzyGrim/Yamtrack&quot;&gt;Yamtrack&lt;/a&gt; is a self-hosted open source media tracking app that began development just a few years ago.&lt;/p&gt;
 &lt;p&gt;Yep, you&amp;#39;ve gotta self-host it. I swear that&amp;#39;s not as daunting as it may sound. But I get it, if you&amp;#39;ve never self-hosted before, it can be hard to get started. Since I&amp;#39;ve been self-hosting for a couple years now, it&amp;#39;s a topic I&amp;#39;m keen to write about much more soon. It&amp;#39;s something that should be accessible to everyone, especially in this day and age. (I might make a video about setting up Yamtrack in the near future.)&lt;/p&gt;
 &lt;p&gt;Being free and open source are huge boons here. My data isn&amp;#39;t trapped in some service with a tenuous future, it&amp;#39;s mine forever. There&amp;#39;s no chance of it being sold or misused, I&amp;#39;m the only one with access to it. Each update and change is transparent and community-led. The worst possible outcome for a project like this is that it&amp;#39;s abandoned by the developer. Certainly a potential scenario, especially in this case where the project is led by &lt;a href=&quot;https://www.fuzzygrim.com/&quot;&gt;one sole developer&lt;/a&gt;. But the collapse of Yamtrack&amp;#39;s development would still leave me in full control of all of my data and plenty of options on where to take it next.&lt;/p&gt;
 &lt;p&gt;Open source means unlimited potential. &lt;a href=&quot;https://github.com/dannyvfilms/Yamtrack&quot;&gt;Someone has already forked Yamtrack and started adding features more rapidly&lt;/a&gt;, if that&amp;#39;s what you&amp;#39;re into. (I suspect this fork is a little &lt;a href=&quot;https://en.wikipedia.org/wiki/Vibe_coding&quot;&gt;vibe-coded&lt;/a&gt;, which is fine, but adds slight risk.)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260203173231.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260203173231.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;And Yamtrack itself is exactly what I want. It&amp;#39;s like the Trakt of yore: just the basics without too many frills. It&amp;#39;s easy to find, rate and mark as watched any movie or TV show. It&amp;#39;s got statistics, lists and a basic calendar. And thanks to a solid Trakt import feature, it was easy to move over all my data.&lt;/p&gt;
 &lt;p&gt;Yamtrack can even track other media like books and video games. I haven&amp;#39;t tried these yet but I don&amp;#39;t see why they shouldn&amp;#39;t work quite well. Transferring in my book history from StoryGraph is on my to-do list for some point in the future.&lt;/p&gt;
 &lt;p&gt;Simplicity is underrated, and Yamtrack does what it should without over-complicating things.&lt;/p&gt;
@@ -258,7 +258,7 @@
 &lt;p&gt;So from now on I&amp;#39;ll be sticking with Yamtrack, and ignoring all the Trakt drama and nonsense. Thanks for 13 good years and good riddance.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><updated>Thu, 01 Jan 1970 00:00:00 GMT</updated><category>self hosting</category><category>technology</category><category>films</category><category>television</category></item><item><title>My favourite media of 2025</title><link>https://thomid.me/posts/my-favourite-media-2025/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-media-2025/</guid><description>These are the things I watched, read and listened to in 2025 that had a big impact on my year</description><pubDate>Fri, 30 Jan 2026 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><updated>Thu, 01 Jan 1970 00:00:00 GMT</updated><category>self hosting</category><category>technology</category><category>films</category><category>television</category></item><item><title>My favourite media of 2025</title><link>https://thomasmidena.au/my-favourite-media-2025/</link><guid isPermaLink="false">https://thomid.me/posts/my-favourite-media-2025/</guid><description>These are the things I watched, read and listened to in 2025 that had a big impact on my year</description><pubDate>Fri, 30 Jan 2026 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/listenbrainztop.CiDKra1X.png&quot; alt=&quot;My favourite media of 2025&quot; /&gt;
                     &lt;p&gt;2025 has come and gone. Another year made so much better by great stories. And the only thing better than watching, reading, listening to and playing... is sharing those experiences with other human beings. So here we go!&lt;/p&gt;
@@ -281,7 +281,7 @@
 &lt;p&gt;Oh and I had to throw &lt;strong&gt;KPop Demon Hunters&lt;/strong&gt; in there because it&amp;#39;s just very cool.&lt;/p&gt;
 &lt;h2&gt;Books&lt;/h2&gt;
 &lt;p&gt;At the beginning of 2025 I set a goal to read at least 25 books in 2025. I started strong towards this goal, but as so often happens, things got in the way and my reading dropped off dramatically. Alas, here&amp;#39;s what I enjoyed reading, and I will aim for 26 in 2026!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260130165348.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260130165348.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Alongside enjoying some easy Star Wars and Harry Potter books in Spanish, I also caught up on another decent novella in Brandon Sanderson&amp;#39;s &lt;em&gt;Stormlight Archive&lt;/em&gt;. There are two other books that I&amp;#39;ll highlight here:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Never Let Me Go&lt;/strong&gt; by Kazuo Ishiguro
 I read this before also watching the movie for the first time. I knew it was going to be a sad story of some kind, but I wasn&amp;#39;t prepared for how deeply upsetting the story is at its core. Before you even get to the intricate details and character beats that make this tale utterly tragic, the very idea of this is just soul-crushing. I loved it. (The film&amp;#39;s good too, but in a different way to the book.)&lt;/p&gt;
@@ -289,7 +289,7 @@ I read this before also watching the movie for the first time. I knew it was goi
 This hooked me big time. It&amp;#39;s my first Rooney novel so it look me a little while to enjoy the rhythm of the writing, the naturalistic flow of characters&amp;#39; thoughts. Before long it feels good though, like a monologue, no distinction needed between an inner thought and something that&amp;#39;s said aloud, one is as significant as the other. I found the characters incredibly endearing, and the relationships between them so tenuous and delicate but also so important. As if two people seeing eye to eye is the most unlikely but most wonderful thing in the world. By the end I was a broken wreck. Seriously. Love that.&lt;/p&gt;
 &lt;h2&gt;Music&lt;/h2&gt;
 &lt;p&gt;Once again, soundtrack music was my most constant companion. This is what I listened to the most:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Pasted%20image%2020260130172035.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Pasted%20image%2020260130172035.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Giacchino continues to top my listens. Makes sense, for a while there his output each year was insane.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;F1&lt;/strong&gt;, &lt;strong&gt;Fantastic Four: First Steps&lt;/strong&gt; and &lt;strong&gt;Mission Impossible: The Final Reckoning&lt;/strong&gt; were the new scores that I kept on repeat. Sometimes you just need those deep motivational action cues to keep you going in life, you know?&lt;/p&gt;
 &lt;p&gt;And one of the most exciting and long-anticipated releases of 2025 was definitely the &lt;strong&gt;Doctor Who Series 10&lt;/strong&gt; soundtrack. I can&amp;#39;t believe it finally hit. I&amp;#39;ve definitely been spinning that one quite a few times.&lt;/p&gt;
@@ -306,7 +306,7 @@ This hooked me big time. It&amp;#39;s my first Rooney novel so it look me a litt
 &lt;p&gt;Can&amp;#39;t wait to see what 2026 brings!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>films</category><category>games</category><category>music</category><category>books</category><category>television</category></item><item><title>Fedora helped me finally ditch Windows for good</title><link>https://thomid.me/posts/one-year-with-fedora/</link><guid isPermaLink="true">https://thomid.me/posts/one-year-with-fedora/</guid><description>How Fedora became my operating system of choice</description><pubDate>Sun, 25 Jan 2026 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>films</category><category>games</category><category>music</category><category>books</category><category>television</category></item><item><title>Fedora helped me finally ditch Windows for good</title><link>https://thomasmidena.au/one-year-with-fedora/</link><guid isPermaLink="false">https://thomid.me/posts/one-year-with-fedora/</guid><description>How Fedora became my operating system of choice</description><pubDate>Sun, 25 Jan 2026 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/Fedora.Bq-Q_rFi.jpg&quot; alt=&quot;Fedora helped me finally ditch Windows for good&quot; /&gt;
                     &lt;p&gt;Windows is awful. Some tell themselves it&amp;#39;s a necessary evil to get through the day, but let&amp;#39;s be real, we all hate it. I&amp;#39;ve dreamed of ditching Windows for many years. But every time I&amp;#39;ve tried Linux, I haven&amp;#39;t been able to stick with it.&lt;/p&gt;
@@ -342,7 +342,7 @@ This hooked me big time. It&amp;#39;s my first Rooney novel so it look me a litt
 &lt;p&gt;It turns out, this really was the year of the Linux desktop. For me, anyway. And with the &lt;a href=&quot;https://store.steampowered.com/hardware&quot;&gt;Steam Machine launching very soon&lt;/a&gt;... I reckon 2026 will be the year of Linux for a lot of people.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><updated>Sat, 25 Apr 2026 14:30:00 GMT</updated><category>technology</category><category>linux</category></item><item><title>My favourite soundtracks of 2024</title><link>https://thomid.me/posts/my-favourite-soundtracks-2024/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-soundtracks-2024/</guid><description>My top original scores from TV, movies and games</description><pubDate>Thu, 30 Jan 2025 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><updated>Sat, 25 Apr 2026 14:30:00 GMT</updated><category>technology</category><category>linux</category></item><item><title>My favourite soundtracks of 2024</title><link>https://thomasmidena.au/my-favourite-soundtracks-2024/</link><guid isPermaLink="false">https://thomid.me/posts/my-favourite-soundtracks-2024/</guid><description>My top original scores from TV, movies and games</description><pubDate>Thu, 30 Jan 2025 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/thumbnail_v3.D3oXGXiW.jpg&quot; alt=&quot;My favourite soundtracks of 2024&quot; /&gt;
                     &lt;p&gt;For the sixth year in a row, I&amp;#39;ve created a list of my favourite soundtrack music of the year. This year I present my &lt;strong&gt;24&lt;/strong&gt; top original scores released in the year 2024.&lt;/p&gt;
@@ -528,7 +528,7 @@ This hooked me big time. It&amp;#39;s my first Rooney novel so it look me a litt
 &lt;p&gt;See you next year!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>music</category><category>soundtracks</category></item><item><title>My favourite media of 2024</title><link>https://thomid.me/posts/my-favourite-media-2024/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-media-2024/</guid><description>The things I watched, read and listened to most (and what they say about my year)</description><pubDate>Mon, 27 Jan 2025 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>music</category><category>soundtracks</category></item><item><title>My favourite media of 2024</title><link>https://thomasmidena.au/my-favourite-media-2024/</link><guid isPermaLink="false">https://thomid.me/posts/my-favourite-media-2024/</guid><description>The things I watched, read and listened to most (and what they say about my year)</description><pubDate>Mon, 27 Jan 2025 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/trakt2024.BMftwwmy.png&quot; alt=&quot;My favourite media of 2024&quot; /&gt;
                     &lt;p&gt;Like most humans, I just can&amp;#39;t get enough stories in my life. &lt;/p&gt;
@@ -571,13 +571,13 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;/ul&gt;
 &lt;h2&gt;Music&lt;/h2&gt;
 &lt;p&gt;I listened to a LOT of music in 2024. I&amp;#39;m a soundtrack fiend and here&amp;#39;s a little Last.fm overview of the things I was into:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/Screenshot%202025-01-27%20213529.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/Screenshot%202025-01-27%20213529.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Giacchino, McCreary and Williams being my top three composers makes a lot of sense. They&amp;#39;ve been up there for a long time and will probably stay there for the rest of my life.&lt;/p&gt;
 &lt;p&gt;As you can tell from my top albums and tracks, I got deep into some video game scores this year. Later this week I&amp;#39;ll be posting my annual &lt;em&gt;Favourite Soundtracks of the Year&lt;/em&gt; video, so I won&amp;#39;t discuss any of these here, but those Last.fm stats might give you a little teaser...&lt;/p&gt;
 &lt;p&gt;All in all, it&amp;#39;s been such a really great year across popular media. And considering the sheer quantity of huge movies and shows that are coming soon, things aren&amp;#39;t gonna be slowing down in 2025!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>films</category><category>games</category><category>music</category><category>books</category></item><item><title>That fresh new website feeling</title><link>https://thomid.me/posts/fresh-new-website/</link><guid isPermaLink="true">https://thomid.me/posts/fresh-new-website/</guid><description>I&apos;ve built a lot of personal websites in the past, but this one is my favourite! (obvs)</description><pubDate>Wed, 20 Nov 2024 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>films</category><category>games</category><category>music</category><category>books</category></item><item><title>That fresh new website feeling</title><link>https://thomasmidena.au/fresh-new-website/</link><guid isPermaLink="false">https://thomid.me/posts/fresh-new-website/</guid><description>I&apos;ve built a lot of personal websites in the past, but this one is my favourite! (obvs)</description><pubDate>Wed, 20 Nov 2024 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/thomasmidenanewsite.DTrWJe8t.png&quot; alt=&quot;That fresh new website feeling&quot; /&gt;
                     &lt;p&gt;Smells pretty good right?&lt;/p&gt;
@@ -630,7 +630,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;And hey, if you do find a link to my bank account... eh, you&amp;#39;re welcome to whatever&amp;#39;s there.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>web design</category><category>open source</category></item><item><title>My favourite soundtracks of 2023</title><link>https://thomid.me/posts/my-favourite-soundtracks-2023/</link><guid isPermaLink="true">https://thomid.me/posts/my-favourite-soundtracks-2023/</guid><description>My top original scores from TV, movies and games</description><pubDate>Sun, 04 Feb 2024 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>web design</category><category>open source</category></item><item><title>My favourite soundtracks of 2023</title><link>https://thomasmidena.au/my-favourite-soundtracks-2023/</link><guid isPermaLink="false">https://thomid.me/posts/my-favourite-soundtracks-2023/</guid><description>My top original scores from TV, movies and games</description><pubDate>Sun, 04 Feb 2024 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     &lt;img src=&quot;/_astro/Brian-Tyler-conducting-an-orchestra.COTJUC-G.jpg&quot; alt=&quot;My favourite soundtracks of 2023&quot; /&gt;
                     &lt;p&gt;Welcome! It&amp;#39;s high time we did this. Today, I’m sharing &lt;strong&gt;the definitive list of the 23 best soundtracks from 2023.&lt;/strong&gt; Objectively. Unequivocally. Indisputably. Agree or not, this is &lt;em&gt;the list.&lt;/em&gt;&lt;/p&gt;
@@ -700,7 +700,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Thank you for reading—see you next year!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>music</category><category>soundtracks</category></item><item><title>Performing in Black Comedy &amp; Love&apos;s Labour&apos;s Lost</title><link>https://thomid.me/posts/performing-in-black-comedy-loves-labours-lost/</link><guid isPermaLink="true">https://thomid.me/posts/performing-in-black-comedy-loves-labours-lost/</guid><pubDate>Fri, 04 Jan 2019 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>music</category><category>soundtracks</category></item><item><title>Performing in Black Comedy &amp; Love&apos;s Labour&apos;s Lost</title><link>https://thomasmidena.au/performing-in-black-comedy-loves-labours-lost/</link><guid isPermaLink="false">https://thomid.me/posts/performing-in-black-comedy-loves-labours-lost/</guid><pubDate>Fri, 04 Jan 2019 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;In November and December 2018 I was ecstatic to be given the opportunity to act in two bright, lively and hilarious plays. Both were directed by Tony Rive and presented in Darwin&amp;#39;s Browns Mart Theatre.&lt;/p&gt;
@@ -715,7 +715,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Unreal amounts of fun making these shows with so many cool people.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>theatre</category><category>comedy</category></item><item><title>Darwin Fringe Show Vaudeville Knockout</title><link>https://thomid.me/posts/darwin-fringe-show-vaudeville-knockout/</link><guid isPermaLink="true">https://thomid.me/posts/darwin-fringe-show-vaudeville-knockout/</guid><pubDate>Sun, 09 Sep 2018 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>theatre</category><category>comedy</category></item><item><title>Darwin Fringe Show Vaudeville Knockout</title><link>https://thomasmidena.au/darwin-fringe-show-vaudeville-knockout/</link><guid isPermaLink="false">https://thomid.me/posts/darwin-fringe-show-vaudeville-knockout/</guid><pubDate>Sun, 09 Sep 2018 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;Yes, this was the sequel to the 2017 Fringe show I was a part of, &amp;quot;Vaudeville Variety&amp;quot;.&lt;/p&gt;
@@ -728,7 +728,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Thanks to all the lovely cast and crew, and of course everyone who came along to see the show. In many ways these ambitious little Fringe shows with a lightning-fast turnaround and little-to-no external support are more exciting than anything else.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>theatre</category><category>comedy</category></item><item><title>You Do You (Darwin International Film Festival Spark Film 2018)</title><link>https://thomid.me/posts/you-do-you-darwin-international-film-festival-spark-film-2018/</link><guid isPermaLink="true">https://thomid.me/posts/you-do-you-darwin-international-film-festival-spark-film-2018/</guid><pubDate>Sun, 09 Sep 2018 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>theatre</category><category>comedy</category></item><item><title>You Do You (Darwin International Film Festival Spark Film 2018)</title><link>https://thomasmidena.au/you-do-you-darwin-international-film-festival-spark-film-2018/</link><guid isPermaLink="false">https://thomid.me/posts/you-do-you-darwin-international-film-festival-spark-film-2018/</guid><pubDate>Sun, 09 Sep 2018 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;This year I was lucky enough to produce and co-direct one of the Darwin International Film Festival&amp;#39;s five &amp;quot;Spark&amp;quot; films. These are five ten minute scripts that are picked to be produced over a short three months and screened as a part of the festival in September.&lt;/p&gt;
@@ -738,7 +738,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;&lt;img src=&quot;/_astro/MVIMG_20180710_154235.BbamScb7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Here&amp;#39;s Lexie herself, with DOP Nathaniel Kelly and star Koko Lawton&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Turns out that was a great decision. Because what Lexie wrote was quite unlike my original plans, and quite unlike the films I&amp;#39;ve made before, but felt genuine and personal. The story is a little more honest than the stories I usually write myself. I was very excited to work on something that wasn&amp;#39;t my usual speed though. This experience was unique. The first time I&amp;#39;ve directed a film I didn&amp;#39;t write myself, too!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thomid.me/_astro/IMG_5612.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thomasmidena.au/_astro/IMG_5612.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Koko, me, and hey look it&amp;#39;s Max Conaghan&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Anyway, we shot the film in July. Worked with a bunch of lovely people. Shooting had its many challenges, as shooting always does. We had to be pretty disciplined about schedules because most of the crew currently resides interstate and were only in Darwin for a couple of weeks. There were some difficult times but overall it was actually one of the smoothest shoots I&amp;#39;ve been involved with. Co-directing with Lexie was lovely not least because it took some of that crazy pressure off my shoulders.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/_astro/MVIMG_20180709_102608.s3NwoW2t.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -750,7 +750,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;iframe allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/dirOQQVYbyE&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
                 &lt;/div&gt;
-            </content:encoded><category>films</category><category>writing</category></item><item><title>We&apos;re Family Now showing at Deckchair Cinema</title><link>https://thomid.me/posts/were-family-now-showing-at-deckchair-cinema/</link><guid isPermaLink="true">https://thomid.me/posts/were-family-now-showing-at-deckchair-cinema/</guid><pubDate>Fri, 27 Apr 2018 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>films</category><category>writing</category></item><item><title>We&apos;re Family Now showing at Deckchair Cinema</title><link>https://thomasmidena.au/were-family-now-showing-at-deckchair-cinema/</link><guid isPermaLink="false">https://thomid.me/posts/were-family-now-showing-at-deckchair-cinema/</guid><pubDate>Fri, 27 Apr 2018 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;Nathaniel Kelly&amp;#39;s debut feature film, which I had several key roles on, will be screening thrice at Darwin&amp;#39;s wonderful outdoor Deckchair Cinema in May.&lt;/p&gt;
@@ -759,7 +759,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Check it out on &lt;a href=&quot;https://www.deckchaircinema.com/films/family-now-presented-nathaniel-kelly/&quot;&gt;12 May&lt;/a&gt; (with Q&amp;amp;A), &lt;a href=&quot;https://www.deckchaircinema.com/films/were-family-now/&quot;&gt;18 May&lt;/a&gt; or &lt;a href=&quot;https://www.deckchaircinema.com/films/were-family-now/&quot;&gt;26 May&lt;/a&gt;.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>films</category><category>world</category></item><item><title>Corrugated Iron&apos;s Whiplash</title><link>https://thomid.me/posts/corrugated-irons-whiplash/</link><guid isPermaLink="true">https://thomid.me/posts/corrugated-irons-whiplash/</guid><pubDate>Fri, 20 Apr 2018 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>films</category><category>world</category></item><item><title>Corrugated Iron&apos;s Whiplash</title><link>https://thomasmidena.au/corrugated-irons-whiplash/</link><guid isPermaLink="false">https://thomid.me/posts/corrugated-irons-whiplash/</guid><pubDate>Fri, 20 Apr 2018 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;This week I attended a talk by Indonesian film director Garin Nugroho. One of the many things he talked about was a kind of theatre in which the actors rock up 30 minutes before the show and are given the story and characters there and then. There is extremely little preparation time, but the director briefly shares their plan, then the actors make the show.&lt;/p&gt;
@@ -771,7 +771,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Final show (of three) tonight.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>creative</category><category>theatre</category><category>comedy</category></item><item><title>The Crucible @ Browns Mart Theatre</title><link>https://thomid.me/posts/the-crucible-browns-mart-theatre/</link><guid isPermaLink="true">https://thomid.me/posts/the-crucible-browns-mart-theatre/</guid><pubDate>Fri, 13 Apr 2018 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>creative</category><category>theatre</category><category>comedy</category></item><item><title>The Crucible @ Browns Mart Theatre</title><link>https://thomasmidena.au/the-crucible-browns-mart-theatre/</link><guid isPermaLink="false">https://thomid.me/posts/the-crucible-browns-mart-theatre/</guid><pubDate>Fri, 13 Apr 2018 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;Last night was the final performance of The Crucible, directed by Merrilee Mills and staged at Darwin&amp;#39;s Browns Mart Theatre.&lt;/p&gt;
@@ -779,7 +779,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;&lt;img src=&quot;/_astro/IMG_20180413_185233.BZaRHAB0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>theatre</category></item><item><title>Books out for Courting 101</title><link>https://thomid.me/posts/books-out-for-courting-101/</link><guid isPermaLink="true">https://thomid.me/posts/books-out-for-courting-101/</guid><pubDate>Mon, 25 Dec 2017 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>theatre</category></item><item><title>Books out for Courting 101</title><link>https://thomasmidena.au/books-out-for-courting-101/</link><guid isPermaLink="false">https://thomid.me/posts/books-out-for-courting-101/</guid><pubDate>Mon, 25 Dec 2017 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;A few weeks ago it was a delight to be a part of Corrugated Iron&amp;#39;s little production of the short comedy play, Courting 101, in Malak&amp;#39;s Chambers Crescent Theatre. I played a crazy professor teaching a class (the audience) how to go on a date and basically succeed in love.&lt;/p&gt;
@@ -787,7 +787,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;Well done and thanks for a great time director Kate and dramaturge Phil and actors Isaac, Amy, Jack, Lily, Michael and Haylee.&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>theatre</category><category>comedy</category></item><item><title>A Very Bedroom Farce</title><link>https://thomid.me/posts/a-very-bedroom-farce/</link><guid isPermaLink="true">https://thomid.me/posts/a-very-bedroom-farce/</guid><pubDate>Tue, 24 Oct 2017 13:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>theatre</category><category>comedy</category></item><item><title>A Very Bedroom Farce</title><link>https://thomasmidena.au/a-very-bedroom-farce/</link><guid isPermaLink="false">https://thomid.me/posts/a-very-bedroom-farce/</guid><pubDate>Tue, 24 Oct 2017 13:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;Last week I got to play an idiot called Trevor in Alan Ayckbourn&amp;#39;s very-rather-British 70&amp;#39;s comedy, &lt;em&gt;Bedroom Farce&lt;/em&gt;. It&amp;#39;s a very understated play featuring particularly unique staging: three beds. The characters move between these three separate beds/bedrooms throughout the play, which takes place over one night, getting twisted up in all kinds of hilarious (but again, very understated!) hi-jinx.&lt;/p&gt;
@@ -801,7 +801,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;And finally the full cast. Candid. Thanks for a fun time!&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>comedy</category><category>theatre</category></item><item><title>Danny Elfman scored my short films</title><link>https://thomid.me/posts/danny-elfman-scored-my-short-films/</link><guid isPermaLink="true">https://thomid.me/posts/danny-elfman-scored-my-short-films/</guid><pubDate>Wed, 06 Sep 2017 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>comedy</category><category>theatre</category></item><item><title>Danny Elfman scored my short films</title><link>https://thomasmidena.au/danny-elfman-scored-my-short-films/</link><guid isPermaLink="false">https://thomid.me/posts/danny-elfman-scored-my-short-films/</guid><pubDate>Wed, 06 Sep 2017 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;That&amp;#39;s a lie, of course. Rather, I made short films for Danny Elfman&amp;#39;s music.&lt;/p&gt;
@@ -815,7 +815,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GL3cYI_dMqU&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
                 &lt;/div&gt;
-            </content:encoded><category>soundtrack</category><category>creative</category><category>films</category><category>music</category><category>original</category><category>fiction</category></item><item><title>Bamboo Moon The Tale of Princess Kaguya</title><link>https://thomid.me/posts/bamboo-moon-the-tale-of-princess-kaguya/</link><guid isPermaLink="true">https://thomid.me/posts/bamboo-moon-the-tale-of-princess-kaguya/</guid><pubDate>Mon, 14 Aug 2017 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>soundtrack</category><category>creative</category><category>films</category><category>music</category><category>original</category><category>fiction</category></item><item><title>Bamboo Moon The Tale of Princess Kaguya</title><link>https://thomasmidena.au/bamboo-moon-the-tale-of-princess-kaguya/</link><guid isPermaLink="false">https://thomid.me/posts/bamboo-moon-the-tale-of-princess-kaguya/</guid><pubDate>Mon, 14 Aug 2017 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;I loved Studio Ghibli&amp;#39;s 2013 film, &lt;em&gt;The Tale of Princess Kaguya,&lt;/em&gt; based on the ancient Japanese folktale, &lt;em&gt;The Tale of the Bamboo Cutter&lt;/em&gt;. What a beautiful, honest and tragic—yet equally uplifting—fairytale about love and loss. And told with a particularly delicate minimalism which only Studio Ghibli can make sexy.&lt;/p&gt;
@@ -840,7 +840,7 @@ A messy Doctor Who adventure with a severe lack of stakes and character developm
 &lt;p&gt;&lt;img src=&quot;/_astro/a8f101_40b010241f784e10a25a88edaf9c7526-mv2_d_2000_1333_s_2.rH9VPXyH.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
                 &lt;/div&gt;
-            </content:encoded><category>theatre</category></item><item><title>Darwin Fringe Show Vaudeville Variety starring Chaplin</title><link>https://thomid.me/posts/darwin-fringe-show-vaudeville-variety-starring-chaplin/</link><guid isPermaLink="true">https://thomid.me/posts/darwin-fringe-show-vaudeville-variety-starring-chaplin/</guid><pubDate>Tue, 08 Aug 2017 14:30:00 GMT</pubDate><content:encoded>
+            </content:encoded><category>theatre</category></item><item><title>Darwin Fringe Show Vaudeville Variety starring Chaplin</title><link>https://thomasmidena.au/darwin-fringe-show-vaudeville-variety-starring-chaplin/</link><guid isPermaLink="false">https://thomid.me/posts/darwin-fringe-show-vaudeville-variety-starring-chaplin/</guid><pubDate>Tue, 08 Aug 2017 14:30:00 GMT</pubDate><content:encoded>
                 &lt;div class=&quot;post-content&quot;&gt;
                     
                     &lt;p&gt;Here&amp;#39;s the facts.&lt;/p&gt;

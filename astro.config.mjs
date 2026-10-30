@@ -7,7 +7,7 @@ import partytown from '@astrojs/partytown';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-	site: 'https://thomid.me',
+	site: 'https://thomasmidena.au',
 	integrations: [mdx(), sitemap(), partytown()],
 
 	markdown: {
@@ -16,7 +16,7 @@ export default defineConfig({
 				[
 					autoNewTabExternalLinks,
 					{
-						domain: 'https://thomid.me'
+						domain: 'https://thomasmidena.au'
 					}
 				]
 			]

@@ -69,13 +69,12 @@ export async function GET(context) {
 				title: post.data.title,
 				pubDate: post.data.pubDate,
 				description: post.data.description || '',
-				link: `${siteUrl}/posts/${post.data.slug}/`,
+				link: `${siteUrl}/${post.data.slug}/`,
 				content: fullContent,
+				// Keep previously published GUIDs stable when the domain and link paths change.
+				customData: `<guid isPermaLink="false">https://thomid.me/posts/${post.data.slug}/</guid>${post.data.updatedDate ? `<updated>${post.data.updatedDate.toUTCString()}</updated>` : ''}`,
 				...(post.data.tags && {
 					categories: post.data.tags
-				}),
-				...(post.data.updatedDate && {
-					customData: `<updated>${post.data.updatedDate.toUTCString()}</updated>`
 				})
 			};
 		}),
