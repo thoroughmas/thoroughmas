@@ -205,7 +205,7 @@ export const projects: Project[] = [
 	{
 		name: 'Absurdity Unit',
 		description: 'A short fictional podcast about patients in a hospital with kinda annoying superpowers.',
-		demoLink: 'https://podcasts.thomid.me/@absurdity/episodes',
+		demoLink: 'https://podcasts.thomasmidena.au/@absurdity/episodes',
 		demoLinkRel: 'nofollow noopener noreferrer',
 		linkType: 'Pocket Casts',
 		image: AbsurdityUnit,
@@ -215,7 +215,7 @@ export const projects: Project[] = [
 	{
 		name: 'Podcast Library',
 		description: "These are all my old podcasts. Who knows, perhaps I'll record again some day!",
-		demoLink: 'https://podcasts.thomid.me/',
+		demoLink: 'https://podcasts.thomasmidena.au/',
 		linkType: 'Listen',
 		image: Podcasts,
 		tags: ['Podcast'],

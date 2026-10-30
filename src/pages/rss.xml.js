@@ -58,6 +58,12 @@ export async function GET(context) {
 
 			const coverImageHtml = post.data.coverImage?.src ? `<img src="${post.data.coverImage.src}" alt="${post.data.title}" />` : '';
 
+			// An empty `updatedDate:` in frontmatter coerces to the Unix epoch, so only
+			// emit it when it is a plausible, distinct date.
+			const updatedDate = post.data.updatedDate;
+			const modifiedDate =
+				updatedDate && updatedDate.getTime() > 0 && updatedDate.getTime() !== post.data.pubDate.getTime() ? updatedDate : null;
+
 			const fullContent = `
                 <div class="post-content">
                     ${coverImageHtml}
@@ -71,8 +77,9 @@ export async function GET(context) {
 				description: post.data.description || '',
 				link: `${siteUrl}/${post.data.slug}/`,
 				content: fullContent,
-				// Keep previously published GUIDs stable when the domain and link paths change.
-				customData: `<guid isPermaLink="false">https://thomid.me/posts/${post.data.slug}/</guid>${post.data.updatedDate ? `<updated>${post.data.updatedDate.toUTCString()}</updated>` : ''}`,
+				...(modifiedDate && {
+					customData: `<updated>${modifiedDate.toUTCString()}</updated>`
+				}),
 				...(post.data.tags && {
 					categories: post.data.tags
 				})

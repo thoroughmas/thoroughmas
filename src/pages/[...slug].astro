@@ -28,9 +28,21 @@ const {
 } = post;
 
 const { Content, headings } = await render(post);
+
+// An empty `updatedDate:` in frontmatter coerces to the Unix epoch, so only treat
+// it as a real modification date when it is a plausible, distinct date.
+const modifiedDate =
+	updatedDate && updatedDate.getTime() > 0 && updatedDate.getTime() !== pubDate.getTime() ? updatedDate : undefined;
 ---
 
-<BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>
+<BaseLayout
+	title={seoTitle || title}
+	description={description}
+	image={coverImage?.src || undefined}
+	type='article'
+	publishedTime={pubDate}
+	modifiedTime={modifiedDate}
+>
 	<div class='container lg:flex gap-10'>
 		<main class='overflow-hidden grow'>
 			<article class='h-entry' itemscope itemtype='http://schema.org/BlogPosting'>
